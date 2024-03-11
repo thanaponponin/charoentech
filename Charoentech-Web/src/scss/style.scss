@@ -1,0 +1,49 @@
+// Bootstrap
+@import "node_modules/bootstrap/scss/_functions";
+@import "variables"; // custom variables
+@import "node_modules/bootstrap/scss/_variables";
+@import "node_modules/bootstrap/scss/_mixins";
+@import "node_modules/bootstrap/scss/bootstrap";
+
+// Required plugins
+@import "node_modules/metismenu/dist/metisMenu";
+@import "node_modules/noty/lib/noty";
+
+// Vendor
+@import "vendor/material-icons";
+@import "vendor/swiper";
+@import "vendor/nouislider";
+@import "vendor/noty";
+@import "vendor/typeahead";
+
+// Template
+@import "mixins";
+@import "custom-scrollbar";
+@import "images";
+@import "grid";
+@import "tables";
+@import "forms";
+@import "buttons";
+@import "dropdown";
+@import "button-group";
+@import "custom-forms";
+@import "nav";
+@import "card";
+@import "breadcrumb";
+@import "pagination";
+@import "badge";
+@import "alert";
+@import "list-group";
+@import "close";
+@import "modal";
+@import "popover";
+@import "utilities";
+@import "menu";
+@import "header";
+@import "price";
+@import "footer";
+@import "rating";
+@import "steps";
+@import "embed-map";
+@import "custom-icon";
+@import "layout-electronics";

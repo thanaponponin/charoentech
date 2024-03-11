@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Font & Icon -->
+  @@include('./include/font-icon.html')
+
+  @@include('./include/style-css.html')
+
+  <title>Mimity</title>
+</head>
+
+<body>
+
+  @@include('./include/topbar.html', {
+    "show": "true",
+    "auth": "true"
+  })
+
+  @@include('./include/header.html', {
+    "menu": "shop",
+    "sub": "checkout",
+    "child": "checkout-complete"
+  })
+
+  <div class="breadcrumb-container">
+    <div class="container-fluid">
+      <nav aria-label="breadcrumb" class="text-center">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item"><a href="javascript:void(0)">Checkout</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Checkout - Complete</li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+
+  <div class="container-fluid mb-3">
+    <div class="row gutters-3 justify-content-center">
+      <div class="col-md-9 col-lg-7 col-xl-6">
+        <div class="card card-style1">
+          <div class="card-body text-center">
+            <i class="material-icons text-success display-4">check_circle_outline</i>
+            <h2>Thank you.</h2>
+            <p>Your order has been placed and will be processed as soon as possible.</p>
+            <p class="mb-0">
+              <span class="text-muted">Order ID: </span>
+              <span class="text-info">#ORD456789</span>
+            </p>
+            <p>
+              <span class="text-muted">Amount: </span>
+              <span class="text-info">$75.00</span>
+            </p>
+            <p>A confirmation email has been sent to <u>john.thor@example.com</u></p>
+            <a href="shop-grid.html" class="btn btn-faded-secondary rounded mb-3">Continue Shopping</a>
+            <a href="account-orders.html" class="btn btn-primary rounded mb-3">View Order</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  @@include('./include/footer.html')
+
+  @@include('./include/modal-menu.html', {
+    "menu": "shop",
+    "sub": "checkout",
+    "child": "checkout-complete"
+  })
+
+  @@include('./include/modal-search.html')
+
+  @@include('./include/modal-cart.html')
+
+  @@include('./include/script-js.html')
+  @@include('./include/app-js.html')
+</body>
+
+</html>

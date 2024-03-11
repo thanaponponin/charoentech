@@ -1,0 +1,58 @@
+﻿@{
+    ViewBag.Title = "About";
+}
+
+
+@*<div class="breadcrumb-container">
+    <div class="container-fluid">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                <li class="breadcrumb-item"><a href="javascript:void(0)">Pages</a></li>
+                <li class="breadcrumb-item active" aria-current="page">About Us</li>
+            </ol>
+        </nav>
+    </div>
+</div>*@
+
+<div class="container-fluid mb-3">
+    <div class="card card-style1">
+        <div class="card-body">
+
+            <!-- About Us -->
+            <div class="row">
+                <div class="col-md-6 mb-3 mb-md-0">
+                    @{
+                        TEXT about = (TEXT)ViewData["about"];
+                    }
+                    <img src="@Url.Content("~/"+about.IMAGE)" alt="About Us" class="w-100">
+                </div>
+                <div class="col-md-6">
+                    <h2>@about.NAME</h2>
+                    <p>@Html.Raw(about.DESCRIPTION)</p>
+                </div>
+            </div>
+            <!-- /About Us -->
+
+            <hr class="my-5">
+
+            <!-- Our Purpose -->
+            <div class="row">
+                <div class="col-md-6 mb-3 mb-md-0 order-md-2">
+                    @{
+                        TEXT purpose = (TEXT)ViewData["purpose"];
+                    }
+                    <img src="@Url.Content("~/" + purpose.IMAGE)" alt="Our Purpose" class="w-100">
+                </div>
+                <div class="col-md-6 order-md-1">
+                    <h2>@purpose.NAME</h2>
+                    <p>@Html.Raw(purpose.DESCRIPTION)</p>
+                </div>
+            </div>
+            <!-- /Our Purpose -->
+
+            
+
+        </div>
+    </div>
+</div>

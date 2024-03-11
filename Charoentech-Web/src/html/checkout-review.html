@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Font & Icon -->
+  @@include('./include/font-icon.html')
+
+  @@include('./include/style-css.html')
+
+  <title>Mimity</title>
+</head>
+
+<body>
+
+  @@include('./include/topbar.html', {
+    "show": "true",
+    "auth": "true"
+  })
+
+  @@include('./include/header.html', {
+    "menu": "shop",
+    "sub": "checkout",
+    "child": "checkout-review"
+  })
+
+  <div class="breadcrumb-container">
+    <div class="container-fluid">
+      <nav aria-label="breadcrumb" class="text-center">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item"><a href="javascript:void(0)">Checkout</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Checkout - Review</li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+
+  <div class="container-fluid mb-3">
+    <div class="row gutters-3 justify-content-center">
+      <div class="col-md-7 col-lg-6 col-xl-5">
+        <div class="card card-style1">
+          <div class="card-body">
+            <nav class="steps">
+              <a href="checkout-shipping.html" data-step="1" class="done">Shipping</a>
+              <a href="checkout-payment.html" data-step="2" class="done">Payment</a>
+              <a href="checkout-review.html" data-step="3" class="current">Review</a>
+            </nav>
+            <hr>
+            <h5>Order Items :</h5>
+            <ul class="list-group list-group-flush list-group-sm mt-3">
+              <li class="list-group-item px-0">
+                <div class="media">
+                  <a href="shop-single.html">
+                    <img src="../../img/products/1_small.jpg" alt="product" width="75">
+                  </a>
+                  <div class="media-body ml-3">
+                    <a href="shop-single.html" class="card-link text-secondary">Hanes Hooded Sweatshirt</a>
+                    <div class="font-size-sm"><span class="text-muted">Size:</span> small</div>
+                    <div class="price">
+                      <span class="text-success">$18.56</span>
+                      <span class="ml-3 text-secondary font-weight-normal">x 1</span>
+                      <span class="ml-3">$18.56</span>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="list-group-item px-0">
+                <div class="media">
+                  <a href="shop-single.html">
+                    <img src="../../img/products/2_small.jpg" alt="product" width="75">
+                  </a>
+                  <div class="media-body ml-3">
+                    <a href="shop-single.html" class="card-link text-secondary">The Flash Logo T-Shirt</a>
+                    <div class="font-size-sm"><span class="text-muted">Size:</span> medium</div>
+                    <div class="price">
+                      <span class="text-success">$16.64</span>
+                      <span class="ml-3 text-secondary font-weight-normal">x 2</span>
+                      <span class="ml-3">$33.28</span>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="list-group-item px-0">
+                <div class="media">
+                  <a href="shop-single.html">
+                    <img src="../../img/products/3_small.jpg" alt="product" width="75">
+                  </a>
+                  <div class="media-body ml-3">
+                    <a href="shop-single.html" class="card-link text-secondary">Open Front Cropped Cardigans</a>
+                    <div class="font-size-sm"><span class="text-muted">Size:</span> large</div>
+                    <div class="price">
+                      <span class="text-success">$15.20</span>
+                      <span class="ml-3 text-secondary font-weight-normal">x 1</span>
+                      <span class="ml-3">$15.20</span>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-5 col-xl-4 mt-1 mt-md-0">
+        <div class="card card-style1">
+          <div class="card-body">
+            <div class="font-condensed">
+              <h5>Shipping to :</h5>
+              <div class="text-muted">
+                John Thor<br>
+                2114 Jadewood Farms 8854<br>
+                john.thor@example.com<br>
+                1-787-376-1552
+              </div>
+              <hr>
+              <h5>Payment Method :</h5>
+              <div class="text-muted">Credit Card : **** **** **** 4567</div>
+              <hr>
+              <div class="d-flex">
+                <div class="text-muted">Bag Total</div>
+                <div class="ml-auto font-weight-bold">$67.04</div>
+              </div>
+              <div class="d-flex">
+                <div class="text-muted">Bag Discount</div>
+                <div class="ml-auto font-weight-bold">$2.04</div>
+              </div>
+              <hr class="my-1">
+              <div class="d-flex">
+                <div class="text-muted">Coupon Discount</div>
+                <div class="ml-auto font-weight-bold">-</div>
+              </div>
+              <div class="d-flex">
+                <div class="text-muted">Shipping Cost</div>
+                <div class="ml-auto font-weight-bold">$10.00</div>
+              </div>
+              <hr>
+              <div class="d-flex">
+                <div class="text-muted">Order Total</div>
+                <div class="ml-auto font-weight-bold text-primary h4 mb-0">$75.00</div>
+              </div>
+              <hr>
+            </div>
+            <a href="checkout-complete.html" class="btn btn-lg btn-primary btn-block has-icon">COMPLETE ORDER<i class="material-icons">chevron_right</i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  @@include('./include/footer.html')
+
+  @@include('./include/modal-menu.html', {
+    "menu": "shop",
+    "sub": "checkout",
+    "child": "checkout-review"
+  })
+
+  @@include('./include/modal-search.html')
+
+  @@include('./include/modal-cart.html')
+
+  @@include('./include/script-js.html')
+  @@include('./include/app-js.html')
+</body>
+
+</html>

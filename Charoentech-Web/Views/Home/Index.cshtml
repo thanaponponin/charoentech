@@ -1,0 +1,279 @@
+﻿@*@{
+    ViewBag.Title = "Home Page";
+}*@
+
+<!-- HOME SLIDER -->
+<div class="swiper-container" id="homeSlider">
+    <div class="swiper-wrapper">
+        @foreach (var banner in (List<BANNER>)ViewData["banner"])
+        {
+            <div class="swiper-slide" data-cover="@Url.Content("~/" + banner.IMAGE)" data-height="160px 265px 300px 300px 300px">
+                <div class="overlay-content overlay-show align-items-end text-white">
+                    <div class="text-center">
+                        <h1 class="animated font-weight-bold" data-animate="fadeDown">Business Casual<br />Outfit Ideas</h1>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+    <div class="swiper-pagination"></div>
+    <div class="swiper-button-prev swiper-button-prev-sm swiper-button-prev2"><i class="material-icons">chevron_left</i></div>
+    <div class="swiper-button-next swiper-button-next-sm swiper-button-next2"><i class="material-icons">chevron_right</i></div>
+</div>
+<!-- /HOME SLIDER -->
+<!-- SERVICES BLOCK -->
+<div class="d-grid grid-template-col-sm-2 grid-template-col-xl-4 column-gap-3 row-gap-4 mt-5">
+    @foreach (var text in (List<TEXT>)ViewData["text"])
+    {
+        <div class="media">
+            <button class="btn btn-icon btn-lg rounded-circle btn-faded-info active" type="button">
+                <i class="material-icons">@text.ICON</i>
+            </button>
+            <div class="media-body ml-2">
+                <h6>@text.NAME</h6>
+                <span class="text-secondary font-condensed">@Html.Raw(@text.DESCRIPTION)</span>
+            </div>
+        </div>
+    }
+</div>
+<!-- /SERVICES BLOCK -->
+<!-- Categories slider -->
+<div class="position-relative mt-5">
+    <div class="swiper-button-prev swiper-button-prev-sm swiper-button-prev2" id="categories-slider-prev"><i class="material-icons">chevron_left</i></div>
+    <div class="swiper-button-next swiper-button-next-sm swiper-button-next2" id="categories-slider-next"><i class="material-icons">chevron_right</i></div>
+    <h4>ประเภทสินค้า</h4>
+    <div class="swiper-container" id="categoriesSlider">
+        <div class="swiper-wrapper">
+            
+            <div class="swiper-slide">
+                <div class="d-grid grid-gap-1 grid-template-col-2 grid-template-col-md-4">
+                @{
+                    int row = 1;
+                }
+                @foreach (var itemCate in (List<ITEM_CATE>)ViewData["ItemCate"])
+                {
+                    int mod = row % 5;
+                    if (mod == 0)
+                    {
+                        @Html.Raw("</div></div><div class='swiper-slide'><div class='d-grid grid-gap-1 grid-template-col-2 grid-template-col-md-4'>");
+                    }
+                    <div class="img img-zoom-in">
+                        <div data-cover="@Url.Content("~/"+@itemCate.IMAGE)" data-height="125px 130px 150px 120px 150px"></div>
+                        <div class="overlay overlay-show bg-dark"></div>
+                        <div class="overlay-content overlay-show">
+                            <a href="@Url.Action("Shopping", "Home", new { id = itemCate.ITEM_CATE_ID })" class="card-link h5 text-white font-condensed stretched-link text-center">
+                                @itemCate.NAME
+                            </a>
+                        </div>
+                    </div>
+                    
+                    row++;
+                }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /Categories slider -->
+<!-- Hot New Releases -->
+<h4 class="mt-5">สินค้าใหม่</h4>
+<div class="d-grid grid-template-col-2 grid-template-col-md-4 grid-gap-1 grid-gap-sm-3 my-3">
+    @foreach (var itemNew in (List<ITEM>)ViewData["New"])
+    {
+        <div class="card card-product rounded-0">
+            <div class="card-body">
+                <a href="javascrit: void(0);"><img class="card-img-top" src="@Url.Content("~/"+itemNew.IMAGE)"></a>
+                <a href="javascrit: void(0);" class="card-title card-link">@itemNew.NAME</a>
+                <span class="badge badge-success">สินค้าใหม่</span>
+                <div class="price">
+                    @if (itemNew.DISCOUNT != null && itemNew.DISCOUNT > 0)
+                    {
+                        <span class="h5 del">@itemNew.DISCOUNT</span>
+                    }
+                    <span class="h5">@itemNew.PRICE</span>
+                </div>
+            </div>
+            <div class="card-footer">
+                <a href="@Url.Action("ShoppingDetail", "Home", new { id = @itemNew.ITEM_ID })" class="btn btn-sm rounded-pill btn-faded-primary btn-block">ดูรายละเอียด</a>
+            </div>
+        </div>
+    }
+    @*<div class="card card-product rounded-0">
+        <div class="card-body">
+            <button class="btn btn-icon btn-text-danger rounded-circle btn-wishlist atw-demo active" data-toggle="button" title="Added to wishlist"></button>
+            <a href="shop-single.html"><img class="card-img-top" src="../../img/products/electro/2.jpg" alt="Card image cap"></a>
+            <a href="shop-single.html" class="card-title card-link">Apple 15.4" MacBook Pro Laptop Space Gray</a>
+            <span class="rating" data-value="4"></span>
+            <div class="price">
+                <span class="h5">$2,720.38</span>
+            </div>
+        </div>
+        <div class="card-footer">
+            <button class="btn btn-sm rounded-0 btn-outline-primary btn-block atc-demo">Add to Cart</button>
+        </div>
+    </div>
+    <div class="card card-product rounded-0">
+        <div class="card-body">
+            <button class="btn btn-icon btn-text-danger rounded-circle btn-wishlist atw-demo" data-toggle="button" title="Add to wishlist"></button>
+            <a href="shop-single.html"><img class="card-img-top" src="../../img/products/electro/3.jpg" alt="Card image cap"></a>
+            <a href="shop-single.html" class="card-title card-link">SanDisk Cruzer CZ36 64GB USB 2.0 Flash Drive</a>
+            <span class="rating" data-value="4.5"></span>
+            <div class="price">
+                <span class="h5">$13.49</span>
+            </div>
+        </div>
+        <div class="card-footer">
+            <button class="btn btn-sm rounded-0 btn-outline-primary btn-block atc-demo">Add to Cart</button>
+        </div>
+    </div>
+    <div class="card card-product rounded-0">
+        <div class="card-body">
+            <button class="btn btn-icon btn-text-danger rounded-circle btn-wishlist atw-demo active" data-toggle="button" title="Added to wishlist"></button>
+            <a href="shop-single.html"><img class="card-img-top" src="../../img/products/electro/4.jpg" alt="Card image cap"></a>
+            <a href="shop-single.html" class="card-title card-link">Sony Alpha a6500 Mirrorless Digital Camera</a>
+            <div class="price">
+                <span class="h5">$1,098.00</span>
+            </div>
+        </div>
+        <div class="card-footer">
+            <button class="btn btn-sm rounded-0 btn-outline-primary btn-block atc-demo">Add to Cart</button>
+        </div>
+    </div>*@
+</div>
+<!-- /Hot New Releases -->
+
+<!-- Popular -->
+<div class="position-relative mt-5">
+    @*<div class="swiper-button-prev swiper-button-prev-sm swiper-button-prev2" id="popular-slider-prev"><i class="material-icons">chevron_left</i></div>
+    <div class="swiper-button-next swiper-button-next-sm swiper-button-next2" id="popular-slider-next"><i class="material-icons">chevron_right</i></div>*@
+    <h4>สินค้าขายดี</h4>
+    <div class="swiper-container" id="popularSlider">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <div class="d-grid grid-gap-2 grid-template-col-2 grid-template-col-md-4">
+                    @foreach (var itemNew in (List<ITEM>)ViewData["BestSaller"])
+                    {
+                        <div class="card card-product rounded-0">
+                            <div class="card-body">
+                                <a href="javascrit: void(0);"><img class="card-img-top" src="@Url.Content("~/"+itemNew.IMAGE)"></a>
+                                <a href="javascrit: void(0);" class="card-title card-link">@itemNew.NAME</a>
+                                <div class="price">
+                                    @if (itemNew.DISCOUNT != null && itemNew.DISCOUNT > 0)
+                                    {
+                                        <span class="h5 del">@itemNew.DISCOUNT</span>
+                                    }
+                                    
+                                    <span class="h5">@itemNew.PRICE</span>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <a href="@Url.Action("ShoppingDetail", "Home", new { id = @itemNew.ITEM_ID })" class="btn btn-sm rounded-pill btn-faded-primary btn-block">ดูรายละเอียด</a>
+                            </div>
+                        </div>
+                    }
+                    @*<div class="card card-product rounded-0">
+                        <div class="card-body">
+                            <button class="btn btn-icon btn-text-danger rounded-circle btn-wishlist atw-demo" data-toggle="button" title="Add to wishlist"></button>
+                            <a href="shop-single.html"><img class="card-img-top" src="../../img/products/electro/10.jpg" alt="Card image cap"></a>
+                            <a href="shop-single.html" class="card-title card-link">Nikon D7200 DX-format DSLR Body (Black)</a>
+                            <span class="badge badge-danger">Hot</span>
+                            <span class="rating" data-value="5"></span>
+                            <div class="price"><span class="h5">$996.95</span></div>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn btn-sm rounded-0 btn-outline-primary btn-block atc-demo">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="card card-product rounded-0">
+                        <div class="card-body">
+                            <button class="btn btn-icon btn-text-danger rounded-circle btn-wishlist atw-demo" data-toggle="button" title="Add to wishlist"></button>
+                            <a href="shop-single.html"><img class="card-img-top" src="../../img/products/electro/11.jpg" alt="Card image cap"></a>
+                            <a href="shop-single.html" class="card-title card-link">Polk Audio PSW10 10-Inch Powered Subwoofer</a>
+                            <span class="rating" data-value="4"></span>
+                            <div class="price"><span class="h5">$99.99</span></div>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn btn-sm rounded-0 btn-outline-primary btn-block atc-demo">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="card card-product rounded-0">
+                        <div class="card-body">
+                            <button class="btn btn-icon btn-text-danger rounded-circle btn-wishlist atw-demo" data-toggle="button" title="Add to wishlist"></button>
+                            <a href="shop-single.html"><img class="card-img-top" src="../../img/products/electro/12.jpg" alt="Card image cap"></a>
+                            <a href="shop-single.html" class="card-title card-link">Essential Phone in Halo Gray – 128 GB Unlocked</a>
+                            <span class="badge badge-warning">Only 1 left in stock</span>
+                            <div class="price">
+                                <span class="h5 del">$499.99</span>
+                                <span class="h5">$435.00</span>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn btn-sm rounded-0 btn-outline-primary btn-block atc-demo">Add to Cart</button>
+                        </div>
+                    </div>*@
+                </div>
+            </div>
+            @*<div class="swiper-slide">
+                <div class="d-grid grid-gap-2 grid-template-col-2 grid-template-col-md-4">
+                    <div class="card card-product rounded-0">
+                        <div class="card-body">
+                            <button class="btn btn-icon btn-text-danger rounded-circle btn-wishlist atw-demo" data-toggle="button" title="Add to wishlist"></button>
+                            <a href="shop-single.html"><img class="card-img-top" src="../../img/products/electro/9.jpg" alt="Card image cap"></a>
+                            <a href="shop-single.html" class="card-title card-link">ASUS VivoBook F510UA FHD Laptop</a>
+                            <span class="badge badge-success">Save $89.01</span>
+                            <span class="rating" data-value="4"></span>
+                            <div class="price">
+                                <span class="h5 del">$599.00</span>
+                                <span class="h5">$509.99</span>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn btn-sm rounded-0 btn-outline-primary btn-block atc-demo">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="card card-product rounded-0">
+                        <div class="card-body">
+                            <button class="btn btn-icon btn-text-danger rounded-circle btn-wishlist atw-demo" data-toggle="button" title="Add to wishlist"></button>
+                            <a href="shop-single.html"><img class="card-img-top" src="../../img/products/electro/10.jpg" alt="Card image cap"></a>
+                            <a href="shop-single.html" class="card-title card-link">Nikon D7200 DX-format DSLR Body (Black)</a>
+                            <span class="badge badge-danger">Hot</span>
+                            <span class="rating" data-value="5"></span>
+                            <div class="price"><span class="h5">$996.95</span></div>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn btn-sm rounded-0 btn-outline-primary btn-block atc-demo">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="card card-product rounded-0">
+                        <div class="card-body">
+                            <button class="btn btn-icon btn-text-danger rounded-circle btn-wishlist atw-demo" data-toggle="button" title="Add to wishlist"></button>
+                            <a href="shop-single.html"><img class="card-img-top" src="../../img/products/electro/11.jpg" alt="Card image cap"></a>
+                            <a href="shop-single.html" class="card-title card-link">Polk Audio PSW10 10-Inch Powered Subwoofer</a>
+                            <span class="rating" data-value="4"></span>
+                            <div class="price"><span class="h5">$99.99</span></div>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn btn-sm rounded-0 btn-outline-primary btn-block atc-demo">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="card card-product rounded-0">
+                        <div class="card-body">
+                            <button class="btn btn-icon btn-text-danger rounded-circle btn-wishlist atw-demo" data-toggle="button" title="Add to wishlist"></button>
+                            <a href="shop-single.html"><img class="card-img-top" src="../../img/products/electro/12.jpg" alt="Card image cap"></a>
+                            <a href="shop-single.html" class="card-title card-link">Essential Phone in Halo Gray – 128 GB Unlocked</a>
+                            <span class="badge badge-warning">Only 1 left in stock</span>
+                            <div class="price">
+                                <span class="h5 del">$499.99</span>
+                                <span class="h5">$435.00</span>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn btn-sm rounded-0 btn-outline-primary btn-block atc-demo">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>*@
+        </div>
+    </div>
+</div>
+<!-- /Popular -->

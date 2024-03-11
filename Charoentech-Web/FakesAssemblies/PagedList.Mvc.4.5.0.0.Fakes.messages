@@ -1,0 +1,5 @@
+D:\CharoentechWeb\Charoentech-Web\Charoentech-Web\Fakes\PagedList.Mvc.fakes : warning : Cannot generate stub for PagedList.Mvc.HtmlHelper: type is sealed.
+D:\CharoentechWeb\Charoentech-Web\Charoentech-Web\Fakes\PagedList.Mvc.fakes : warning : Cannot generate stub for PagedList.Mvc.PagedListDisplayMode: type is a value type.
+D:\CharoentechWeb\Charoentech-Web\Charoentech-Web\Fakes\PagedList.Mvc.fakes : warning : Cannot generate shim for PagedList.Mvc.HtmlHelper+<>c__DisplayClass3: type is not supported because of internal limitations.
+D:\CharoentechWeb\Charoentech-Web\Charoentech-Web\Fakes\PagedList.Mvc.fakes : warning : Cannot generate shim for PagedList.Mvc.PagedListDisplayMode: type is an enum.
+D:\CharoentechWeb\Charoentech-Web\Charoentech-Web\Fakes\PagedList.Mvc.fakes : warning : Cannot generate shim for PagedList.Mvc.PagedListRenderOptions+<>c__DisplayClass1: type is not supported because of internal limitations.

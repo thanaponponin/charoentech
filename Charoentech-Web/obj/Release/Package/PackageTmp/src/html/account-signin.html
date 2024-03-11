@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Font & Icon -->
+  @@include('./include/font-icon.html')
+
+  @@include('./include/style-css.html')
+
+  <title>Mimity</title>
+</head>
+
+<body>
+
+  @@include('./include/topbar.html', {
+    "show": "false",
+    "auth": "false"
+  })
+
+  @@include('./include/header.html', {
+    "menu": "account",
+    "sub": "account-signin",
+    "child": ""
+  })
+
+  <div class="container-fluid my-3">
+    <div class="row justify-content-center">
+      <div class="col-md-auto d-flex justify-content-center">
+        <div class="card shadow-sm" style="width: 350px">
+          <div class="card-body">
+            <div class="modal fade modal-content-right modal-shown-static" id="signinModal" tabindex="-1" role="dialog">
+              <div class="modal-dialog modal-sm" role="document">
+
+                <div class="modal-content" id="signinContent">
+                  <div class="text-center">
+                    <h3 class="modal-title">Sign in</h3>
+                    <em>to your account</em>
+                    <hr>
+                  </div>
+                  <div class="modal-body">
+                    <form id="formSignin">
+                      <div class="form-group">
+                        <span class="input-icon">
+                          <i class="material-icons">mail_outline</i>
+                          <input type="email" class="form-control" id="signInEmailInput" placeholder="Email address" required>
+                        </span>
+                      </div>
+                      <div class="form-group">
+                        <span class="input-icon">
+                          <i class="material-icons">lock_open</i>
+                          <input type="password" class="form-control" id="signInPasswordInput" placeholder="Password" required>
+                        </span>
+                      </div>
+                      <div class="form-group d-flex justify-content-between">
+                        <div class="custom-control custom-checkbox">
+                          <input type="checkbox" class="custom-control-input" id="rememberCheck" checked>
+                          <label class="custom-control-label" for="rememberCheck">Remember me</label>
+                        </div>
+                        <u><a href="#" class="text-primary small" id="showResetContent">Forgot password ?</a></u>
+                      </div>
+                      <button type="submit" class="btn btn-primary btn-block">Sign In</button>
+                    </form>
+                    <hr>
+                    <p class="font-italic">Don't have an account ? <u><a href="#" id="showSignupContent">Sign Up</a></u></p>
+                    <hr>
+                    <div class="text-center">
+                      <p class="font-italic">Or sign in via</p>
+                      <button class="btn btn-icon btn-faded-primary rounded-circle" data-toggle="tooltip" title="Facebook" data-container="#signinContent">
+                        <i class="custom-icon" data-icon="facebook" data-size="20x20"></i>
+                      </button>
+                      <button class="btn btn-icon btn-faded-info rounded-circle" data-toggle="tooltip" title="Twitter" data-container="#signinContent">
+                        <i class="custom-icon" data-icon="twitter" data-size="20x20"></i>
+                      </button>
+                      <button class="btn btn-icon btn-faded-danger rounded-circle" data-toggle="tooltip" title="Google" data-container="#signinContent">
+                        <i class="custom-icon" data-icon="gplus" data-size="20x20"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="modal-content" id="signupContent" hidden>
+                  <div class="text-center">
+                    <h3 class="modal-title">Sign up</h3>
+                    <em>create an account</em>
+                    <hr>
+                  </div>
+                  <div class="modal-body">
+                    <form id="formSignup">
+                      <div class="form-group">
+                        <input type="text" class="form-control" id="signUpNameInput" placeholder="Full name" required>
+                      </div>
+                      <div class="form-group">
+                        <input type="email" class="form-control" id="signUpEmailInput" placeholder="Email address" required>
+                      </div>
+                      <div class="form-group">
+                        <input type="password" class="form-control" id="signUpPasswordInput" placeholder="Password" required>
+                      </div>
+                      <div class="form-group">
+                        <input type="password" class="form-control" id="signUpPasswordConfirmInput" placeholder="Confirm password" required>
+                      </div>
+                      <button type="submit" class="btn btn-primary btn-block">Sign Up</button>
+                    </form>
+                    <hr>
+                    <button class="btn btn-faded-light has-icon btn-sm showSigninContent" type="button">
+                      <i class="material-icons">chevron_left</i> Back to sign in
+                    </button>
+                  </div>
+                </div>
+
+                <div class="modal-content" id="resetContent" hidden>
+                  <div class="text-center">
+                    <h3 class="modal-title">Reset Password</h3>
+                    <em>enter your email address</em>
+                    <hr>
+                  </div>
+                  <div class="modal-body">
+                    <form id="formReset">
+                      <div class="form-group">
+                        <span class="input-icon">
+                          <i class="material-icons">mail_outline</i>
+                          <input type="email" class="form-control" id="resetEmailInput" placeholder="Email address" required>
+                        </span>
+                      </div>
+                      <button type="submit" class="btn btn-danger btn-block">RESET</button>
+                    </form>
+                    <hr>
+                    <button class="btn btn-faded-light has-icon btn-sm showSigninContent" type="button">
+                      <i class="material-icons">chevron_left</i> Back to sign in
+                    </button>
+                  </div>
+                </div>
+
+                <div class="modal-content" id="resetDoneContent" hidden>
+                  <div class="modal-body text-center pt-0">
+                    <i class="material-icons text-primary display-4">check_circle_outline</i>
+                    <h3>CHECK YOUR EMAIL</h3>
+                    <p>We just sent you a letter with instructions to reset your password</p>
+                    <button class="btn btn-primary btn-block showSigninContent" type="button">Sign in</button>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  @@include('./include/footer.html')
+
+  @@include('./include/modal-menu.html', {
+    "menu": "account",
+    "sub": "account-signin",
+    "child": ""
+  })
+
+  @@include('./include/modal-search.html')
+
+  @@include('./include/modal-cart.html')
+
+  @@include('./include/script-js.html')
+  @@include('./include/app-js.html')
+</body>
+
+</html>

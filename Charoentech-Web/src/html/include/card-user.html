@@ -1,0 +1,29 @@
+<div class="card card-style1">
+          <div class="card-body text-center">
+            <img src="../../img/user/user.svg" width="100" height="100" alt="User" class="rounded-circle mb-3">
+            <h5 class="mb-0">John Thor</h5>
+            <small class="text-muted">Joined Dec 31, 2017</small>
+            <hr>
+            <div class="font-condensed d-flex align-items-center justify-content-center" data-toggle="tooltip" title="You currently have 9,386 Points to spend.">
+              <i class="material-icons text-warning mr-2">grade</i> Points: 9386</div>
+          </div>
+          <div class="list-group list-group-flush">
+            <a href="account-profile.html" class="list-group-item list-group-item-action d-flex@@if(active =='account-profile'){ active}">
+              <i class="material-icons mr-3">person</i> Profile
+            </a>
+            <a href="account-orders.html" class="list-group-item list-group-item-action d-flex@@if(active =='account-orders'){ active}">
+              <i class="material-icons mr-3">shopping_cart</i> Orders
+            </a>
+            <a href="account-wishlist.html" class="list-group-item list-group-item-action d-flex align-items-center@@if(active =='account-wishlist'){ active}">
+              <i class="material-icons mr-3">favorite_border</i> Wishlist
+              @@if(active =='account-wishlist'){<span class="badge badge-light badge-pill ml-auto">3</span>}
+              @@if(active !='account-wishlist'){<span class="badge badge-primary badge-pill ml-auto">3</span>}
+            </a>
+            <a href="account-address.html" class="list-group-item list-group-item-action d-flex@@if(active =='account-address'){ active}">
+              <i class="material-icons mr-3">location_on</i> Address
+            </a>
+            <a href="account-signin.html" class="list-group-item list-group-item-action text-danger d-flex">
+              <i class="material-icons mr-3">exit_to_app</i> Sign Out
+            </a>
+          </div>
+        </div>

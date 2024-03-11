@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CharoenTechModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="BANNER">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IMAGE" Type="nvarchar(max)" />
+    <Property Name="STATUS" Type="int" />
+  </EntityType>
+  <EntityType Name="BLOG">
+    <Key>
+      <PropertyRef Name="BLOG_ID" />
+    </Key>
+    <Property Name="BLOG_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NAME" Type="nvarchar(max)" />
+    <Property Name="TOPIC" Type="nvarchar(max)" />
+    <Property Name="DESCRIPTION" Type="nvarchar(max)" />
+    <Property Name="IMAGE" Type="nvarchar(max)" />
+    <Property Name="STATUS" Type="int" />
+    <Property Name="CREATED_DT" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CUSTOMER">
+    <Key>
+      <PropertyRef Name="CUST_ID" />
+    </Key>
+    <Property Name="CUST_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NAME" Type="nvarchar(max)" />
+    <Property Name="TOPIC" Type="nvarchar(max)" />
+    <Property Name="DESCRIPTION" Type="nvarchar(max)" />
+    <Property Name="IMAGE" Type="nvarchar(max)" />
+    <Property Name="STATUS" Type="int" />
+    <Property Name="CREATED_DT" Type="datetime" />
+  </EntityType>
+  <EntityType Name="DOWNLOAD">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NAME" Type="nvarchar(max)" />
+    <Property Name="PATH" Type="nvarchar(max)" />
+    <Property Name="STATUS" Type="int" />
+  </EntityType>
+  <EntityType Name="ITEM">
+    <Key>
+      <PropertyRef Name="ITEM_ID" />
+    </Key>
+    <Property Name="ITEM_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ITEM_CATE_ID" Type="int" />
+    <Property Name="NAME" Type="nvarchar(max)" />
+    <Property Name="DESCRIPTION" Type="nvarchar(max)" />
+    <Property Name="DOWNLOAD_TAB" Type="nvarchar(max)" />
+    <Property Name="PRICE" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="DISCOUNT" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="FLAG" Type="int" />
+    <Property Name="BEST_SALLER" Type="int" />
+    <Property Name="NEW" Type="int" />
+    <Property Name="INDEX_HOME_PG" Type="int" />
+    <Property Name="ORDER_LIST" Type="int" />
+    <Property Name="IMAGE" Type="nvarchar(max)" />
+    <Property Name="BOSURE" Type="nvarchar(max)" />
+    <Property Name="PO" Type="nvarchar(max)" />
+    <Property Name="STATUS" Type="int" />
+    <Property Name="CREATED_DT" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ITEM_CATE">
+    <Key>
+      <PropertyRef Name="ITEM_CATE_ID" />
+    </Key>
+    <Property Name="ITEM_CATE_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NAME" Type="nvarchar(max)" />
+    <Property Name="DESCRIPTION" Type="nvarchar(max)" />
+    <Property Name="FLAG_HOME_PG" Type="int" />
+    <Property Name="IMAGE" Type="nvarchar(max)" />
+    <Property Name="STATUS" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SERVICE_CATE">
+    <Key>
+      <PropertyRef Name="SERVICE_CATE_ID" />
+    </Key>
+    <Property Name="SERVICE_CATE_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NAME" Type="nvarchar(max)" />
+    <Property Name="TOPIC" Type="nvarchar(max)" />
+    <Property Name="DESCRIPTION" Type="nvarchar(max)" />
+    <Property Name="IMAGE" Type="nvarchar(max)" />
+    <Property Name="ICON" Type="nvarchar(max)" />
+    <Property Name="ORDER_LIST" Type="int" />
+    <Property Name="STATUS" Type="int" Nullable="false" />
+    <Property Name="CREATED_DT" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TEXT">
+    <Key>
+      <PropertyRef Name="TEXT_ID" />
+    </Key>
+    <Property Name="TEXT_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TASK" Type="nvarchar(max)" />
+    <Property Name="ICON" Type="nvarchar(max)" />
+    <Property Name="NAME" Type="nvarchar(max)" />
+    <Property Name="TOPIC" Type="nvarchar(max)" />
+    <Property Name="DESCRIPTION" Type="nvarchar(max)" />
+    <Property Name="IMAGE" Type="nvarchar(max)" />
+    <Property Name="STATUS" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TICKET">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NUMBER" Type="int" />
+  </EntityType>
+  <EntityType Name="USERS">
+    <Key>
+      <PropertyRef Name="USER_ID" />
+    </Key>
+    <Property Name="USER_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="USERNAME" Type="nvarchar" MaxLength="50" />
+    <Property Name="PASSWORD" Type="nvarchar" MaxLength="50" />
+    <Property Name="ACTIVE" Type="nchar" MaxLength="1" />
+  </EntityType>
+  <EntityContainer Name="CharoenTechModelStoreContainer">
+    <EntitySet Name="BANNER" EntityType="Self.BANNER" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="BLOG" EntityType="Self.BLOG" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CUSTOMER" EntityType="Self.CUSTOMER" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DOWNLOAD" EntityType="Self.DOWNLOAD" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ITEM" EntityType="Self.ITEM" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ITEM_CATE" EntityType="Self.ITEM_CATE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SERVICE_CATE" EntityType="Self.SERVICE_CATE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TEXT" EntityType="Self.TEXT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TICKET" EntityType="Self.TICKET" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="USERS" EntityType="Self.USERS" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

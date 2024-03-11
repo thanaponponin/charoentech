@@ -1,0 +1,560 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PagedList.Mvc.4.5.0.0.Fakes</name>
+    </assembly>
+    <members>
+        <member name="T:PagedList.Mvc.Fakes.ShimGoToFormRenderOptions">
+            <summary>Shim type of PagedList.Mvc.GoToFormRenderOptions</summary>
+        </member>
+        <member name="M:PagedList.Mvc.Fakes.ShimGoToFormRenderOptions.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:PagedList.Mvc.Fakes.ShimGoToFormRenderOptions.#ctor(PagedList.Mvc.GoToFormRenderOptions)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="M:PagedList.Mvc.Fakes.ShimGoToFormRenderOptions.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:PagedList.Mvc.Fakes.ShimGoToFormRenderOptions.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:PagedList.Mvc.Fakes.ShimGoToFormRenderOptions.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:PagedList.Mvc.Fakes.ShimGoToFormRenderOptions.Constructor">
+            <summary>Sets the shim of GoToFormRenderOptions.GoToFormRenderOptions()</summary>
+        </member>
+        <member name="P:PagedList.Mvc.Fakes.ShimGoToFormRenderOptions.ConstructorString">
+            <summary>Sets the shim of GoToFormRenderOptions.GoToFormRenderOptions(String inputFieldName)</summary>
+        </member>
+        <member name="P:PagedList.Mvc.Fakes.ShimGoToFormRenderOptions.InputFieldNameGet">
+            <summary>Sets the shim of GoToFormRenderOptions.get_InputFieldName()</summary>
+        </member>
+        <member name="P:PagedList.Mvc.Fakes.ShimGoToFormRenderOptions.InputFieldNameSetString">
+            <summary>Sets the shim of GoToFormRenderOptions.set_InputFieldName(String value)</summary>
+        </member>
+        <member name="P:PagedList.Mvc.Fakes.ShimGoToFormRenderOptions.InputFieldTypeGet">
+            <summary>Sets the shim of GoToFormRenderOptions.get_InputFieldType()</summary>
+        </member>
+        <member name="P:PagedList.Mvc.Fakes.ShimGoToFormRenderOptions.InputFieldTypeSetString">
+            <summary>Sets the shim of GoToFormRenderOptions.set_InputFieldType(String value)</summary>
+        </member>
+        <member name="P:PagedList.Mvc.Fakes.ShimGoToFormRenderOptions.LabelFormatGet">
+            <summary>Sets the shim of GoToFormRenderOptions.get_LabelFormat()</summary>
+        </member>
+        <member name="P:PagedList.Mvc.Fakes.ShimGoToFormRenderOptions.LabelFormatSetString">
+            <summary>Sets the shim of GoToFormRenderOptions.set_LabelFormat(String value)</summary>
+        </member>
+        <member name="P:PagedList.Mvc.Fakes.ShimGoToFormRenderOptions.SubmitButtonFormatGet">
+            <summary>Sets the shim of GoToFormRenderOptions.get_SubmitButtonFormat()</summary>
+        </member>
+        <member name="P:PagedList.Mvc.Fakes.ShimGoToFormRenderOptions.SubmitButtonFormatSetString">
+            <summary>Sets the shim of GoToFormRenderOptions.set_SubmitButtonFormat(String value)</summary>
+        </member>
+        <member name="T:PagedList.Mvc.Fakes.ShimGoToFormRenderOptions.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:PagedList.Mvc.Fakes.ShimGoToFormRenderOptions.AllInstances.InputFieldNameGet">
+            <summary>Sets the shim of GoToFormRenderOptions.get_InputFieldName()</summary>
+        </member>
+        <member name="P:PagedList.Mvc.Fakes.ShimGoToFormRenderOptions.AllInstances.InputFieldNameSetString">
+            <summary>Sets the shim of GoToFormRenderOptions.set_InputFieldName(String value)</summary>
+        </member>
+        <member name="P:PagedList.Mvc.Fakes.ShimGoToFormRenderOptions.AllInstances.InputFieldTypeGet">
+            <summary>Sets the shim of GoToFormRenderOptions.get_InputFieldType()</summary>
+        </member>
+        <member name="P:PagedList.Mvc.Fakes.ShimGoToFormRenderOptions.AllInstances.InputFieldTypeSetString">
+            <summary>Sets the shim of GoToFormRenderOptions.set_InputFieldType(String value)</summary>
+        </member>
+        <member name="P:PagedList.Mvc.Fakes.ShimGoToFormRenderOptions.AllInstances.LabelFormatGet">
+            <summary>Sets the shim of GoToFormRenderOptions.get_LabelFormat()</summary>
+        </member>
+        <member name="P:PagedList.Mvc.Fakes.ShimGoToFormRenderOptions.AllInstances.LabelFormatSetString">
+            <summary>Sets the shim of GoToFormRenderOptions.set_LabelFormat(String value)</summary>
+        </member>
+        <member name="P:PagedList.Mvc.Fakes.ShimGoToFormRenderOptions.AllInstances.SubmitButtonFormatGet">
+            <summary>Sets the shim of GoToFormRenderOptions.get_SubmitButtonFormat()</summary>
+        </member>
+        <member name="P:PagedList.Mvc.Fakes.ShimGoToFormRenderOptions.AllInstances.SubmitButtonFormatSetString">
+            <summary>Sets the shim of GoToFormRenderOptions.set_SubmitButtonFormat(String value)</summary>
+        </member>
+        <member name="T:PagedList.Mvc.Fakes.ShimHtmlHelper">
+            <summary>Shim type of PagedList.Mvc.HtmlHelper</summary>
+        </member>
+        <member name="M:PagedList.Mvc.Fakes.ShimHtmlHelper.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:PagedList.Mvc.Fakes.ShimHtmlHelper.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:PagedList.Mvc.Fakes.ShimHtmlHelper.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:PagedList.Mvc.Fakes.ShimHtmlHelper.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:PagedList.Mvc.Fakes.ShimHtmlHelper.EllipsesPagedListRenderOptions">
+            <summary>Sets the shim of HtmlHelper.Ellipses(PagedListRenderOptions options)</summary>
+        </member>
+        <member name="P:PagedList.Mvc.Fakes.ShimHtmlHelper.FirstIPagedListFuncOfInt32StringPagedListRenderOptions">
+            <summary>Sets the shim of HtmlHelper.First(IPagedList list, Func`2&lt;Int32,String&gt; generatePageUrl, PagedListRenderOptions options)</summary>
+        </member>
+        <member name="P:PagedList.Mvc.Fakes.ShimHtmlHelper.ItemSliceAndTotalTextIPagedListPagedListRenderOptions">
+            <summary>Sets the shim of HtmlHelper.ItemSliceAndTotalText(IPagedList list, PagedListRenderOptions options)</summary>
+        </member>
+        <member name="P:PagedList.Mvc.Fakes.ShimHtmlHelper.LastIPagedListFuncOfInt32StringPagedListRenderOptions">
+            <summary>Sets the shim of HtmlHelper.Last(IPagedList list, Func`2&lt;Int32,String&gt; generatePageUrl, PagedListRenderOptions options)</summary>
+        </member>
+        <member name="P:PagedList.Mvc.Fakes.ShimHtmlHelper.NextIPagedListFuncOfInt32StringPagedListRenderOptions">
+            <summary>Sets the shim of HtmlHelper.Next(IPagedList list, Func`2&lt;Int32,String&gt; generatePageUrl, PagedListRenderOptions options)</summary>
+        </member>
+        <member name="P:PagedList.Mvc.Fakes.ShimHtmlHelper.PageCountAndLocationTextIPagedListPagedListRenderOptions">
+            <summary>Sets the shim of HtmlHelper.PageCountAndLocationText(IPagedList list, PagedListRenderOptions options)</summary>
+        </member>
+        <member name="P:PagedList.Mvc.Fakes.ShimHtmlHelper.PageInt32IPagedListFuncOfInt32StringPagedListRenderOptions">
+            <summary>Sets the shim of HtmlHelper.Page(Int32 i, IPagedList list, Func`2&lt;Int32,String&gt; generatePageUrl, PagedListRenderOptions options)</summary>
+        </member>
+        <member name="P:PagedList.Mvc.Fakes.ShimHtmlHelper.PagedListGoToPageFormHtmlHelperIPagedListString">
+            <summary>Sets the shim of HtmlHelper.PagedListGoToPageForm(HtmlHelper html, IPagedList list, String formAction)</summary>
+        </member>
+        <member name="P:PagedList.Mvc.Fakes.ShimHtmlHelper.PagedListGoToPageFormHtmlHelperIPagedListStringGoToFormRenderOptions">
+            <summary>Sets the shim of HtmlHelper.PagedListGoToPageForm(HtmlHelper html, IPagedList list, String formAction, GoToFormRenderOptions options)</summary>
+        </member>
+        <member name="P:PagedList.Mvc.Fakes.ShimHtmlHelper.PagedListGoToPageFormHtmlHelperIPagedListStringString">
+            <summary>Sets the shim of HtmlHelper.PagedListGoToPageForm(HtmlHelper html, IPagedList list, String formAction, String inputFieldName)</summary>
+        </member>
+        <member name="P:PagedList.Mvc.Fakes.ShimHtmlHelper.PagedListPagerHtmlHelperIPagedListFuncOfInt32String">
+            <summary>Sets the shim of HtmlHelper.PagedListPager(HtmlHelper html, IPagedList list, Func`2&lt;Int32,String&gt; generatePageUrl)</summary>
+        </member>
+        <member name="P:PagedList.Mvc.Fakes.ShimHtmlHelper.PagedListPagerHtmlHelperIPagedListFuncOfInt32StringPagedListRenderOptions">
+            <summary>Sets the shim of HtmlHelper.PagedListPager(HtmlHelper html, IPagedList list, Func`2&lt;Int32,String&gt; generatePageUrl, PagedListRenderOptions options)</summary>
+        </member>
+        <member name="P:PagedList.Mvc.Fakes.ShimHtmlHelper.PreviousIPagedListFuncOfInt32StringPagedListRenderOptions">
+            <summary>Sets the shim of HtmlHelper.Previous(IPagedList list, Func`2&lt;Int32,String&gt; generatePageUrl, PagedListRenderOptions options)</summary>
+        </member>
+        <member name="P:PagedList.Mvc.Fakes.ShimHtmlHelper.WrapInListItemString">
+            <summary>Sets the shim of HtmlHelper.WrapInListItem(String text)</summary>
+        </member>
+        <member name="P:PagedList.Mvc.Fakes.ShimHtmlHelper.WrapInListItemTagBuilderPagedListRenderOptionsStringArray">
+            <summary>Sets the shim of HtmlHelper.WrapInListItem(TagBuilder inner, PagedListRenderOptions options, String[] classes)</summary>
+        </member>
+        <member name="P:PagedList.Mvc.Fakes.ShimHtmlHelper._PagedListPagerb__9StringBuilderTagBuilder">
+            <summary>Sets the shim of HtmlHelper.&lt;PagedListPager&gt;b__9(StringBuilder sb, TagBuilder listItem)</summary>
+        </member>
+        <member name="P:PagedList.Mvc.Fakes.ShimHtmlHelper._PagedListPagerb__aStringBuilder">
+            <summary>Sets the shim of HtmlHelper.&lt;PagedListPager&gt;b__a(StringBuilder sb)</summary>
+        </member>
+        <member name="T:PagedList.Mvc.Fakes.ShimPagedListRenderOptions">
+            <summary>Shim type of PagedList.Mvc.PagedListRenderOptions</summary>
+        </member>
+        <member name="M:PagedList.Mvc.Fakes.ShimPagedListRenderOptions.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:PagedList.Mvc.Fakes.ShimPagedListRenderOptions.#ctor(PagedList.Mvc.PagedListRenderOptions)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="M:PagedList.Mvc.Fakes.ShimPagedListRenderOptions.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:PagedList.Mvc.Fakes.ShimPagedListRenderOptions.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:PagedList.Mvc.Fakes.ShimPagedListRenderOptions.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:PagedList.Mvc.Fakes.ShimPagedListRenderOptions.ClassToApplyToFirstListItemInPagerGet">
+            <summary>Sets the shim of PagedListRenderOptions.get_ClassToApplyToFirstListItemInPager()</summary>
+        </member>
+        <member name="P:PagedList.Mvc.Fakes.ShimPagedListRenderOptions.ClassToApplyToFirstListItemInPagerSetString">
+            <summary>Sets the shim of PagedListRenderOptions.set_ClassToApplyToFirstListItemInPager(String value)</summary>
+        </member>
+        <member name="P:PagedList.Mvc.Fakes.ShimPagedListRenderOptions.ClassToApplyToLastListItemInPagerGet">
+            <summary>Sets the shim of PagedListRenderOptions.get_ClassToApplyToLastListItemInPager()</summary>
+        </member>
+        <member name="P:PagedList.Mvc.Fakes.ShimPagedListRenderOptions.ClassToApplyToLastListItemInPagerSetString">
+            <summary>Sets the shim of PagedListRenderOptions.set_ClassToApplyToLastListItemInPager(String value)</summary>
+        </member>
+        <member name="P:PagedList.Mvc.Fakes.ShimPagedListRenderOptions.ClassicGet">
+            <summary>Sets the shim of PagedListRenderOptions.get_Classic()</summary>
+        </member>
+        <member name="P:PagedList.Mvc.Fakes.ShimPagedListRenderOptions.ClassicPlusFirstAndLastGet">
+            <summary>Sets the shim of PagedListRenderOptions.get_ClassicPlusFirstAndLast()</summary>
+        </member>
+        <member name="P:PagedList.Mvc.Fakes.ShimPagedListRenderOptions.Constructor">
+            <summary>Sets the shim of PagedListRenderOptions.PagedListRenderOptions()</summary>
+        </member>
+        <member name="P:PagedList.Mvc.Fakes.ShimPagedListRenderOptions.ContainerDivClassesGet">
+            <summary>Sets the shim of PagedListRenderOptions.get_ContainerDivClasses()</summary>
+        </member>
+        <member name="P:PagedList.Mvc.Fakes.ShimPagedListRenderOptions.ContainerDivClassesSetIEnumerableOfString">
+            <summary>Sets the shim of PagedListRenderOptions.set_ContainerDivClasses(IEnumerable`1&lt;String&gt; value)</summary>
+        </member>
+        <member name="P:PagedList.Mvc.Fakes.ShimPagedListRenderOptions.DelimiterBetweenPageNumbersGet">
+            <summary>Sets the shim of PagedListRenderOptions.get_DelimiterBetweenPageNumbers()</summary>
+        </member>
+        <member name="P:PagedList.Mvc.Fakes.ShimPagedListRenderOptions.DelimiterBetweenPageNumbersSetString">
+            <summary>Sets the shim of PagedListRenderOptions.set_DelimiterBetweenPageNumbers(String value)</summary>
+        </member>
+        <member name="P:PagedList.Mvc.Fakes.ShimPagedListRenderOptions.DisplayEllipsesWhenNotShowingAllPageNumbersGet">
+            <summary>Sets the shim of PagedListRenderOptions.get_DisplayEllipsesWhenNotShowingAllPageNumbers()</summary>
+        </member>
+        <member name="P:PagedList.Mvc.Fakes.ShimPagedListRenderOptions.DisplayEllipsesWhenNotShowingAllPageNumbersSetBoolean">
+            <summary>Sets the shim of PagedListRenderOptions.set_DisplayEllipsesWhenNotShowingAllPageNumbers(Boolean value)</summary>
+        </member>
+        <member name="P:PagedList.Mvc.Fakes.ShimPagedListRenderOptions.DisplayGet">
+            <summary>Sets the shim of PagedListRenderOptions.get_Display()</summary>
+        </member>
+        <member name="P:PagedList.Mvc.Fakes.ShimPagedListRenderOptions.DisplayItemSliceAndTotalGet">
+            <summary>Sets the shim of PagedListRenderOptions.get_DisplayItemSliceAndTotal()</summary>
+        </member>
+        <member name="P:PagedList.Mvc.Fakes.ShimPagedListRenderOptions.DisplayItemSliceAndTotalSetBoolean">
+            <summary>Sets the shim of PagedListRenderOptions.set_DisplayItemSliceAndTotal(Boolean value)</summary>
+        </member>
+        <member name="P:PagedList.Mvc.Fakes.ShimPagedListRenderOptions.DisplayLinkToFirstPageGet">
+            <summary>Sets the shim of PagedListRenderOptions.get_DisplayLinkToFirstPage()</summary>
+        </member>
+        <member name="P:PagedList.Mvc.Fakes.ShimPagedListRenderOptions.DisplayLinkToFirstPageSetPagedListDisplayMode">
+            <summary>Sets the shim of PagedListRenderOptions.set_DisplayLinkToFirstPage(PagedListDisplayMode value)</summary>
+        </member>
+        <member name="P:PagedList.Mvc.Fakes.ShimPagedListRenderOptions.DisplayLinkToIndividualPagesGet">
+            <summary>Sets the shim of PagedListRenderOptions.get_DisplayLinkToIndividualPages()</summary>
+        </member>
+        <member name="P:PagedList.Mvc.Fakes.ShimPagedListRenderOptions.DisplayLinkToIndividualPagesSetBoolean">
+            <summary>Sets the shim of PagedListRenderOptions.set_DisplayLinkToIndividualPages(Boolean value)</summary>
+        </member>
+        <member name="P:PagedList.Mvc.Fakes.ShimPagedListRenderOptions.DisplayLinkToLastPageGet">
+            <summary>Sets the shim of PagedListRenderOptions.get_DisplayLinkToLastPage()</summary>
+        </member>
+        <member name="P:PagedList.Mvc.Fakes.ShimPagedListRenderOptions.DisplayLinkToLastPageSetPagedListDisplayMode">
+            <summary>Sets the shim of PagedListRenderOptions.set_DisplayLinkToLastPage(PagedListDisplayMode value)</summary>
+        </member>
+        <member name="P:PagedList.Mvc.Fakes.ShimPagedListRenderOptions.DisplayLinkToNextPageGet">
+            <summary>Sets the shim of PagedListRenderOptions.get_DisplayLinkToNextPage()</summary>
+        </member>
+        <member name="P:PagedList.Mvc.Fakes.ShimPagedListRenderOptions.DisplayLinkToNextPageSetPagedListDisplayMode">
+            <summary>Sets the shim of PagedListRenderOptions.set_DisplayLinkToNextPage(PagedListDisplayMode value)</summary>
+        </member>
+        <member name="P:PagedList.Mvc.Fakes.ShimPagedListRenderOptions.DisplayLinkToPreviousPageGet">
+            <summary>Sets the shim of PagedListRenderOptions.get_DisplayLinkToPreviousPage()</summary>
+        </member>
+        <member name="P:PagedList.Mvc.Fakes.ShimPagedListRenderOptions.DisplayLinkToPreviousPageSetPagedListDisplayMode">
+            <summary>Sets the shim of PagedListRenderOptions.set_DisplayLinkToPreviousPage(PagedListDisplayMode value)</summary>
+        </member>
+        <member name="P:PagedList.Mvc.Fakes.ShimPagedListRenderOptions.DisplayPageCountAndCurrentLocationGet">
+            <summary>Sets the shim of PagedListRenderOptions.get_DisplayPageCountAndCurrentLocation()</summary>
+        </member>
+        <member name="P:PagedList.Mvc.Fakes.ShimPagedListRenderOptions.DisplayPageCountAndCurrentLocationSetBoolean">
+            <summary>Sets the shim of PagedListRenderOptions.set_DisplayPageCountAndCurrentLocation(Boolean value)</summary>
+        </member>
+        <member name="P:PagedList.Mvc.Fakes.ShimPagedListRenderOptions.DisplaySetPagedListDisplayMode">
+            <summary>Sets the shim of PagedListRenderOptions.set_Display(PagedListDisplayMode value)</summary>
+        </member>
+        <member name="P:PagedList.Mvc.Fakes.ShimPagedListRenderOptions.EllipsesFormatGet">
+            <summary>Sets the shim of PagedListRenderOptions.get_EllipsesFormat()</summary>
+        </member>
+        <member name="P:PagedList.Mvc.Fakes.ShimPagedListRenderOptions.EllipsesFormatSetString">
+            <summary>Sets the shim of PagedListRenderOptions.set_EllipsesFormat(String value)</summary>
+        </member>
+        <member name="P:PagedList.Mvc.Fakes.ShimPagedListRenderOptions.EnableUnobtrusiveAjaxReplacingAjaxOptions">
+            <summary>Sets the shim of PagedListRenderOptions.EnableUnobtrusiveAjaxReplacing(AjaxOptions ajaxOptions)</summary>
+        </member>
+        <member name="P:PagedList.Mvc.Fakes.ShimPagedListRenderOptions.EnableUnobtrusiveAjaxReplacingPagedListRenderOptionsAjaxOptions">
+            <summary>Sets the shim of PagedListRenderOptions.EnableUnobtrusiveAjaxReplacing(PagedListRenderOptions options, AjaxOptions ajaxOptions)</summary>
+        </member>
+        <member name="P:PagedList.Mvc.Fakes.ShimPagedListRenderOptions.EnableUnobtrusiveAjaxReplacingString">
+            <summary>Sets the shim of PagedListRenderOptions.EnableUnobtrusiveAjaxReplacing(String id)</summary>
+        </member>
+        <member name="P:PagedList.Mvc.Fakes.ShimPagedListRenderOptions.FunctionToDisplayEachPageNumberGet">
+            <summary>Sets the shim of PagedListRenderOptions.get_FunctionToDisplayEachPageNumber()</summary>
+        </member>
+        <member name="P:PagedList.Mvc.Fakes.ShimPagedListRenderOptions.FunctionToDisplayEachPageNumberSetFuncOfInt32String">
+            <summary>Sets the shim of PagedListRenderOptions.set_FunctionToDisplayEachPageNumber(Func`2&lt;Int32,String&gt; value)</summary>
+        </member>
+        <member name="P:PagedList.Mvc.Fakes.ShimPagedListRenderOptions.FunctionToTransformEachPageLinkGet">
+            <summary>Sets the shim of PagedListRenderOptions.get_FunctionToTransformEachPageLink()</summary>
+        </member>
+        <member name="P:PagedList.Mvc.Fakes.ShimPagedListRenderOptions.FunctionToTransformEachPageLinkSetFuncOfTagBuilderTagBuilderTagBuilder">
+            <summary>Sets the shim of PagedListRenderOptions.set_FunctionToTransformEachPageLink(Func`3&lt;TagBuilder,TagBuilder,TagBuilder&gt; value)</summary>
+        </member>
+        <member name="P:PagedList.Mvc.Fakes.ShimPagedListRenderOptions.ItemSliceAndTotalFormatGet">
+            <summary>Sets the shim of PagedListRenderOptions.get_ItemSliceAndTotalFormat()</summary>
+        </member>
+        <member name="P:PagedList.Mvc.Fakes.ShimPagedListRenderOptions.ItemSliceAndTotalFormatSetString">
+            <summary>Sets the shim of PagedListRenderOptions.set_ItemSliceAndTotalFormat(String value)</summary>
+        </member>
+        <member name="P:PagedList.Mvc.Fakes.ShimPagedListRenderOptions.LiElementClassesGet">
+            <summary>Sets the shim of PagedListRenderOptions.get_LiElementClasses()</summary>
+        </member>
+        <member name="P:PagedList.Mvc.Fakes.ShimPagedListRenderOptions.LiElementClassesSetIEnumerableOfString">
+            <summary>Sets the shim of PagedListRenderOptions.set_LiElementClasses(IEnumerable`1&lt;String&gt; value)</summary>
+        </member>
+        <member name="P:PagedList.Mvc.Fakes.ShimPagedListRenderOptions.LinkToFirstPageFormatGet">
+            <summary>Sets the shim of PagedListRenderOptions.get_LinkToFirstPageFormat()</summary>
+        </member>
+        <member name="P:PagedList.Mvc.Fakes.ShimPagedListRenderOptions.LinkToFirstPageFormatSetString">
+            <summary>Sets the shim of PagedListRenderOptions.set_LinkToFirstPageFormat(String value)</summary>
+        </member>
+        <member name="P:PagedList.Mvc.Fakes.ShimPagedListRenderOptions.LinkToIndividualPageFormatGet">
+            <summary>Sets the shim of PagedListRenderOptions.get_LinkToIndividualPageFormat()</summary>
+        </member>
+        <member name="P:PagedList.Mvc.Fakes.ShimPagedListRenderOptions.LinkToIndividualPageFormatSetString">
+            <summary>Sets the shim of PagedListRenderOptions.set_LinkToIndividualPageFormat(String value)</summary>
+        </member>
+        <member name="P:PagedList.Mvc.Fakes.ShimPagedListRenderOptions.LinkToLastPageFormatGet">
+            <summary>Sets the shim of PagedListRenderOptions.get_LinkToLastPageFormat()</summary>
+        </member>
+        <member name="P:PagedList.Mvc.Fakes.ShimPagedListRenderOptions.LinkToLastPageFormatSetString">
+            <summary>Sets the shim of PagedListRenderOptions.set_LinkToLastPageFormat(String value)</summary>
+        </member>
+        <member name="P:PagedList.Mvc.Fakes.ShimPagedListRenderOptions.LinkToNextPageFormatGet">
+            <summary>Sets the shim of PagedListRenderOptions.get_LinkToNextPageFormat()</summary>
+        </member>
+        <member name="P:PagedList.Mvc.Fakes.ShimPagedListRenderOptions.LinkToNextPageFormatSetString">
+            <summary>Sets the shim of PagedListRenderOptions.set_LinkToNextPageFormat(String value)</summary>
+        </member>
+        <member name="P:PagedList.Mvc.Fakes.ShimPagedListRenderOptions.LinkToPreviousPageFormatGet">
+            <summary>Sets the shim of PagedListRenderOptions.get_LinkToPreviousPageFormat()</summary>
+        </member>
+        <member name="P:PagedList.Mvc.Fakes.ShimPagedListRenderOptions.LinkToPreviousPageFormatSetString">
+            <summary>Sets the shim of PagedListRenderOptions.set_LinkToPreviousPageFormat(String value)</summary>
+        </member>
+        <member name="P:PagedList.Mvc.Fakes.ShimPagedListRenderOptions.MaximumPageNumbersToDisplayGet">
+            <summary>Sets the shim of PagedListRenderOptions.get_MaximumPageNumbersToDisplay()</summary>
+        </member>
+        <member name="P:PagedList.Mvc.Fakes.ShimPagedListRenderOptions.MaximumPageNumbersToDisplaySetNullableOfInt32">
+            <summary>Sets the shim of PagedListRenderOptions.set_MaximumPageNumbersToDisplay(Nullable`1&lt;Int32&gt; value)</summary>
+        </member>
+        <member name="P:PagedList.Mvc.Fakes.ShimPagedListRenderOptions.MinimalGet">
+            <summary>Sets the shim of PagedListRenderOptions.get_Minimal()</summary>
+        </member>
+        <member name="P:PagedList.Mvc.Fakes.ShimPagedListRenderOptions.MinimalWithItemCountTextGet">
+            <summary>Sets the shim of PagedListRenderOptions.get_MinimalWithItemCountText()</summary>
+        </member>
+        <member name="P:PagedList.Mvc.Fakes.ShimPagedListRenderOptions.MinimalWithPageCountTextGet">
+            <summary>Sets the shim of PagedListRenderOptions.get_MinimalWithPageCountText()</summary>
+        </member>
+        <member name="P:PagedList.Mvc.Fakes.ShimPagedListRenderOptions.OnlyShowFivePagesAtATimeGet">
+            <summary>Sets the shim of PagedListRenderOptions.get_OnlyShowFivePagesAtATime()</summary>
+        </member>
+        <member name="P:PagedList.Mvc.Fakes.ShimPagedListRenderOptions.PageCountAndCurrentLocationFormatGet">
+            <summary>Sets the shim of PagedListRenderOptions.get_PageCountAndCurrentLocationFormat()</summary>
+        </member>
+        <member name="P:PagedList.Mvc.Fakes.ShimPagedListRenderOptions.PageCountAndCurrentLocationFormatSetString">
+            <summary>Sets the shim of PagedListRenderOptions.set_PageCountAndCurrentLocationFormat(String value)</summary>
+        </member>
+        <member name="P:PagedList.Mvc.Fakes.ShimPagedListRenderOptions.PageNumbersOnlyGet">
+            <summary>Sets the shim of PagedListRenderOptions.get_PageNumbersOnly()</summary>
+        </member>
+        <member name="P:PagedList.Mvc.Fakes.ShimPagedListRenderOptions.TwitterBootstrapPagerAlignedGet">
+            <summary>Sets the shim of PagedListRenderOptions.get_TwitterBootstrapPagerAligned()</summary>
+        </member>
+        <member name="P:PagedList.Mvc.Fakes.ShimPagedListRenderOptions.TwitterBootstrapPagerGet">
+            <summary>Sets the shim of PagedListRenderOptions.get_TwitterBootstrapPager()</summary>
+        </member>
+        <member name="P:PagedList.Mvc.Fakes.ShimPagedListRenderOptions.UlElementClassesGet">
+            <summary>Sets the shim of PagedListRenderOptions.get_UlElementClasses()</summary>
+        </member>
+        <member name="P:PagedList.Mvc.Fakes.ShimPagedListRenderOptions.UlElementClassesSetIEnumerableOfString">
+            <summary>Sets the shim of PagedListRenderOptions.set_UlElementClasses(IEnumerable`1&lt;String&gt; value)</summary>
+        </member>
+        <member name="T:PagedList.Mvc.Fakes.ShimPagedListRenderOptions.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:PagedList.Mvc.Fakes.ShimPagedListRenderOptions.AllInstances.ClassToApplyToFirstListItemInPagerGet">
+            <summary>Sets the shim of PagedListRenderOptions.get_ClassToApplyToFirstListItemInPager()</summary>
+        </member>
+        <member name="P:PagedList.Mvc.Fakes.ShimPagedListRenderOptions.AllInstances.ClassToApplyToFirstListItemInPagerSetString">
+            <summary>Sets the shim of PagedListRenderOptions.set_ClassToApplyToFirstListItemInPager(String value)</summary>
+        </member>
+        <member name="P:PagedList.Mvc.Fakes.ShimPagedListRenderOptions.AllInstances.ClassToApplyToLastListItemInPagerGet">
+            <summary>Sets the shim of PagedListRenderOptions.get_ClassToApplyToLastListItemInPager()</summary>
+        </member>
+        <member name="P:PagedList.Mvc.Fakes.ShimPagedListRenderOptions.AllInstances.ClassToApplyToLastListItemInPagerSetString">
+            <summary>Sets the shim of PagedListRenderOptions.set_ClassToApplyToLastListItemInPager(String value)</summary>
+        </member>
+        <member name="P:PagedList.Mvc.Fakes.ShimPagedListRenderOptions.AllInstances.ContainerDivClassesGet">
+            <summary>Sets the shim of PagedListRenderOptions.get_ContainerDivClasses()</summary>
+        </member>
+        <member name="P:PagedList.Mvc.Fakes.ShimPagedListRenderOptions.AllInstances.ContainerDivClassesSetIEnumerableOfString">
+            <summary>Sets the shim of PagedListRenderOptions.set_ContainerDivClasses(IEnumerable`1&lt;String&gt; value)</summary>
+        </member>
+        <member name="P:PagedList.Mvc.Fakes.ShimPagedListRenderOptions.AllInstances.DelimiterBetweenPageNumbersGet">
+            <summary>Sets the shim of PagedListRenderOptions.get_DelimiterBetweenPageNumbers()</summary>
+        </member>
+        <member name="P:PagedList.Mvc.Fakes.ShimPagedListRenderOptions.AllInstances.DelimiterBetweenPageNumbersSetString">
+            <summary>Sets the shim of PagedListRenderOptions.set_DelimiterBetweenPageNumbers(String value)</summary>
+        </member>
+        <member name="P:PagedList.Mvc.Fakes.ShimPagedListRenderOptions.AllInstances.DisplayEllipsesWhenNotShowingAllPageNumbersGet">
+            <summary>Sets the shim of PagedListRenderOptions.get_DisplayEllipsesWhenNotShowingAllPageNumbers()</summary>
+        </member>
+        <member name="P:PagedList.Mvc.Fakes.ShimPagedListRenderOptions.AllInstances.DisplayEllipsesWhenNotShowingAllPageNumbersSetBoolean">
+            <summary>Sets the shim of PagedListRenderOptions.set_DisplayEllipsesWhenNotShowingAllPageNumbers(Boolean value)</summary>
+        </member>
+        <member name="P:PagedList.Mvc.Fakes.ShimPagedListRenderOptions.AllInstances.DisplayGet">
+            <summary>Sets the shim of PagedListRenderOptions.get_Display()</summary>
+        </member>
+        <member name="P:PagedList.Mvc.Fakes.ShimPagedListRenderOptions.AllInstances.DisplayItemSliceAndTotalGet">
+            <summary>Sets the shim of PagedListRenderOptions.get_DisplayItemSliceAndTotal()</summary>
+        </member>
+        <member name="P:PagedList.Mvc.Fakes.ShimPagedListRenderOptions.AllInstances.DisplayItemSliceAndTotalSetBoolean">
+            <summary>Sets the shim of PagedListRenderOptions.set_DisplayItemSliceAndTotal(Boolean value)</summary>
+        </member>
+        <member name="P:PagedList.Mvc.Fakes.ShimPagedListRenderOptions.AllInstances.DisplayLinkToFirstPageGet">
+            <summary>Sets the shim of PagedListRenderOptions.get_DisplayLinkToFirstPage()</summary>
+        </member>
+        <member name="P:PagedList.Mvc.Fakes.ShimPagedListRenderOptions.AllInstances.DisplayLinkToFirstPageSetPagedListDisplayMode">
+            <summary>Sets the shim of PagedListRenderOptions.set_DisplayLinkToFirstPage(PagedListDisplayMode value)</summary>
+        </member>
+        <member name="P:PagedList.Mvc.Fakes.ShimPagedListRenderOptions.AllInstances.DisplayLinkToIndividualPagesGet">
+            <summary>Sets the shim of PagedListRenderOptions.get_DisplayLinkToIndividualPages()</summary>
+        </member>
+        <member name="P:PagedList.Mvc.Fakes.ShimPagedListRenderOptions.AllInstances.DisplayLinkToIndividualPagesSetBoolean">
+            <summary>Sets the shim of PagedListRenderOptions.set_DisplayLinkToIndividualPages(Boolean value)</summary>
+        </member>
+        <member name="P:PagedList.Mvc.Fakes.ShimPagedListRenderOptions.AllInstances.DisplayLinkToLastPageGet">
+            <summary>Sets the shim of PagedListRenderOptions.get_DisplayLinkToLastPage()</summary>
+        </member>
+        <member name="P:PagedList.Mvc.Fakes.ShimPagedListRenderOptions.AllInstances.DisplayLinkToLastPageSetPagedListDisplayMode">
+            <summary>Sets the shim of PagedListRenderOptions.set_DisplayLinkToLastPage(PagedListDisplayMode value)</summary>
+        </member>
+        <member name="P:PagedList.Mvc.Fakes.ShimPagedListRenderOptions.AllInstances.DisplayLinkToNextPageGet">
+            <summary>Sets the shim of PagedListRenderOptions.get_DisplayLinkToNextPage()</summary>
+        </member>
+        <member name="P:PagedList.Mvc.Fakes.ShimPagedListRenderOptions.AllInstances.DisplayLinkToNextPageSetPagedListDisplayMode">
+            <summary>Sets the shim of PagedListRenderOptions.set_DisplayLinkToNextPage(PagedListDisplayMode value)</summary>
+        </member>
+        <member name="P:PagedList.Mvc.Fakes.ShimPagedListRenderOptions.AllInstances.DisplayLinkToPreviousPageGet">
+            <summary>Sets the shim of PagedListRenderOptions.get_DisplayLinkToPreviousPage()</summary>
+        </member>
+        <member name="P:PagedList.Mvc.Fakes.ShimPagedListRenderOptions.AllInstances.DisplayLinkToPreviousPageSetPagedListDisplayMode">
+            <summary>Sets the shim of PagedListRenderOptions.set_DisplayLinkToPreviousPage(PagedListDisplayMode value)</summary>
+        </member>
+        <member name="P:PagedList.Mvc.Fakes.ShimPagedListRenderOptions.AllInstances.DisplayPageCountAndCurrentLocationGet">
+            <summary>Sets the shim of PagedListRenderOptions.get_DisplayPageCountAndCurrentLocation()</summary>
+        </member>
+        <member name="P:PagedList.Mvc.Fakes.ShimPagedListRenderOptions.AllInstances.DisplayPageCountAndCurrentLocationSetBoolean">
+            <summary>Sets the shim of PagedListRenderOptions.set_DisplayPageCountAndCurrentLocation(Boolean value)</summary>
+        </member>
+        <member name="P:PagedList.Mvc.Fakes.ShimPagedListRenderOptions.AllInstances.DisplaySetPagedListDisplayMode">
+            <summary>Sets the shim of PagedListRenderOptions.set_Display(PagedListDisplayMode value)</summary>
+        </member>
+        <member name="P:PagedList.Mvc.Fakes.ShimPagedListRenderOptions.AllInstances.EllipsesFormatGet">
+            <summary>Sets the shim of PagedListRenderOptions.get_EllipsesFormat()</summary>
+        </member>
+        <member name="P:PagedList.Mvc.Fakes.ShimPagedListRenderOptions.AllInstances.EllipsesFormatSetString">
+            <summary>Sets the shim of PagedListRenderOptions.set_EllipsesFormat(String value)</summary>
+        </member>
+        <member name="P:PagedList.Mvc.Fakes.ShimPagedListRenderOptions.AllInstances.FunctionToDisplayEachPageNumberGet">
+            <summary>Sets the shim of PagedListRenderOptions.get_FunctionToDisplayEachPageNumber()</summary>
+        </member>
+        <member name="P:PagedList.Mvc.Fakes.ShimPagedListRenderOptions.AllInstances.FunctionToDisplayEachPageNumberSetFuncOfInt32String">
+            <summary>Sets the shim of PagedListRenderOptions.set_FunctionToDisplayEachPageNumber(Func`2&lt;Int32,String&gt; value)</summary>
+        </member>
+        <member name="P:PagedList.Mvc.Fakes.ShimPagedListRenderOptions.AllInstances.FunctionToTransformEachPageLinkGet">
+            <summary>Sets the shim of PagedListRenderOptions.get_FunctionToTransformEachPageLink()</summary>
+        </member>
+        <member name="P:PagedList.Mvc.Fakes.ShimPagedListRenderOptions.AllInstances.FunctionToTransformEachPageLinkSetFuncOfTagBuilderTagBuilderTagBuilder">
+            <summary>Sets the shim of PagedListRenderOptions.set_FunctionToTransformEachPageLink(Func`3&lt;TagBuilder,TagBuilder,TagBuilder&gt; value)</summary>
+        </member>
+        <member name="P:PagedList.Mvc.Fakes.ShimPagedListRenderOptions.AllInstances.ItemSliceAndTotalFormatGet">
+            <summary>Sets the shim of PagedListRenderOptions.get_ItemSliceAndTotalFormat()</summary>
+        </member>
+        <member name="P:PagedList.Mvc.Fakes.ShimPagedListRenderOptions.AllInstances.ItemSliceAndTotalFormatSetString">
+            <summary>Sets the shim of PagedListRenderOptions.set_ItemSliceAndTotalFormat(String value)</summary>
+        </member>
+        <member name="P:PagedList.Mvc.Fakes.ShimPagedListRenderOptions.AllInstances.LiElementClassesGet">
+            <summary>Sets the shim of PagedListRenderOptions.get_LiElementClasses()</summary>
+        </member>
+        <member name="P:PagedList.Mvc.Fakes.ShimPagedListRenderOptions.AllInstances.LiElementClassesSetIEnumerableOfString">
+            <summary>Sets the shim of PagedListRenderOptions.set_LiElementClasses(IEnumerable`1&lt;String&gt; value)</summary>
+        </member>
+        <member name="P:PagedList.Mvc.Fakes.ShimPagedListRenderOptions.AllInstances.LinkToFirstPageFormatGet">
+            <summary>Sets the shim of PagedListRenderOptions.get_LinkToFirstPageFormat()</summary>
+        </member>
+        <member name="P:PagedList.Mvc.Fakes.ShimPagedListRenderOptions.AllInstances.LinkToFirstPageFormatSetString">
+            <summary>Sets the shim of PagedListRenderOptions.set_LinkToFirstPageFormat(String value)</summary>
+        </member>
+        <member name="P:PagedList.Mvc.Fakes.ShimPagedListRenderOptions.AllInstances.LinkToIndividualPageFormatGet">
+            <summary>Sets the shim of PagedListRenderOptions.get_LinkToIndividualPageFormat()</summary>
+        </member>
+        <member name="P:PagedList.Mvc.Fakes.ShimPagedListRenderOptions.AllInstances.LinkToIndividualPageFormatSetString">
+            <summary>Sets the shim of PagedListRenderOptions.set_LinkToIndividualPageFormat(String value)</summary>
+        </member>
+        <member name="P:PagedList.Mvc.Fakes.ShimPagedListRenderOptions.AllInstances.LinkToLastPageFormatGet">
+            <summary>Sets the shim of PagedListRenderOptions.get_LinkToLastPageFormat()</summary>
+        </member>
+        <member name="P:PagedList.Mvc.Fakes.ShimPagedListRenderOptions.AllInstances.LinkToLastPageFormatSetString">
+            <summary>Sets the shim of PagedListRenderOptions.set_LinkToLastPageFormat(String value)</summary>
+        </member>
+        <member name="P:PagedList.Mvc.Fakes.ShimPagedListRenderOptions.AllInstances.LinkToNextPageFormatGet">
+            <summary>Sets the shim of PagedListRenderOptions.get_LinkToNextPageFormat()</summary>
+        </member>
+        <member name="P:PagedList.Mvc.Fakes.ShimPagedListRenderOptions.AllInstances.LinkToNextPageFormatSetString">
+            <summary>Sets the shim of PagedListRenderOptions.set_LinkToNextPageFormat(String value)</summary>
+        </member>
+        <member name="P:PagedList.Mvc.Fakes.ShimPagedListRenderOptions.AllInstances.LinkToPreviousPageFormatGet">
+            <summary>Sets the shim of PagedListRenderOptions.get_LinkToPreviousPageFormat()</summary>
+        </member>
+        <member name="P:PagedList.Mvc.Fakes.ShimPagedListRenderOptions.AllInstances.LinkToPreviousPageFormatSetString">
+            <summary>Sets the shim of PagedListRenderOptions.set_LinkToPreviousPageFormat(String value)</summary>
+        </member>
+        <member name="P:PagedList.Mvc.Fakes.ShimPagedListRenderOptions.AllInstances.MaximumPageNumbersToDisplayGet">
+            <summary>Sets the shim of PagedListRenderOptions.get_MaximumPageNumbersToDisplay()</summary>
+        </member>
+        <member name="P:PagedList.Mvc.Fakes.ShimPagedListRenderOptions.AllInstances.MaximumPageNumbersToDisplaySetNullableOfInt32">
+            <summary>Sets the shim of PagedListRenderOptions.set_MaximumPageNumbersToDisplay(Nullable`1&lt;Int32&gt; value)</summary>
+        </member>
+        <member name="P:PagedList.Mvc.Fakes.ShimPagedListRenderOptions.AllInstances.PageCountAndCurrentLocationFormatGet">
+            <summary>Sets the shim of PagedListRenderOptions.get_PageCountAndCurrentLocationFormat()</summary>
+        </member>
+        <member name="P:PagedList.Mvc.Fakes.ShimPagedListRenderOptions.AllInstances.PageCountAndCurrentLocationFormatSetString">
+            <summary>Sets the shim of PagedListRenderOptions.set_PageCountAndCurrentLocationFormat(String value)</summary>
+        </member>
+        <member name="P:PagedList.Mvc.Fakes.ShimPagedListRenderOptions.AllInstances.UlElementClassesGet">
+            <summary>Sets the shim of PagedListRenderOptions.get_UlElementClasses()</summary>
+        </member>
+        <member name="P:PagedList.Mvc.Fakes.ShimPagedListRenderOptions.AllInstances.UlElementClassesSetIEnumerableOfString">
+            <summary>Sets the shim of PagedListRenderOptions.set_UlElementClasses(IEnumerable`1&lt;String&gt; value)</summary>
+        </member>
+        <member name="T:PagedList.Mvc.Fakes.StubGoToFormRenderOptions">
+            <summary>Stub type of PagedList.Mvc.GoToFormRenderOptions</summary>
+        </member>
+        <member name="M:PagedList.Mvc.Fakes.StubGoToFormRenderOptions.#ctor">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:PagedList.Mvc.Fakes.StubGoToFormRenderOptions.#ctor(System.String)">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:PagedList.Mvc.Fakes.StubGoToFormRenderOptions.InitializeStub">
+            <summary>Initializes a new instance of type StubGoToFormRenderOptions</summary>
+        </member>
+        <member name="P:PagedList.Mvc.Fakes.StubGoToFormRenderOptions.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="P:PagedList.Mvc.Fakes.StubGoToFormRenderOptions.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="P:PagedList.Mvc.Fakes.StubGoToFormRenderOptions.InstanceObserver">
+            <summary>Gets or sets the instance observer.</summary>
+        </member>
+        <member name="T:PagedList.Mvc.Fakes.StubPagedListRenderOptions">
+            <summary>Stub type of PagedList.Mvc.PagedListRenderOptions</summary>
+        </member>
+        <member name="M:PagedList.Mvc.Fakes.StubPagedListRenderOptions.#ctor">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:PagedList.Mvc.Fakes.StubPagedListRenderOptions.InitializeStub">
+            <summary>Initializes a new instance of type StubPagedListRenderOptions</summary>
+        </member>
+        <member name="P:PagedList.Mvc.Fakes.StubPagedListRenderOptions.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="P:PagedList.Mvc.Fakes.StubPagedListRenderOptions.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="P:PagedList.Mvc.Fakes.StubPagedListRenderOptions.InstanceObserver">
+            <summary>Gets or sets the instance observer.</summary>
+        </member>
+    </members>
+</doc>

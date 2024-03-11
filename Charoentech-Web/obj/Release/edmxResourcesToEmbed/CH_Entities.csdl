@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CharoenTechModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="ITEM">
+    <Key>
+      <PropertyRef Name="ITEM_ID" />
+    </Key>
+    <Property Name="ITEM_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NAME" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="DESCRIPTION" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PRICE" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="DISCOUNT" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="FLAG" Type="Int32" />
+    <Property Name="ORDER_LIST" Type="Int32" />
+    <Property Name="IMAGE" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="BOSURE" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PO" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="STATUS" Type="Int32" />
+    <Property Name="CREATED_DT" Type="Binary" MaxLength="8" FixedLength="true" Nullable="false" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="INDEX_HOME_PG" Type="Int32" />
+    <Property Name="ITEM_CATE_ID" Type="Int32" />
+    <Property Name="BEST_SALLER" Type="Int32" />
+    <Property Name="NEW" Type="Int32" />
+    <Property Name="DOWNLOAD_TAB" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="ITEM_CATE">
+    <Key>
+      <PropertyRef Name="ITEM_CATE_ID" />
+    </Key>
+    <Property Name="ITEM_CATE_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NAME" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="DESCRIPTION" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="STATUS" Type="Int32" Nullable="false" />
+    <Property Name="FLAG_HOME_PG" Type="Int32" />
+    <Property Name="IMAGE" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="SERVICE_CATE">
+    <Key>
+      <PropertyRef Name="SERVICE_CATE_ID" />
+    </Key>
+    <Property Name="SERVICE_CATE_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NAME" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="TOPIC" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="DESCRIPTION" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="IMAGE" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ICON" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ORDER_LIST" Type="Int32" />
+    <Property Name="STATUS" Type="Int32" Nullable="false" />
+    <Property Name="CREATED_DT" Type="Binary" MaxLength="8" FixedLength="true" Nullable="false" annotation:StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityContainer Name="CharoenTechEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="ITEM" EntityType="Self.ITEM" />
+    <EntitySet Name="ITEM_CATE" EntityType="Self.ITEM_CATE" />
+    <EntitySet Name="SERVICE_CATE" EntityType="Self.SERVICE_CATE" />
+    <EntitySet Name="BLOG" EntityType="CharoenTechModel.BLOG" />
+    <EntitySet Name="CUSTOMER" EntityType="CharoenTechModel.CUSTOMER" />
+    <EntitySet Name="TEXT" EntityType="CharoenTechModel.TEXT" />
+    <EntitySet Name="USERS" EntityType="CharoenTechModel.USERS" />
+    <EntitySet Name="BANNER" EntityType="CharoenTechModel.BANNER" />
+    <EntitySet Name="DOWNLOAD" EntityType="CharoenTechModel.DOWNLOAD" />
+    <EntitySet Name="TICKET" EntityType="CharoenTechModel.TICKET" />
+  </EntityContainer>
+  <EntityType Name="BLOG">
+    <Key>
+      <PropertyRef Name="BLOG_ID" />
+    </Key>
+    <Property Name="BLOG_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NAME" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="TOPIC" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="DESCRIPTION" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="IMAGE" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="STATUS" Type="Int32" />
+    <Property Name="CREATED_DT" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="CUSTOMER">
+    <Key>
+      <PropertyRef Name="CUST_ID" />
+    </Key>
+    <Property Name="CUST_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NAME" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="TOPIC" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="DESCRIPTION" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="IMAGE" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="STATUS" Type="Int32" />
+    <Property Name="CREATED_DT" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="TEXT">
+    <Key>
+      <PropertyRef Name="TEXT_ID" />
+    </Key>
+    <Property Name="TEXT_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TASK" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ICON" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="NAME" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="TOPIC" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="DESCRIPTION" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="IMAGE" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="STATUS" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="USERS">
+    <Key>
+      <PropertyRef Name="USER_ID" />
+    </Key>
+    <Property Name="USER_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="USERNAME" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PASSWORD" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ACTIVE" Type="String" MaxLength="1" FixedLength="true" Unicode="true" />
+  </EntityType>
+  <EntityType Name="BANNER">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IMAGE" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="STATUS" Type="Int32" />
+  </EntityType>
+  <EntityType Name="DOWNLOAD">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NAME" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PATH" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="STATUS" Type="Int32" />
+  </EntityType>
+  <EntityType Name="TICKET">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NUMBER" Type="Int32" />
+  </EntityType>
+</Schema>

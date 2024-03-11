@@ -1,0 +1,155 @@
+﻿@model Charoentech_Web.ModelViews.ItemForm
+@{
+    ViewBag.Title = "Shopping-Detail";
+}
+<style>
+    .price, .price span 
+    {
+       font-family: 'kanit', sans-serif;
+    }
+    .swiper-slide 
+    {
+        width: 70%;    
+    }
+    .swiper-gallery-carousel 
+    {
+        padding-left: 100px;
+    }
+   .swiper-gallery-carousel .swiper-slide {
+        cursor : default;
+    }
+</style>
+@{
+    ITEM item = (ITEM)ViewData["item"];
+}
+
+<div class="breadcrumb-container">
+    <div class="container-fluid">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="/">หน้าแรก</a></li>
+                <li class="breadcrumb-item"><a href="@Url.Action("Shopping", "Home", new { id = @item.ITEM_CATE_ID })">@ViewData["oItemCate"]</a></li>
+                <li class="breadcrumb-item active" aria-current="page">@item.NAME</li>
+            </ol>
+        </nav>
+    </div>
+</div>
+
+<div class="card card-style1">
+    <div class="card-body">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="swiper-gallery">
+                  <div class="swiper-gallery-carousel">
+                    <div class="swiper-container" id="mainSlider">
+                      <div class="swiper-wrapper">
+                        <img src="@Url.Content("~/"+item.IMAGE)" class="swiper-slide">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <div class="col-md-6 pt-3 pt-md-0">
+                <h3 class="card-title font-weight-normal mb-3">@item.NAME</h3>
+                @if (@item.DISCOUNT > 0)
+                {
+                    <h5 class="price font-weight-normal mb-3">
+                        ลดราคาจาก <span class="del">@item.DISCOUNT</span>
+                    </h5>
+                }
+                <h5 class="price font-weight-normal mb-3">
+                    ราคาปัจจุบัน <span>@item.PRICE</span>
+                </h5>
+                <hr>
+                <div class="d-flex align-items-center">
+                    <a href="@Url.Action("Download", "Home", new { id = item.ITEM_ID, isBOSURE = "1" })" class="btn btn-sm rounded-pill btn-faded-primary rounded-circle ml-1">brochure</a>
+                    @*<a href="@Url.Action("Download", "Home", new { id = item.ITEM_ID, isBOSURE = "0" })" class="btn btn-sm rounded-pill btn-faded-danger rounded-circle ml-1">Purchase order</a>*@
+                </div>
+            </div>
+        </div>
+    </div>
+    <nav class="nav nav-tabs justify-content-center border-bottom mt-3">
+        <a class="nav-item nav-link has-icon @TempData["default_active"]" href="#description-content" data-toggle="tab"><i class="material-icons mr-1">list</i>รายละเอียด</a>
+        <a class="nav-item nav-link has-icon @TempData["contact_active"]" href="#review-content" data-toggle="tab"><i class="material-icons mr-1">contact_phone</i>สั่งซื้อสินค้า</a>
+        <a class="nav-item nav-link has-icon" href="#download-content" data-toggle="tab"><i class="material-icons mr-1">cloud_download</i>ดาวน์โหลด</a>
+    </nav>
+    <div class="tab-content pt-4">
+        <div class="tab-pane fade show @TempData["default_active_show"]" id="description-content">
+            @Html.Raw(@item.DESCRIPTION)
+        </div>
+        <div class="tab-pane fade @TempData["contact_active_show"]" id="review-content">
+            @if (TempData["notice"] != null)
+            {
+                <p class="alert alert-success" role="alert">@TempData["notice"]</p>
+            }
+            @using (Html.BeginForm("ShoppingDetail", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
+            {
+                @Html.AntiForgeryToken()
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                <div class="form-group col-md-6">
+                    <span class="input-icon">
+                        <i class="material-icons">shopping_cart</i>
+                        @Html.TextBoxFor(model => Model.ItemName, new { placeholder = "ชื่อสินค้า", @class = "form-control" })
+                        @Html.ValidationMessageFor(model => Model.ItemName, "", new { @readonly = "readonly", @class = "text-danger" })
+                    </span>
+                </div>
+                <div class="form-group col-md-6">
+                    <span class="input-icon">
+                        <i class="material-icons">person</i>
+                        @Html.TextBoxFor(model => Model.Name, new { placeholder = "ชื่อ-นามสกุล ผู้ติดต่อ", @class = "form-control" })
+                        @Html.ValidationMessageFor(model => Model.Name, "", new { @class = "text-danger" })
+                    </span>
+                </div>
+                <div class="form-group col-md-6">
+                    <span class="input-icon">
+                        <i class="material-icons">exposure</i>
+                        @Html.TextBoxFor(model => Model.Qty, new { placeholder = "จำนวน", @class = "form-control" })
+                        @Html.ValidationMessageFor(model => Model.Qty, "", new { @class = "text-danger" })
+                    </span>
+                </div>
+                <div class="form-group col-md-6">
+                    <span class="input-icon">
+                        <i class="material-icons">business_center</i>
+                        @Html.TextBoxFor(model => Model.Company, new { placeholder = "บริษัท/องค์กร", @class = "form-control" })
+                        @Html.ValidationMessageFor(model => Model.Company, "", new { @class = "text-danger" })
+                    </span>
+                </div>
+                <div class="form-group col-md-6">
+                    <span class="input-icon">
+                        <i class="material-icons">house</i>
+                        @Html.TextAreaFor(model => model.Address, new { placeholder = "ที่อยู่", @rows = 3, @class = "form-control" })
+                        @Html.ValidationMessageFor(model => Model.Address, "", new { @class = "text-danger" })
+                    </span>
+                </div>
+                <div class="form-group col-md-6">
+                    <span class="input-icon">
+                        <i class="material-icons">phone</i>
+                        @Html.TextBoxFor(model => Model.Phone, new { placeholder = "เบอร์ติดต่อ", @class = "form-control" })
+                        @Html.ValidationMessageFor(model => Model.Phone, "", new { @class = "text-danger" })
+                    </span>
+                </div>
+                <div class="form-group col-md-6">
+                    <span class="input-icon">
+                        <i class="material-icons">email</i>
+                        @Html.TextBoxFor(model => Model.Email, new { placeholder = "อีเมล์", @class = "form-control" })
+                        @Html.ValidationMessageFor(model => Model.Email, "", new { @class = "text-danger" })
+                    </span>
+                </div>
+                <div class="form-group col-md-6">
+                    <span class="input-icon">
+                        <i class="material-icons">description</i>
+                        @Html.TextAreaFor(model => model.Description, new { placeholder = "ข้อมูลเพิ่มเติม", @rows = 3, @class = "form-control" })
+                        @Html.ValidationMessageFor(model => Model.Description, "", new { @class = "text-danger" })
+                    </span>
+                </div>
+                <div class="form-group col-md-6">
+                    @Html.HiddenFor(model => model.ID)
+                    <input type="submit" class="btn btn-primary" value="ส่งเมล์" />
+                </div>
+            }
+        </div>
+        <div class="tab-pane fade show" id="download-content">
+            @Html.Raw(@item.DOWNLOAD_TAB)
+        </div>
+    </div>
+</div>

@@ -1,0 +1,71 @@
+﻿@model Charoentech_Web.ModelViews.ITEM_CATE_MODEL_VIEW
+
+@{
+    ViewBag.Title = "ประเภทสินค้า";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>ประเภทสินค้า</h2>
+@if (TempData["notice"] != null)
+{
+    <p class="alert alert-success" role="alert">@TempData["notice"]</p>
+}
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.LabelFor(model => Model.NAME, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => Model.NAME, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => Model.NAME, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => Model.DESCRIPTION, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => Model.DESCRIPTION, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => Model.DESCRIPTION, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => Model.STATUS, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @*@Html.EditorFor(model => Model.STATUS, new { htmlAttributes = new { @class = "form-control" } })*@
+                @Html.DropDownListFor(model => Model.STATUS, (IEnumerable<SelectListItem>)ViewBag.STATUS, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => Model.STATUS, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => Model.FLAG_HOME_PG, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownListFor(model => Model.FLAG_HOME_PG, (IEnumerable<SelectListItem>)ViewBag.STATUS, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => Model.FLAG_HOME_PG, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => Model.IMAGE, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => Model.IMAGE, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => Model.IMAGE, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("กลับหน้ารายการ", "ItemCate")
+</div>

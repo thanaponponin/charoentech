@@ -1,0 +1,511 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Font & Icon -->
+  @@include('./include/font-icon.html')
+
+  @@include('./include/style-css.html')
+
+  <title>Mimity</title>
+</head>
+
+<body>
+
+  @@include('./include/topbar.html', {
+    "show": "true",
+    "auth": "false"
+  })
+
+  @@include('./include/header.html', {
+    "menu": "pages",
+    "sub": "faq",
+    "child": ""
+  })
+
+  <div class="breadcrumb-container">
+    <div class="container-fluid">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item"><a href="javascript:void(0)">Pages</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Help / FAQ</li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+
+  <div class="container-fluid mb-3">
+    <div class="card card-style1">
+      <div class="card-body" lang="zxx"> <!-- because 'lorem ipsum' is not english language, so we add lang="zxx" attribute, remove it on production environment -->
+
+        <div class="row">
+
+          <div class="col-12 mb-4">
+            <h3>Frequently Asked Questions (FAQ)</h3><hr>
+          </div>
+
+          <!-- Shopping FAQ -->
+          <div class="col-md-4">
+            <h4 class="mb-3 mb-md-0"><i class="material-icons align-top">shopping_cart</i> Shopping</h4>
+          </div>
+          <div class="col-md-8 mb-5">
+            <div class="accordion accordion-caret accordion-no-border" id="accordion1">
+              <div class="card card-primary">
+                <a class="card-header h6" data-toggle="collapse" href="#collapse1-1" aria-expanded="false" aria-controls="collapse1-1">
+                  I see different prices with the same title. Why?
+                </a>
+                <div id="collapse1-1" class="collapse" aria-labelledby="heading1-1" data-parent="#accordion1">
+                  <div class="card-body">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam unde dicta ab sapiente harum beatae nihil aspernatur nam eos perferendis. Iusto perspiciatis assumenda vitae aspernatur nam est fuga maiores sequi.
+                  </div>
+                </div>
+              </div>
+              <div class="card card-primary">
+                <a class="card-header h6" data-toggle="collapse" href="#collapse1-2" aria-expanded="false" aria-controls="collapse1-2">
+                  Why do I see different prices for the same product?
+                </a>
+                <div id="collapse1-2" class="collapse" aria-labelledby="heading1-2" data-parent="#accordion1">
+                  <div class="card-body">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident blanditiis ipsa expedita, earum esse omnis delectus possimus fugit perferendis ex veritatis veniam consequuntur mollitia, facilis vel velit voluptatem eos ut!
+                  </div>
+                </div>
+              </div>
+              <div class="card card-primary">
+                <a class="card-header h6" data-toggle="collapse" href="#collapse1-3" aria-expanded="false" aria-controls="collapse1-3">
+                  Is it necessary to have an account to shop on Marketshop?
+                </a>
+                <div id="collapse1-3" class="collapse" aria-labelledby="heading1-3" data-parent="#accordion1">
+                  <div class="card-body">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo, quisquam, corrupti. Perspiciatis maxime provident in vero dolore similique quam voluptatum eum reiciendis ex repellat a saepe, explicabo odit quae perferendis!
+                  </div>
+                </div>
+              </div>
+              <div class="card card-primary">
+                <a class="card-header h6" data-toggle="collapse" href="#collapse1-4" aria-expanded="false" aria-controls="collapse1-4">
+                  What do I need to know before getting an order gift wrapped?
+                </a>
+                <div id="collapse1-4" class="collapse" aria-labelledby="heading1-4" data-parent="#accordion1">
+                  <div class="card-body">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab perferendis, similique a accusamus ipsum incidunt repellendus quis, soluta, minus molestiae illum eligendi id hic eum accusantium voluptatem quae facilis architecto.
+                  </div>
+                </div>
+              </div>
+              <div class="card card-primary">
+                <a class="card-header h6" data-toggle="collapse" href="#collapse1-5" aria-expanded="false" aria-controls="collapse1-5">
+                  What is Advantage?
+                </a>
+                <div id="collapse1-5" class="collapse" aria-labelledby="heading1-5" data-parent="#accordion1">
+                  <div class="card-body">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, culpa rem in voluptate inventore repudiandae officia ad eveniet aut reiciendis corrupti, odit, velit officiis voluptatibus, incidunt minima omnis voluptas. Similique.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- /Shopping FAQ -->
+
+          <!-- Payments FAQ -->
+          <div class="col-md-4">
+            <h4 class="mb-3 mb-md-0"><i class="material-icons align-top">credit_card</i> Payments</h4>
+          </div>
+          <div class="col-md-8 mb-5">
+            <div class="accordion accordion-caret accordion-no-border" id="accordion2">
+              <div class="card card-success">
+                <a class="card-header h6" data-toggle="collapse" href="#collapse2-1" aria-expanded="false" aria-controls="collapse2-1">
+                  How do I pay for a purchase?
+                </a>
+                <div id="collapse2-1" class="collapse" aria-labelledby="heading2-1" data-parent="#accordion2">
+                  <div class="card-body">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam unde dicta ab sapiente harum beatae nihil aspernatur nam eos perferendis. Iusto perspiciatis assumenda vitae aspernatur nam est fuga maiores sequi.
+                  </div>
+                </div>
+              </div>
+              <div class="card card-success">
+                <a class="card-header h6" data-toggle="collapse" href="#collapse2-2" aria-expanded="false" aria-controls="collapse2-2">
+                  Are there any hidden charges (Octroi or Sales Tax) when I make a purchase?
+                </a>
+                <div id="collapse2-2" class="collapse" aria-labelledby="heading2-2" data-parent="#accordion2">
+                  <div class="card-body">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident blanditiis ipsa expedita, earum esse omnis delectus possimus fugit perferendis ex veritatis veniam consequuntur mollitia, facilis vel velit voluptatem eos ut!
+                  </div>
+                </div>
+              </div>
+              <div class="card card-success">
+                <a class="card-header h6" data-toggle="collapse" href="#collapse2-3" aria-expanded="false" aria-controls="collapse2-3">
+                  What is Cash on Delivery?
+                </a>
+                <div id="collapse2-3" class="collapse" aria-labelledby="heading2-3" data-parent="#accordion2">
+                  <div class="card-body">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo, quisquam, corrupti. Perspiciatis maxime provident in vero dolore similique quam voluptatum eum reiciendis ex repellat a saepe, explicabo odit quae perferendis!
+                  </div>
+                </div>
+              </div>
+              <div class="card card-success">
+                <a class="card-header h6" data-toggle="collapse" href="#collapse2-4" aria-expanded="false" aria-controls="collapse2-4">
+                  How do I pay using a credit/debit card?
+                </a>
+                <div id="collapse2-4" class="collapse" aria-labelledby="heading2-4" data-parent="#accordion2">
+                  <div class="card-body">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab perferendis, similique a accusamus ipsum incidunt repellendus quis, soluta, minus molestiae illum eligendi id hic eum accusantium voluptatem quae facilis architecto.
+                  </div>
+                </div>
+              </div>
+              <div class="card card-success">
+                <a class="card-header h6" data-toggle="collapse" href="#collapse2-5" aria-expanded="false" aria-controls="collapse2-5">
+                  Is it safe to use my credit/debit card on this store?
+                </a>
+                <div id="collapse2-5" class="collapse" aria-labelledby="heading2-5" data-parent="#accordion2">
+                  <div class="card-body">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, culpa rem in voluptate inventore repudiandae officia ad eveniet aut reiciendis corrupti, odit, velit officiis voluptatibus, incidunt minima omnis voluptas. Similique.
+                  </div>
+                </div>
+              </div>
+              <div class="card card-success">
+                <a class="card-header h6" data-toggle="collapse" href="#collapse2-6" aria-expanded="false" aria-controls="collapse2-6">
+                  What is a 3D Secure password?
+                </a>
+                <div id="collapse2-6" class="collapse" aria-labelledby="heading2-6" data-parent="#accordion2">
+                  <div class="card-body">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, culpa rem in voluptate inventore repudiandae officia ad eveniet aut reiciendis corrupti, odit, velit officiis voluptatibus, incidunt minima omnis voluptas. Similique.
+                  </div>
+                </div>
+              </div>
+              <div class="card card-success">
+                <a class="card-header h6" data-toggle="collapse" href="#collapse2-7" aria-expanded="false" aria-controls="collapse2-7">
+                  How can I get the 3D Secure password for my credit/debit card?
+                </a>
+                <div id="collapse2-7" class="collapse" aria-labelledby="heading2-7" data-parent="#accordion2">
+                  <div class="card-body">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, culpa rem in voluptate inventore repudiandae officia ad eveniet aut reiciendis corrupti, odit, velit officiis voluptatibus, incidunt minima omnis voluptas. Similique.
+                  </div>
+                </div>
+              </div>
+              <div class="card card-success">
+                <a class="card-header h6" data-toggle="collapse" href="#collapse2-8" aria-expanded="false" aria-controls="collapse2-8">
+                  Can I use my bank's Internet Banking feature to make a payment?
+                </a>
+                <div id="collapse2-8" class="collapse" aria-labelledby="heading2-8" data-parent="#accordion2">
+                  <div class="card-body">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, culpa rem in voluptate inventore repudiandae officia ad eveniet aut reiciendis corrupti, odit, velit officiis voluptatibus, incidunt minima omnis voluptas. Similique.
+                  </div>
+                </div>
+              </div>
+              <div class="card card-success">
+                <a class="card-header h6" data-toggle="collapse" href="#collapse2-9" aria-expanded="false" aria-controls="collapse2-9">
+                  Can I make a credit/debit card or Internet Banking payment through my mobile?
+                </a>
+                <div id="collapse2-9" class="collapse" aria-labelledby="heading2-9" data-parent="#accordion2">
+                  <div class="card-body">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, culpa rem in voluptate inventore repudiandae officia ad eveniet aut reiciendis corrupti, odit, velit officiis voluptatibus, incidunt minima omnis voluptas. Similique.
+                  </div>
+                </div>
+              </div>
+              <div class="card card-success">
+                <a class="card-header h6" data-toggle="collapse" href="#collapse2-10" aria-expanded="false" aria-controls="collapse2-10">
+                  How does 'Instant Cashback' work?
+                </a>
+                <div id="collapse2-10" class="collapse" aria-labelledby="heading2-10" data-parent="#accordion2">
+                  <div class="card-body">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, culpa rem in voluptate inventore repudiandae officia ad eveniet aut reiciendis corrupti, odit, velit officiis voluptatibus, incidunt minima omnis voluptas. Similique.
+                  </div>
+                </div>
+              </div>
+              <div class="card card-success">
+                <a class="card-header h6" data-toggle="collapse" href="#collapse2-11" aria-expanded="false" aria-controls="collapse2-11">
+                  How do I place a Cash on Delivery (COD) order?
+                </a>
+                <div id="collapse2-11" class="collapse" aria-labelledby="heading2-11" data-parent="#accordion2">
+                  <div class="card-body">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, culpa rem in voluptate inventore repudiandae officia ad eveniet aut reiciendis corrupti, odit, velit officiis voluptatibus, incidunt minima omnis voluptas. Similique.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- /Payments FAQ -->
+
+          <!-- My Account &amp; My Orders FAQ -->
+          <div class="col-md-4">
+            <h4 class="mb-3 mb-md-0"><i class="material-icons align-top">person</i> My Account &amp; My Orders</h4>
+          </div>
+          <div class="col-md-8 mb-5">
+            <div class="accordion accordion-caret accordion-no-border" id="accordion3">
+              <div class="card card-warning">
+                <a class="card-header h6" data-toggle="collapse" href="#collapse3-1" aria-expanded="false" aria-controls="collapse3-1">
+                  What is 'My Account'? How do I update my information ?
+                </a>
+                <div id="collapse3-1" class="collapse" aria-labelledby="heading3-1" data-parent="#accordion3">
+                  <div class="card-body">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam unde dicta ab sapiente harum beatae nihil aspernatur nam eos perferendis. Iusto perspiciatis assumenda vitae aspernatur nam est fuga maiores sequi.
+                  </div>
+                </div>
+              </div>
+              <div class="card card-warning">
+                <a class="card-header h6" data-toggle="collapse" href="#collapse3-2" aria-expanded="false" aria-controls="collapse3-2">
+                  How do I merge my accounts linked to different email ids?
+                </a>
+                <div id="collapse3-2" class="collapse" aria-labelledby="heading3-2" data-parent="#accordion3">
+                  <div class="card-body">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam unde dicta ab sapiente harum beatae nihil aspernatur nam eos perferendis. Iusto perspiciatis assumenda vitae aspernatur nam est fuga maiores sequi.
+                  </div>
+                </div>
+              </div>
+              <div class="card card-warning">
+                <a class="card-header h6" data-toggle="collapse" href="#collapse3-3" aria-expanded="false" aria-controls="collapse3-3">
+                  How do I know my order has been confirmed?
+                </a>
+                <div id="collapse3-3" class="collapse" aria-labelledby="heading3-3" data-parent="#accordion3">
+                  <div class="card-body">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam unde dicta ab sapiente harum beatae nihil aspernatur nam eos perferendis. Iusto perspiciatis assumenda vitae aspernatur nam est fuga maiores sequi.
+                  </div>
+                </div>
+              </div>
+              <div class="card card-warning">
+                <a class="card-header h6" data-toggle="collapse" href="#collapse3-4" aria-expanded="false" aria-controls="collapse3-4">
+                  Can I order a product that is 'Out of Stock'?
+                </a>
+                <div id="collapse3-4" class="collapse" aria-labelledby="heading3-4" data-parent="#accordion3">
+                  <div class="card-body">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam unde dicta ab sapiente harum beatae nihil aspernatur nam eos perferendis. Iusto perspiciatis assumenda vitae aspernatur nam est fuga maiores sequi.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- /My Account &amp; My Orders FAQ -->
+
+          <!-- Gift Voucher FAQ -->
+          <div class="col-md-4">
+            <h4 class="mb-3 mb-md-0"><i class="material-icons align-top">card_giftcard</i> Gift Voucher</h4>
+          </div>
+          <div class="col-md-8 mb-5">
+            <div class="accordion accordion-caret accordion-no-border" id="accordion4">
+              <div class="card card-secondary">
+                <a class="card-header h6" data-toggle="collapse" href="#collapse4-1" aria-expanded="false" aria-controls="collapse4-1">
+                  How do I buy/gift an e-Gift Voucher?
+                </a>
+                <div id="collapse4-1" class="collapse" aria-labelledby="heading4-1" data-parent="#accordion4">
+                  <div class="card-body">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam unde dicta ab sapiente harum beatae nihil aspernatur nam eos perferendis. Iusto perspiciatis assumenda vitae aspernatur nam est fuga maiores sequi.
+                  </div>
+                </div>
+              </div>
+              <div class="card card-secondary">
+                <a class="card-header h6" data-toggle="collapse" href="#collapse4-2" aria-expanded="false" aria-controls="collapse4-2">
+                  How do I make a purchase with an e-Gift Voucher?
+                </a>
+                <div id="collapse4-2" class="collapse" aria-labelledby="heading4-2" data-parent="#accordion4">
+                  <div class="card-body">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam unde dicta ab sapiente harum beatae nihil aspernatur nam eos perferendis. Iusto perspiciatis assumenda vitae aspernatur nam est fuga maiores sequi.
+                  </div>
+                </div>
+              </div>
+              <div class="card card-secondary">
+                <a class="card-header h6" data-toggle="collapse" href="#collapse4-3" aria-expanded="false" aria-controls="collapse4-3">
+                  Does an e-Gift Voucher expire?
+                </a>
+                <div id="collapse4-3" class="collapse" aria-labelledby="heading4-3" data-parent="#accordion4">
+                  <div class="card-body">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam unde dicta ab sapiente harum beatae nihil aspernatur nam eos perferendis. Iusto perspiciatis assumenda vitae aspernatur nam est fuga maiores sequi.
+                  </div>
+                </div>
+              </div>
+              <div class="card card-secondary">
+                <a class="card-header h6" data-toggle="collapse" href="#collapse4-4" aria-expanded="false" aria-controls="collapse4-4">
+                  Can I use promotional codes with e-Gift Vouchers?
+                </a>
+                <div id="collapse4-4" class="collapse" aria-labelledby="heading4-4" data-parent="#accordion4">
+                  <div class="card-body">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam unde dicta ab sapiente harum beatae nihil aspernatur nam eos perferendis. Iusto perspiciatis assumenda vitae aspernatur nam est fuga maiores sequi.
+                  </div>
+                </div>
+              </div>
+              <div class="card card-secondary">
+                <a class="card-header h6" data-toggle="collapse" href="#collapse4-5" aria-expanded="false" aria-controls="collapse4-5">
+                  Is there a limit on how many e-Gift vouchers I can use on a single order?
+                </a>
+                <div id="collapse4-5" class="collapse" aria-labelledby="heading4-5" data-parent="#accordion4">
+                  <div class="card-body">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam unde dicta ab sapiente harum beatae nihil aspernatur nam eos perferendis. Iusto perspiciatis assumenda vitae aspernatur nam est fuga maiores sequi.
+                  </div>
+                </div>
+              </div>
+              <div class="card card-secondary">
+                <a class="card-header h6" data-toggle="collapse" href="#collapse4-6" aria-expanded="false" aria-controls="collapse4-6">
+                  What Terms & Conditions apply to e-Gift Vouchers?
+                </a>
+                <div id="collapse4-6" class="collapse" aria-labelledby="heading4-6" data-parent="#accordion4">
+                  <div class="card-body">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam unde dicta ab sapiente harum beatae nihil aspernatur nam eos perferendis. Iusto perspiciatis assumenda vitae aspernatur nam est fuga maiores sequi.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- /Gift Voucher FAQ -->
+
+          <!-- Order Status FAQ -->
+          <div class="col-md-4">
+            <h4 class="mb-3 mb-md-0"><i class="material-icons align-top">help</i> Order Status</h4>
+          </div>
+          <div class="col-md-8 mb-5">
+            <div class="accordion accordion-caret accordion-no-border" id="accordion5">
+              <div class="card card-info">
+                <a class="card-header h6" data-toggle="collapse" href="#collapse5-1" aria-expanded="false" aria-controls="collapse5-1">
+                  How do I check the current status of my orders?
+                </a>
+                <div id="collapse5-1" class="collapse" aria-labelledby="heading5-1" data-parent="#accordion5">
+                  <div class="card-body">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam unde dicta ab sapiente harum beatae nihil aspernatur nam eos perferendis. Iusto perspiciatis assumenda vitae aspernatur nam est fuga maiores sequi.
+                  </div>
+                </div>
+              </div>
+              <div class="card card-info">
+                <a class="card-header h6" data-toggle="collapse" href="#collapse5-2" aria-expanded="false" aria-controls="collapse5-2">
+                  What do the different order status mean?
+                </a>
+                <div id="collapse5-2" class="collapse" aria-labelledby="heading5-2" data-parent="#accordion5">
+                  <div class="card-body">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam unde dicta ab sapiente harum beatae nihil aspernatur nam eos perferendis. Iusto perspiciatis assumenda vitae aspernatur nam est fuga maiores sequi.
+                  </div>
+                </div>
+              </div>
+              <div class="card card-info">
+                <a class="card-header h6" data-toggle="collapse" href="#collapse5-3" aria-expanded="false" aria-controls="collapse5-3">
+                  When and how can I cancel an order?
+                </a>
+                <div id="collapse5-3" class="collapse" aria-labelledby="heading5-3" data-parent="#accordion5">
+                  <div class="card-body">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam unde dicta ab sapiente harum beatae nihil aspernatur nam eos perferendis. Iusto perspiciatis assumenda vitae aspernatur nam est fuga maiores sequi.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- /Order Status FAQ -->
+
+          <!-- Shipping FAQ -->
+          <div class="col-md-4">
+            <h4 class="mb-3 mb-md-0"><i class="material-icons align-top">local_shipping</i> Shipping</h4>
+          </div>
+          <div class="col-md-8 mb-5">
+            <div class="accordion accordion-caret accordion-no-border" id="accordion6">
+              <div class="card card-dark">
+                <a class="card-header h6" data-toggle="collapse" href="#collapse6-1" aria-expanded="false" aria-controls="collapse6-1">
+                  What are the delivery charges?
+                </a>
+                <div id="collapse6-1" class="collapse" aria-labelledby="heading6-1" data-parent="#accordion6">
+                  <div class="card-body">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam unde dicta ab sapiente harum beatae nihil aspernatur nam eos perferendis. Iusto perspiciatis assumenda vitae aspernatur nam est fuga maiores sequi.
+                  </div>
+                </div>
+              </div>
+              <div class="card card-dark">
+                <a class="card-header h6" data-toggle="collapse" href="#collapse6-2" aria-expanded="false" aria-controls="collapse6-2">
+                  Are there any hidden costs (sales tax, octroi etc) on items sold by sellers?
+                </a>
+                <div id="collapse6-2" class="collapse" aria-labelledby="heading6-2" data-parent="#accordion6">
+                  <div class="card-body">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam unde dicta ab sapiente harum beatae nihil aspernatur nam eos perferendis. Iusto perspiciatis assumenda vitae aspernatur nam est fuga maiores sequi.
+                  </div>
+                </div>
+              </div>
+              <div class="card card-dark">
+                <a class="card-header h6" data-toggle="collapse" href="#collapse6-3" aria-expanded="false" aria-controls="collapse6-3">
+                  What is the estimated delivery time?
+                </a>
+                <div id="collapse6-3" class="collapse" aria-labelledby="heading6-3" data-parent="#accordion6">
+                  <div class="card-body">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam unde dicta ab sapiente harum beatae nihil aspernatur nam eos perferendis. Iusto perspiciatis assumenda vitae aspernatur nam est fuga maiores sequi.
+                  </div>
+                </div>
+              </div>
+              <div class="card card-dark">
+                <a class="card-header h6" data-toggle="collapse" href="#collapse6-4" aria-expanded="false" aria-controls="collapse6-4">
+                  Why does the estimated delivery time vary from seller to seller?
+                </a>
+                <div id="collapse6-4" class="collapse" aria-labelledby="heading6-4" data-parent="#accordion6">
+                  <div class="card-body">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam unde dicta ab sapiente harum beatae nihil aspernatur nam eos perferendis. Iusto perspiciatis assumenda vitae aspernatur nam est fuga maiores sequi.
+                  </div>
+                </div>
+              </div>
+              <div class="card card-dark">
+                <a class="card-header h6" data-toggle="collapse" href="#collapse6-5" aria-expanded="false" aria-controls="collapse6-5">
+                  Why does the delivery date not correspond to the delivery timeline mentioned?
+                </a>
+                <div id="collapse6-5" class="collapse" aria-labelledby="heading6-5" data-parent="#accordion6">
+                  <div class="card-body">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam unde dicta ab sapiente harum beatae nihil aspernatur nam eos perferendis. Iusto perspiciatis assumenda vitae aspernatur nam est fuga maiores sequi.
+                  </div>
+                </div>
+              </div>
+              <div class="card card-dark">
+                <a class="card-header h6" data-toggle="collapse" href="#collapse6-6" aria-expanded="false" aria-controls="collapse6-6">
+                  Seller does not/cannot ship to my area. Why?
+                </a>
+                <div id="collapse6-6" class="collapse" aria-labelledby="heading6-6" data-parent="#accordion6">
+                  <div class="card-body">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam unde dicta ab sapiente harum beatae nihil aspernatur nam eos perferendis. Iusto perspiciatis assumenda vitae aspernatur nam est fuga maiores sequi.
+                  </div>
+                </div>
+              </div>
+              <div class="card card-dark">
+                <a class="card-header h6" data-toggle="collapse" href="#collapse6-7" aria-expanded="false" aria-controls="collapse6-7">
+                  I need to return an item, how do I arrange for a pick-up?
+                </a>
+                <div id="collapse6-7" class="collapse" aria-labelledby="heading6-7" data-parent="#accordion6">
+                  <div class="card-body">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam unde dicta ab sapiente harum beatae nihil aspernatur nam eos perferendis. Iusto perspiciatis assumenda vitae aspernatur nam est fuga maiores sequi.
+                  </div>
+                </div>
+              </div>
+              <div class="card card-dark">
+                <a class="card-header h6" data-toggle="collapse" href="#collapse6-8" aria-expanded="false" aria-controls="collapse6-8">
+                  Does deliver internationally?
+                </a>
+                <div id="collapse6-8" class="collapse" aria-labelledby="heading6-8" data-parent="#accordion6">
+                  <div class="card-body">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam unde dicta ab sapiente harum beatae nihil aspernatur nam eos perferendis. Iusto perspiciatis assumenda vitae aspernatur nam est fuga maiores sequi.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- /Shipping FAQ -->
+
+          <div class="col-12">
+            <div class="alert alert-primary" role="alert">
+              Was this article helpful ? <a href="javascript:void(0)" class="alert-link">Yes</a> / <a href="contact.html" class="alert-link">No, I want to contact support</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  @@include('./include/footer.html')
+
+  @@include('./include/modal-signin.html')
+
+  @@include('./include/modal-menu.html', {
+    "menu": "pages",
+    "sub": "faq",
+    "child": ""
+  })
+
+  @@include('./include/modal-search.html')
+
+  @@include('./include/modal-cart.html')
+
+  @@include('./include/script-js.html')
+  @@include('./include/app-js.html')
+</body>
+
+</html>

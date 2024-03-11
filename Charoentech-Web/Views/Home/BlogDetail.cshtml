@@ -1,0 +1,38 @@
+﻿@{
+    ViewBag.Title = "Blog";
+}
+
+@{
+    BLOG item = (BLOG)ViewData["oBlog"];
+}
+<div class="breadcrumb-container">
+    <div class="container-fluid">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="/">หน้าแรก</a></li>
+                <li class="breadcrumb-item"><a href="@Url.Action("BlogList", "Home")">บทความ</a></li>
+                <li class="breadcrumb-item active" aria-current="page">@item.NAME</li>
+            </ol>
+        </nav>
+    </div>
+</div>
+<div class="container-fluid mb-3">
+    <div class="row gutters-3">
+        <div class="col-md-8 col-xl-9">
+            <div class="card card-style1">
+                <div class="card-body" lang="zxx">
+                    <!-- because 'lorem ipsum' is not english language, so we add lang="zxx" attribute, remove it on production environment -->
+                    <!-- Blog Info -->
+                    <div class="d-flex align-items-center small mb-3">
+                        <i class="material-icons font-size-base mr-1">alarm</i> @item.CREATED_DT.ToString()
+                    </div>
+                    <!-- Blog Content -->
+                    <h2>@item.NAME</h2>
+                    <img src="@Url.Content("~/"+item.IMAGE)" alt="Blog" class="img-fluid w-100 my-3">
+                    <p>@Html.Raw(@item.DESCRIPTION)</p>
+                    <!-- /Blog Content -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

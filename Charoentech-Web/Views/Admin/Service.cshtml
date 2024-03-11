@@ -1,0 +1,49 @@
+﻿@model PagedList.IPagedList<SERVICE_CATE>
+@using PagedList.Mvc;
+<link href="~/Content/PagedList.css" rel="stylesheet" type="text/css" />
+
+@{
+    ViewBag.Title = "Service";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="row">
+    <div class="col-md-12" style="margin-top: 50px;">
+        <h2>Service</h2>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <td>ID</td>
+                    <td>ชื่อ</td>
+                    <td>เรียงลำดับที่</td>
+                    <td>Icon</td>
+                    <td>สถานะ</td>
+                    <td>Action</td>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.SERVICE_CATE_ID</td>
+                        <td>@item.NAME</td>
+                        <td>@item.ORDER_LIST</td>
+                        <td>@item.ICON</td>
+                        <td>
+                            @if (item.STATUS == 1)
+                            { @Html.Raw("เปิด") }
+                            else
+                            { @Html.Raw("ปิด") }
+                        </td>
+                        <td><a href="@Url.Action("Service_Edit", "Admin", new { id = item.SERVICE_CATE_ID })" class="btn btn-xs btn-warning">ดู/แก้ไข</a></td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+        <br />
+        Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
+
+        @Html.PagedListPager(Model, page => Url.Action("Service", new { page }))
+    </div>
+</div>
+
+

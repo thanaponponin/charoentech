@@ -1,0 +1,92 @@
+﻿@model Charoentech_Web.ModelViews.Partner
+@{
+    ViewBag.Title = "Partner";
+}
+
+<div class="container-fluid mb-3">
+    <div class="card card-style1">
+        <div class="card-body">
+            <!-- <div class="row"> -->
+            <div class="d-grid grid-template-col-md-1 grid-gap-5">
+
+                <!-- Map
+                <div class="embed-responsive embed-map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3021.9264094650316!2d-73.97488578459351!3d40.763643279326224!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c258f00eb25f59%3A0x75ddbee78904e799!2s767+5th+Ave%2C+New+York%2C+NY+10153%2C+USA!5e0!3m2!1sen!2sid!4v1532319134271" width="600" height="450" style="border:0" allowfullscreen></iframe>
+                </div>-->
+                <!-- Contact Us Form -->
+                <div>
+                    <h3>@Model.Header</h3>
+                    <div class="form-row">
+                        <div class="form-group col-md-12">
+                            <p>@Html.Raw(Model.Description)</p>
+                        </div>
+                    </div>
+                    <hr />
+                    @if (TempData["notice"] != null)
+                    {
+                        <p class="alert alert-success" role="alert">@TempData["notice"]</p>
+                    }
+                    @using (Html.BeginForm("Partner", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
+                    {
+                        @Html.AntiForgeryToken()
+                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                        <div class="form-group col-md-6">
+                            <span class="input-icon">
+                                <i class="material-icons">person</i>
+                                @Html.TextBoxFor(model => Model.Name, new { placeholder = "ชื่อ-นามสกุล ผู้ติดต่อ", @class = "form-control" })
+                                @Html.ValidationMessageFor(model => Model.Name, "", new { @class = "text-danger" })
+                            </span>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <span class="input-icon">
+                                <i class="material-icons">business_center</i>
+                                @Html.TextBoxFor(model => Model.Company, new { placeholder = "บริษัท/องค์กร", @class = "form-control" })
+                                @Html.ValidationMessageFor(model => Model.Company, "", new { @class = "text-danger" })
+                            </span>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <span class="input-icon">
+                                <i class="material-icons">business_center</i>
+                                @Html.TextBoxFor(model => Model.Position, new { placeholder = "ตำแหน่ง", @class = "form-control" })
+                                @Html.ValidationMessageFor(model => Model.Company, "", new { @class = "text-danger" })
+                            </span>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <span class="input-icon">
+                                <i class="material-icons">house</i>
+                                @Html.TextAreaFor(model => model.Address, new { placeholder = "ที่อยู่", @rows = 3, @class = "form-control" })
+                                @Html.ValidationMessageFor(model => Model.Address, "", new { @class = "text-danger" })
+                            </span>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <span class="input-icon">
+                                <i class="material-icons">phone</i>
+                                @Html.TextBoxFor(model => Model.Phone, new { placeholder = "เบอร์ติดต่อ", @class = "form-control" })
+                                @Html.ValidationMessageFor(model => Model.Phone, "", new { @class = "text-danger" })
+                            </span>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <span class="input-icon">
+                                <i class="material-icons">email</i>
+                                @Html.TextBoxFor(model => Model.Email, new { placeholder = "อีเมล์", @class = "form-control" })
+                                @Html.ValidationMessageFor(model => Model.Email, "", new { @class = "text-danger" })
+                            </span>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <span class="input-icon">
+                                <i class="material-icons">shopping_cart</i>
+                                @Html.TextBoxFor(model => Model.ItemName, new { placeholder = "สินค้าที่สนใจ", @class = "form-control" })
+                                @Html.ValidationMessageFor(model => Model.ItemName, "", new { @readonly = "readonly", @class = "text-danger" })
+                            </span>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <input type="submit" class="btn btn-primary" value="ส่งข้อมูลติดต่อ" />
+                        </div>
+                    }
+                </div>
+                <!-- /Contact Us Form -->
+
+            </div>
+        </div>
+    </div>
+</div>

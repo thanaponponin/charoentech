@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Font & Icon -->
+  @@include('./include/font-icon.html')
+
+  @@include('./include/style-css.html')
+
+  <title>Mimity</title>
+</head>
+
+<body>
+
+  @@include('./include/topbar.html', {
+    "show": "true",
+    "auth": "true"
+  })
+
+  @@include('./include/header.html', {
+    "menu": "account",
+    "sub": "account-address",
+    "child": ""
+  })
+
+  <div class="breadcrumb-container">
+    <div class="container-fluid">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item"><a href="javascript:void(0)">Account</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Address</li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+
+  <div class="container-fluid my-3">
+    <div class="row gutters-3">
+      <div class="col-md-4 col-lg-3">
+        @@include('./include/card-user.html', {
+          "active": "account-address"
+        })
+      </div>
+      <div class="col mt-3 mt-md-0">
+        <div class="card card-style1">
+          <div class="card-body">
+            <h4>Billing Address</h4>
+            <hr>
+            <form class="form-style-1">
+              <div class="form-row">
+                <div class="form-group col-12">
+                  <label for="billingAddress">Address</label>
+                  <input type="text" class="form-control" id="billingAddress" value="2114  Jadewood Farms">
+                </div>
+                <div class="form-group col-6 col-sm-5">
+                  <label for="billingCountry">Country</label>
+                  <select class="form-control custom-select" id="billingCountry">
+                    <option>Choose country</option>
+                    <option value="Australia">Australia</option>
+                    <option value="Canada">Canada</option>
+                    <option value="France">France</option>
+                    <option value="Germany">Germany</option>
+                    <option value="Switzerland">Switzerland</option>
+                    <option value="USA" selected>United States</option>
+                  </select>
+                </div>
+                <div class="form-group col-6 col-sm-5">
+                  <label for="billingCity">City</label>
+                  <input type="text" class="form-control" id="billingCity" value="Piscataway, New Jersey">
+                </div>
+                <div class="form-group col-3 col-sm-2">
+                  <label for="billingZip">ZIP Code</label>
+                  <input type="number" class="form-control" id="billingZip" value="8854">
+                </div>
+              </div>
+              <div class="form-group">
+                <button type="button" class="btn btn-primary">UPDATE ADDRESS</button>
+              </div>
+            </form>
+            <h4 class="mt-5">Shipping Address</h4>
+            <hr>
+            <div class="custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input" id="shippingAddress" checked>
+              <label class="custom-control-label" for="shippingAddress" data-toggle="collapse" data-target="#shippingAddressCollapse">Same as billing address</label>
+            </div>
+            <form class="form-style-1 mt-3 collapse" id="shippingAddressCollapse">
+              <div class="form-row">
+                <div class="form-group col-12">
+                  <label for="shippingAddress2">Address</label>
+                  <input type="text" class="form-control" id="shippingAddress2">
+                </div>
+                <div class="form-group col-6 col-sm-5">
+                  <label for="shippingCountry">Country</label>
+                  <select class="form-control custom-select" id="shippingCountry">
+                    <option>Choose country</option>
+                    <option value="Australia">Australia</option>
+                    <option value="Canada">Canada</option>
+                    <option value="France">France</option>
+                    <option value="Germany">Germany</option>
+                    <option value="Switzerland">Switzerland</option>
+                    <option value="USA">United States</option>
+                  </select>
+                </div>
+                <div class="form-group col-6 col-sm-5">
+                  <label for="shippingCity">City</label>
+                  <input type="text" class="form-control" id="shippingCity">
+                </div>
+                <div class="form-group col-3 col-sm-2">
+                  <label for="shippingZip">ZIP Code</label>
+                  <input type="number" class="form-control" id="shippingZip">
+                </div>
+              </div>
+              <div class="form-group">
+                <button type="button" class="btn btn-faded-primary">SAVE ADDRESS</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  @@include('./include/footer.html')
+
+  @@include('./include/modal-menu.html', {
+    "menu": "account",
+    "sub": "account-address",
+    "child": ""
+  })
+
+  @@include('./include/modal-search.html')
+
+  @@include('./include/modal-cart.html')
+
+  @@include('./include/script-js.html')
+  @@include('./include/app-js.html')
+</body>
+
+</html>

@@ -1,0 +1,139 @@
+/* Bootstrap variables ========================================================================================================== */
+
+  // Color system
+  $blue: #36A2EB;
+  $red: #f05a5c;
+  $green: #4cc065;
+  $yellow: #ffd062;
+  $cyan: lighten(#17a2b8, 3%);
+
+  // Options
+  $enable-responsive-font-sizes: true;
+
+  // Body
+  $body-bg: #f8f8f8;
+  $body-color: #606975;
+
+  $container-max-widths: (
+    sm: 560px,
+    md: 755px,
+    lg: 975px,
+    xl: 1190px
+  );
+  $container-fluid-max-width: 1350px;
+
+  // Components
+  $component-active-bg: $blue;
+  $faded-level: -11;
+  $faded-active-level: 8%; // darken 8%
+
+  // Typography
+  $font-family-sans-serif: 'Roboto', sans-serif;
+  $text-muted: #aaa;
+  $headings-color: inherit;
+
+  // Buttons + Forms
+  $input-btn-focus-width: .125rem;
+  $input-focus-border-color: $component-active-bg;
+
+  // Badges
+  $badge-font-size: 65%;
+
+  // Alerts
+  $alert-bg-level: $faded-level;
+  $alert-border-level: $faded-level;
+  $alert-color-level: 1;
+
+  // Cards
+  $card-spacer-y: .5rem;
+  $card-spacer-x: 1rem;
+  $card-cap-bg: #fff;
+  $card-columns-margin: 1.25rem;
+
+  // Navs
+  $nav-link-disabled-color: rgba($body-color, .5);
+  $nav-tabs-border-width: 0;
+  $nav-tabs-link-active-bg: transparent;
+
+  // Navbar
+  $navbar-light-hover-color: $component-active-bg;
+  $navbar-light-active-color: $component-active-bg;
+
+  // Modals
+  $modal-content-border-width: 0;
+
+  // Dropdowns
+  $dropdown-border-color: rgba(#000, .075);
+  $dropdown-min-width: 5rem;
+
+  // Pagination
+  $pagination-disabled-color: #adb5bd;
+
+  // Z-index master list
+  // Make popovers & tooltips behind the other
+  // For popovers & tooltips within modals, use data-container to the parent modal
+  $zindex-popover: 980;
+  $zindex-tooltip: 990;
+
+  // Image thumbnails
+  $thumbnail-bg: #fff;
+
+  // Breadcrumbs
+  $breadcrumb-bg: #eee;
+
+/* End of Bootstrap variables =================================================================================================== */
+
+
+
+/* Theme variables ============================================================================================================== */
+
+  // Webkit scroll bar
+  $webkit-scrollbar-size: 9px;
+  $webkit-scrollbar-track-bg: #f2f2f2;
+  $webkit-scrollbar-track-border: 1px solid #d9d9d9;
+  $webkit-scrollbar-handle-bg: #c2c2c2;
+  $webkit-scrollbar-handle-border: 1px solid #9c9c9c;
+  $webkit-scrollbar-handle-hover-bg: #919191;
+  $webkit-scrollbar-handle-hover-border: 1px solid #6a6a6a;
+
+  // Button
+  $btn-light-border-color: #ddd;
+  $btn-light-active-bg: darken(#f8f9fa, 6%);
+
+  // Material Icons
+  $material-icons-size: 1.5rem;
+  $material-icons-size-sm: $material-icons-size * .875;
+  $material-icons-size-lg: $material-icons-size * 1.25;
+
+  // List Group
+  $list-group-item-stripped-bg: #f7f7f7;
+
+  // noUi Slider
+  $noui-size: .25rem;
+  $noui-handle-size: 1rem;
+
+  // Menu
+  $sidebar-max-width: 250px;
+  $sidebar-link-color: #828282;
+  $sidebar-link-hover-bg: #f8f8f8;
+  $sidebar-link-active-bg: #f8f8f8;
+  $sidebar-link-active-mark-bg: $blue;
+  $sidebar-second-link-color: #777;
+  $sidebar-third-link-color: #777;
+
+  // Price
+  $price-color: #e83e8c;
+
+  // Footer
+  $footer-bg: #fff;
+  $copyright-bg: #fff;
+
+  // Electronics Store Layout
+  $content-padding: 15px;
+  $navbar-height: 56px;
+  $sidebar-width: 200px;
+  $sidebar-bg: #fff;
+  $sidebar-color: #{darken(#fff, 35%)};
+  $sidebar-header-bg: #fff;
+
+/* End of Theme variables ======================================================================================================= */

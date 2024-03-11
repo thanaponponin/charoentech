@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Font & Icon -->
+  @@include('./include/font-icon.html')
+
+  @@include('./include/style-css.html')
+
+  <title>Mimity</title>
+</head>
+
+<body>
+
+  @@include('./include/topbar.html', {
+    "show": "true",
+    "auth": "true"
+  })
+
+  @@include('./include/header.html', {
+    "menu": "account",
+    "sub": "account-wishlist",
+    "child": ""
+  })
+
+  <div class="breadcrumb-container">
+    <div class="container-fluid">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item"><a href="javascript:void(0)">Account</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Wishlist</li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+
+  <div class="container-fluid my-3">
+    <div class="row gutters-3">
+      <div class="col-md-4 col-lg-3">
+        @@include('./include/card-user.html', {
+          "active": "account-wishlist"
+        })
+      </div>
+      <div class="col mt-3 mt-md-0">
+        <div class="card card-style1">
+          <div class="card-body">
+            <h4>My Wishlist</h4>
+            <ul class="list-group list-group-flush list-group-sm mt-3">
+              <li class="list-group-item px-0 d-flex align-items-center">
+                <div class="media">
+                  <a href="shop-single.html">
+                    <img src="../../img/products/1_small.jpg" alt="product" width="75">
+                  </a>
+                  <div class="media-body ml-3">
+                    <a href="shop-single.html" class="card-link text-secondary">Hanes Hooded Sweatshirt</a>
+                    <div class="price"><span>$18.56</span></div>
+                    <button class="btn btn-sm btn-faded-primary mt-1 atc-demo" data-title="Hanes Hooded Sweatshirt">Add to Cart</button>
+                  </div>
+                </div>
+                <button class="btn btn-icon btn-sm btn-text-danger rounded-circle ml-auto" type="button"><i class="material-icons">close</i></button>
+              </li>
+              <li class="list-group-item px-0 d-flex align-items-center">
+                <div class="media">
+                  <a href="shop-single.html">
+                    <img src="../../img/products/8_small.jpg" alt="product" width="75">
+                  </a>
+                  <div class="media-body ml-3">
+                    <a href="shop-single.html" class="card-link text-secondary">Slim-Fit Short-Sleeve Printed Shirt</a>
+                    <div class="price"><span>$25.00</span></div>
+                    <button class="btn btn-sm btn-faded-primary mt-1 atc-demo" data-title="Slim-Fit Short-Sleeve Printed Shirt">Add to Cart</button>
+                  </div>
+                </div>
+                <button class="btn btn-icon btn-sm btn-text-danger rounded-circle ml-auto" type="button"><i class="material-icons">close</i></button>
+              </li>
+              <li class="list-group-item px-0 d-flex align-items-center">
+                <div class="media">
+                  <a href="shop-single.html">
+                    <img src="../../img/products/3_small.jpg" alt="product" width="75">
+                  </a>
+                  <div class="media-body ml-3">
+                    <a href="shop-single.html" class="card-link text-secondary">Open Front Cropped Cardigans</a>
+                    <div class="price">
+                      <span>$15.20</span>
+                      <span class="del">$19.00</span>
+                    </div>
+                    <button class="btn btn-sm btn-faded-primary mt-1 atc-demo" data-title="Open Front Cropped Cardigans">Add to Cart</button>
+                  </div>
+                </div>
+                <button class="btn btn-icon btn-sm btn-text-danger rounded-circle ml-auto" type="button"><i class="material-icons">close</i></button>
+              </li>
+              <li class="list-group-item px-0 d-flex align-items-center">
+                <div class="media">
+                  <a href="shop-single.html">
+                    <img src="../../img/products/4_small.jpg" alt="product" width="75">
+                  </a>
+                  <div class="media-body ml-3">
+                    <a href="shop-single.html" class="card-link text-secondary">Cotton Fleece Long Hoodie</a>
+                    <div class="font-size-sm text-muted"><i class="material-icons text-warning font-size-base align-text-top">warning</i> Out of stock</div>
+                  </div>
+                </div>
+                <button class="btn btn-icon btn-sm btn-text-danger rounded-circle ml-auto" type="button"><i class="material-icons">close</i></button>
+              </li>
+            </ul>
+            <div class="custom-control custom-checkbox mt-3">
+              <input type="checkbox" class="custom-control-input" id="informCheck" checked="">
+              <label class="custom-control-label" for="informCheck">Inform me when item from my wishlist is available</label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  @@include('./include/footer.html')
+
+  @@include('./include/modal-menu.html', {
+    "menu": "account",
+    "sub": "account-wishlist",
+    "child": ""
+  })
+
+  @@include('./include/modal-search.html')
+
+  @@include('./include/modal-cart.html')
+
+  @@include('./include/script-js.html')
+  @@include('./include/app-js.html')
+  <script>
+    $(() => {
+
+      App.atcDemo() // Add to Cart Demo
+
+    })
+  </script>
+</body>
+
+</html>

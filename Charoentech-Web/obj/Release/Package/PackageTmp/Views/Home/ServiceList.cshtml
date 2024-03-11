@@ -1,0 +1,45 @@
+﻿@{
+    ViewBag.Title = "Service";
+}
+
+<div class="breadcrumb-container">
+    <div class="container-fluid">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="/">หน้าแรก</a></li>
+                <li class="breadcrumb-item active" aria-current="page">บริการ</li>
+            </ol>
+        </nav>
+    </div>
+</div>
+
+<!-- MEDIA LIST GROUP -->
+<h2 class="mb-3">บริการของเรา</h2>
+<div class="d-grid grid-gap-3 grid-template-col-md-2 mb-5">
+    <div class="list-group">
+        @{
+            int row = 1;    
+        }
+
+        @foreach (var item in (List<SERVICE_CATE>)ViewData["oListService"])
+        {
+            int mod = row % 4;
+            if(mod == 0)
+            {
+                @Html.Raw("</div><div class=\"list-group\">");
+            }
+            <div class="list-group-item">
+                <div class="media">
+                    <i class="material-icons text-info display-4">@item.ICON</i>
+                    <div class="media-body ml-3">
+                        <h5 class="font-weight-bold">@item.NAME</h5>
+                        <span class="text-secondary">@item.TOPIC</span>
+                        <a href="@Url.Action("ServiceDetail", "Home", new { id = item.SERVICE_CATE_ID })">ดูรายละเอียด</a>
+                    </div>
+                </div>
+            </div>
+            row++;
+        }
+    </div>
+</div>
+<!-- /MEDIA LIST GROUP -->

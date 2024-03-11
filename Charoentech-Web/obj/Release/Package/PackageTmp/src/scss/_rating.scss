@@ -1,0 +1,6 @@
+.rating {
+  display: inline-flex;
+  > svg {
+    fill: $warning;
+  }
+}

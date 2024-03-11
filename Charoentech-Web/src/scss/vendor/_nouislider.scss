@@ -1,0 +1,65 @@
+// Size
+.noUi-horizontal {
+  height: $noui-size;
+}
+.noUi-vertical {
+  width: $noui-size;
+}
+
+// Bar
+.noUi-target {
+  border: 0;
+  background: #dee2e6;
+  box-shadow: none;
+}
+.noUi-target,
+.noUi-connects {
+  border-radius: $border-radius;
+}
+.noUi-connect {
+  background: $component-active-bg;
+}
+
+// Handle
+.noUi-handle {
+  border-radius: 50%;
+  border: 0;
+  .noUi-horizontal &,
+  .noUi-vertical & {
+    width: $noui-handle-size;
+    height: $noui-handle-size;
+  }
+  .noUi-horizontal & {
+    top: calc((#{$noui-size} - #{$noui-handle-size}) / 2);
+    left: -($noui-handle-size / 2);
+  }
+  &::before,
+  &::after {
+    display: none;
+  }
+  .noUi-vertical & {
+    left: calc((#{$noui-size} - #{$noui-handle-size}) / 2);
+    top: -($noui-handle-size / 2);
+  }
+  html:not([dir="rtl"]) .noUi-horizontal & {
+    right: -($noui-handle-size / 2);
+  }
+  &::before,
+  .noUi-vertical &::before {
+    display: block;
+    width: calc(#{$noui-handle-size} + 2px);
+    height: calc(#{$noui-handle-size} + 2px);
+    border-radius: 50%;
+    top: -1px;
+    left: -1px;
+    background-color: $component-active-bg;
+    z-index: -1;
+  }
+  &:focus {
+    outline: 0;
+  }
+}
+.noUi-handle,
+.noUi-active {
+  box-shadow: none;
+}

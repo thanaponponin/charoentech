@@ -1,0 +1,33 @@
+﻿@{
+    ViewBag.Title = "Customer";
+}
+
+<div class="breadcrumb-container">
+    <div class="container-fluid">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="/">หน้าแรก</a></li>
+                <li class="breadcrumb-item active" aria-current="page">ผลงานของเรา</li>
+            </ol>
+        </nav>
+    </div>
+</div>
+
+<div class="container-fluid mb-3">
+    <div class="row gutters-3">
+        <div class="col-md-12 col-xl-12">
+            <div class="d-grid grid-template-col-sm-2 grid-template-col-xl-4 grid-gap-3 mt-3">
+                @foreach(var item in (List<CUSTOMER>)ViewData["oListCust"])
+                {
+                    <div class="card card-style1">
+                        <a href="@Url.Action("CustomerDetail", "Home", new { id = item.CUST_ID })" class="img img-zoom-in"><img src="@Url.Content("~/"+item.IMAGE)" class="w-100" alt="Blog"></a>
+                        <div class="card-body">
+                            <a href="@Url.Action("CustomerDetail", "Home", new { id = item.CUST_ID })" class="h5 card-link d-block">@item.NAME</a>
+                            <p>@{@item.TOPIC} ...</p>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+        </div>
+    </div>

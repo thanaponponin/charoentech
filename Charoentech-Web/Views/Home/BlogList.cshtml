@@ -1,0 +1,35 @@
+﻿@{
+    ViewBag.Title = "Blog";
+}
+
+<div class="breadcrumb-container">
+    <div class="container-fluid">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="/">หน้าแรก</a></li>
+                <li class="breadcrumb-item active" aria-current="page">บทความ</li>
+            </ol>
+        </nav>
+    </div>
+</div>
+<div class="container-fluid mb-3">
+    <div class="row gutters-3">
+        @foreach (var item in (List<BLOG>)ViewData["oListBlog"])
+        {
+            <div class="col-md-12 col-xl-12">
+                <div class="card card-style1 mt-3">
+                    <div class="card-body p-0">
+                        <div class="media align-items-stretch">
+                            <a href="@Url.Action("BlogDetail", "Home", new { id = item.BLOG_ID })" class="img img-zoom-in w-25">
+                                <span data-cover="@Url.Content("~/" + item.IMAGE)" data-height="100%"></span>
+                            </a>
+                            <div class="media-body p-3">
+                                @item.TOPIC <a href="@Url.Action("BlogDetail", "Home", new { id = item.BLOG_ID })">คลิกอ่านต่อ...</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>

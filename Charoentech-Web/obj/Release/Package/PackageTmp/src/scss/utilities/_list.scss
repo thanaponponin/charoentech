@@ -1,0 +1,9 @@
+.list-inline-block {
+  display: inline-flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: -($list-inline-padding / 4);
+  > * {
+    margin: ($list-inline-padding / 4);
+  }
+}

@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Font & Icon -->
+  @@include('./include/font-icon.html')
+
+  @@include('./include/style-css.html')
+
+  <title>Mimity</title>
+</head>
+
+<body>
+
+  @@include('./include/topbar.html', {
+    "show": "true",
+    "auth": "true"
+  })
+
+  @@include('./include/header.html', {
+    "menu": "account",
+    "sub": "account-profile",
+    "child": ""
+  })
+
+  <div class="breadcrumb-container">
+    <div class="container-fluid">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item"><a href="javascript:void(0)">Account</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Profile</li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+
+  <div class="container-fluid my-3">
+    <div class="row gutters-3">
+      <div class="col-md-4 col-lg-3">
+        @@include('./include/card-user.html', {
+          "active": "account-profile"
+        })
+      </div>
+      <div class="col mt-3 mt-md-0">
+        <div class="card card-style1">
+          <div class="card-body">
+            <h4>My Profile</h4>
+            <hr>
+            <form class="form-style-1">
+              <div class="form-row">
+                <div class="form-group col-sm-6">
+                  <label for="profileFirstName">First Name</label>
+                  <input type="text" class="form-control" id="profileFirstName" value="John">
+                </div>
+                <div class="form-group col-sm-6">
+                  <label for="profileLastName">Last Name</label>
+                  <input type="text" class="form-control" id="profileLastName" value="Thor">
+                </div>
+                <div class="form-group col-sm-6">
+                  <label for="profileEmail">Email address</label>
+                  <input type="email" class="form-control" id="profileEmail" value="john.thor@example.com">
+                </div>
+                <div class="form-group col-sm-6">
+                  <label for="profilePhone">Phone Number</label>
+                  <input type="text" class="form-control" id="profilePhone" value="1-787-376-1552">
+                </div>
+                <div class="form-group col-sm-6">
+                  <label for="profileNewPassword">New Password</label>
+                  <input type="password" class="form-control" id="profileNewPassword">
+                </div>
+                <div class="form-group col-sm-6">
+                  <label for="profileConfirmPassword">Confirm Password</label>
+                  <input type="password" class="form-control" id="profileConfirmPassword">
+                </div>
+                <div class="form-group col-12">
+                  <button type="button" class="btn btn-primary">UPDATE PROFILE</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  @@include('./include/footer.html')
+
+  @@include('./include/modal-menu.html', {
+    "menu": "account",
+    "sub": "account-profile",
+    "child": ""
+  })
+
+  @@include('./include/modal-search.html')
+
+  @@include('./include/modal-cart.html')
+
+  @@include('./include/script-js.html')
+  @@include('./include/app-js.html')
+</body>
+
+</html>

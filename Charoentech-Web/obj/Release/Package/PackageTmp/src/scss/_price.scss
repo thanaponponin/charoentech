@@ -1,0 +1,23 @@
+.price {
+  @extend .font-condensed;
+  span {
+    @extend .font-condensed;
+    font-weight: bold;
+    color: $price-color;
+    &.del {
+      position: relative;
+      margin: 0 .5rem;
+      color: $gray-500;
+      &::after {
+        position: absolute;
+        top: calc(50% - 2px);
+        left: -5px;
+        width: calc(100% + 10px);
+        height: 4px;
+        content: '';
+        border-top: 1px solid $gray-500;
+        border-bottom: 1px solid $gray-500;
+      }
+    }
+  }
+}

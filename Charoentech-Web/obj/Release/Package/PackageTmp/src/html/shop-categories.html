@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Font & Icon -->
+  @@include('./include/font-icon.html')
+
+  @@include('./include/style-css.html')
+
+  <title>Mimity</title>
+</head>
+
+<body>
+
+  @@include('./include/topbar.html', {
+    "show": "true",
+    "auth": "false"
+  })
+
+  @@include('./include/header.html', {
+    "menu": "shop",
+    "sub": "shop-categories",
+    "child": ""
+  })
+
+  <div class="breadcrumb-container">
+    <div class="container-fluid">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item"><a href="javascript:void(0)">Shop</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Shop Categories</li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+
+  <div class="container-fluid mb-3">
+
+    <!-- CATEGORIES GRID 1 -->
+    <div class="d-grid grid-template-col-2 grid-template-col-md-3 grid-gap-1 grid-gap-sm-3 mt-3">
+      <div class="img img-zoom-in grid-column-start-1 grid-column-end-3 grid-column-end-sm-2 grid-row-start-sm-1 grid-row-end-sm-3">
+        <div data-cover="../../img/categories/1.jpeg" data-height="150px 276px 250px 325px 400px"></div>
+        <div class="overlay overlay-show bg-dark"></div>
+        <div class="overlay-content overlay-show">
+          <a href="shop-grid.html" class="card-link h3 text-white font-condensed font-weight-bold stretched-link">Men's Fashion</a>
+        </div>
+      </div>
+      <div class="img img-zoom-in">
+        <div data-cover="../../img/categories/2.jpeg" data-height="125px 100% 100% 100% 100%"></div>
+        <div class="overlay overlay-show bg-dark"></div>
+        <div class="overlay-content overlay-show">
+          <a href="shop-grid.html" class="card-link h3 text-white font-condensed stretched-link text-center px-3">Clothing</a>
+        </div>
+      </div>
+      <div class="img img-zoom-in">
+        <div data-cover="../../img/categories/3.jpeg" data-height="125px 100% 100% 100% 100%"></div>
+        <div class="overlay overlay-show bg-dark"></div>
+        <div class="overlay-content overlay-show">
+          <a href="shop-grid.html" class="card-link h3 text-white font-condensed stretched-link text-center px-3">Shoes</a>
+        </div>
+      </div>
+      <div class="img img-zoom-in">
+        <div data-cover="../../img/categories/4.jpeg" data-height="125px 130px 100% 100% 100%"></div>
+        <div class="overlay overlay-show bg-dark"></div>
+        <div class="overlay-content overlay-show">
+          <a href="shop-grid.html" class="card-link h3 text-white font-condensed stretched-link text-center px-3">Watches</a>
+        </div>
+      </div>
+      <div class="img img-zoom-in">
+        <div data-cover="../../img/categories/5.jpeg" data-height="125px 130px 100% 100% 100%"></div>
+        <div class="overlay overlay-show bg-dark"></div>
+        <div class="overlay-content overlay-show">
+          <a href="shop-grid.html" class="card-link h3 text-white font-condensed stretched-link text-center px-3">Accessories</a>
+        </div>
+      </div>
+    </div>
+    <!-- /CATEGORIES GRID 1 -->
+
+    <!-- CATEGORIES GRID 2 -->
+    <div class="d-grid grid-template-col-2 grid-template-col-md-4 grid-gap-1 grid-gap-sm-3 grid-gap-md-2 grid-gap-lg-3 mt-3">
+      <div class="card border-0 shadow-sm">
+        <a href="shop-grid.html" class="card-link">
+          <img class="card-img-top" src="../../img/categories/men2.jpg" alt="Men">
+          <div class="card-body bg-primary-faded text-primary">
+            <h5 class="mb-0">MEN</h5>
+          </div>
+        </a>
+        <div class="list-group list-group-sms list-group-no-border list-group-flush">
+          <a href="shop-grid.html" class="list-group-item list-group-item-action">Clothing</a>
+          <a href="shop-grid.html" class="list-group-item list-group-item-action">Shoes</a>
+          <a href="shop-grid.html" class="list-group-item list-group-item-action">Watches</a>
+          <a href="shop-grid.html" class="list-group-item list-group-item-action">Accessories</a>
+          <a href="shop-grid.html" class="list-group-item list-group-item-action">More &raquo;</a>
+        </div>
+      </div>
+      <div class="card border-0 shadow-sm">
+        <a href="shop-grid.html" class="card-link">
+          <img class="card-img-top" src="../../img/categories/women2.jpg" alt="Women">
+          <div class="card-body bg-danger-faded text-danger">
+            <h5 class="mb-0">WOMEN</h5>
+          </div>
+        </a>
+        <div class="list-group list-group-sms list-group-no-border list-group-flush">
+          <a href="shop-grid.html" class="list-group-item list-group-item-action">Clothing</a>
+          <a href="shop-grid.html" class="list-group-item list-group-item-action">Shoes</a>
+          <a href="shop-grid.html" class="list-group-item list-group-item-action">Jewelry</a>
+          <a href="shop-grid.html" class="list-group-item list-group-item-action">Accessories</a>
+          <a href="shop-grid.html" class="list-group-item list-group-item-action">More &raquo;</a>
+        </div>
+      </div>
+      <div class="card border-0 shadow-sm">
+        <a href="shop-grid.html" class="card-link">
+          <img class="card-img-top" src="../../img/categories/kids.jpg" alt="Kids">
+          <div class="card-body bg-success-faded text-success">
+            <h5 class="mb-0">BOYS FASHION</h5>
+          </div>
+        </a>
+        <div class="list-group list-group-sms list-group-no-border list-group-flush">
+          <a href="shop-grid.html" class="list-group-item list-group-item-action">Clothing</a>
+          <a href="shop-grid.html" class="list-group-item list-group-item-action">Shoes</a>
+          <a href="shop-grid.html" class="list-group-item list-group-item-action">Toys</a>
+          <a href="shop-grid.html" class="list-group-item list-group-item-action">Accessories</a>
+          <a href="shop-grid.html" class="list-group-item list-group-item-action">More &raquo;</a>
+        </div>
+      </div>
+      <div class="card border-0 shadow-sm">
+        <a href="shop-grid.html" class="card-link">
+          <img class="card-img-top" src="../../img/categories/girls.jpg" alt="Kids">
+          <div class="card-body bg-warning-faded text-warning">
+            <h5 class="mb-0">GIRLS FASHION</h5>
+          </div>
+        </a>
+        <div class="list-group list-group-sms list-group-no-border list-group-flush">
+          <a href="shop-grid.html" class="list-group-item list-group-item-action">Clothing</a>
+          <a href="shop-grid.html" class="list-group-item list-group-item-action">Shoes</a>
+          <a href="shop-grid.html" class="list-group-item list-group-item-action">Jewelry</a>
+          <a href="shop-grid.html" class="list-group-item list-group-item-action">Accessories</a>
+          <a href="shop-grid.html" class="list-group-item list-group-item-action">More &raquo;</a>
+        </div>
+      </div>
+    </div>
+    <!-- /CATEGORIES GRID 2 -->
+
+    <!-- CATEGORIES GRID 3 -->
+    <div class="d-grid grid-template-col-2 grid-template-col-md-3 grid-gap-1 grid-gap-sm-3 mt-3">
+      <div class="img img-zoom-in grid-column-start-1 grid-column-end-3 grid-row-start-sm-1 grid-row-end-sm-3 grid-column-start-sm-2 grid-column-end-sm-3">
+        <div data-cover="../../img/categories/6.jpeg" data-height="150px 276px 250px 325px 400px"></div>
+        <div class="overlay overlay-show bg-dark"></div>
+        <div class="overlay-content overlay-show">
+          <a href="shop-grid.html" class="card-link h3 text-white font-condensed font-weight-bold stretched-link">Women's Fashion</a>
+        </div>
+      </div>
+      <div class="img img-zoom-in">
+        <div data-cover="../../img/categories/7.jpeg" data-height="125px 100% 100% 100% 100%"></div>
+        <div class="overlay overlay-show bg-dark"></div>
+        <div class="overlay-content overlay-show">
+          <a href="shop-grid.html" class="card-link h3 text-white font-condensed stretched-link text-center px-3">Clothing</a>
+        </div>
+      </div>
+      <div class="img img-zoom-in">
+        <div data-cover="../../img/categories/8.jpeg" data-height="125px 100% 100% 100% 100%"></div>
+        <div class="overlay overlay-show bg-dark"></div>
+        <div class="overlay-content overlay-show">
+          <a href="shop-grid.html" class="card-link h3 text-white font-condensed stretched-link text-center px-3">Shoes</a>
+        </div>
+      </div>
+      <div class="img img-zoom-in">
+        <div data-cover="../../img/categories/9.jpeg" data-height="125px 130px 100% 100% 100%"></div>
+        <div class="overlay overlay-show bg-dark"></div>
+        <div class="overlay-content overlay-show">
+          <a href="shop-grid.html" class="card-link h3 text-white font-condensed stretched-link text-center px-3">Jewelry</a>
+        </div>
+      </div>
+      <div class="img img-zoom-in">
+        <div data-cover="../../img/categories/10.jpeg" data-height="125px 130px 100% 100% 100%"></div>
+        <div class="overlay overlay-show bg-dark"></div>
+        <div class="overlay-content overlay-show">
+          <a href="shop-grid.html" class="card-link h3 text-white font-condensed stretched-link text-center px-3">Handbags</a>
+        </div>
+      </div>
+    </div>
+    <!-- /CATEGORIES GRID 3 -->
+
+  </div>
+
+  @@include('./include/footer.html')
+
+  @@include('./include/modal-signin.html')
+
+  @@include('./include/modal-menu.html', {
+    "menu": "shop",
+    "sub": "shop-categories",
+    "child": ""
+  })
+
+  @@include('./include/modal-search.html')
+
+  @@include('./include/modal-cart.html')
+
+  @@include('./include/script-js.html')
+  @@include('./include/app-js.html')
+</body>
+
+</html>

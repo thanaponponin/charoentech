@@ -1,0 +1,74 @@
+// Wrapper
+.wrapper {
+  display: flex;
+}
+
+// Main
+.main {
+  width: 100%;
+  padding: ($content-padding + $navbar-height) $content-padding $content-padding;
+  background-color: #fff;
+}
+
+@include media-breakpoint-up(lg) {
+  .main,
+  .navbar-main {
+    padding-left: $sidebar-max-width + $content-padding;
+  }
+}
+
+// Main navbar
+.navbar-main {
+  animation: none;
+  box-shadow: $box-shadow-sm;
+  transform: translateZ(0);
+  &.navbar-light {
+    background-color: #fff;
+  }
+  &.navbar-dark {
+    background-color: $dark;
+  }
+  .nav-toggler {
+    margin-left: $content-padding;
+  }
+}
+
+// Sidebar
+.sidebar {
+  position: fixed;
+  z-index: $zindex-fixed + 1;
+  overflow: hidden;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: $sidebar-max-width;
+  background: $sidebar-bg;
+  border-right: 1px solid $border-color;
+  .modal-header {
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+  }
+  .modal-shown-static .modal-dialog .modal-content .modal-header {
+    display: flex;
+  }
+  @include media-breakpoint-up(lg) {
+    .modal-content {
+      max-height: 100vh;
+    }
+    [data-dismiss="modal"] {
+      display: none;
+    }
+  }
+  @include media-breakpoint-down(md) {
+    position: static;
+    z-index: unset;
+    width: 0;
+    border: 0;
+  }
+}
+
+// Footer
+.footer-electronics {
+  margin: $content-padding -#{$content-padding} -#{$content-padding};
+  padding-top: .5rem;
+}

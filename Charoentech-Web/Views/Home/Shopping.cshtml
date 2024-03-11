@@ -1,0 +1,59 @@
+﻿@{
+    ViewBag.Title = "Shopping";
+}
+
+
+@*<div class="breadcrumb-container">
+        <div class="container-fluid">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item"><a href="javascript:void(0)">Pages</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">About Us</li>
+                </ol>
+            </nav>
+        </div>
+    </div>*@
+<div class="breadcrumb-container">
+    <div class="container-fluid">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="/">หน้าแรก</a></li>
+                <li class="breadcrumb-item active" aria-current="page">@ViewBag.cateName</li>
+            </ol>
+        </nav>
+    </div>
+</div>
+
+<h3 style="margin-bottom: 0;" class="text-black-50">@ViewBag.cateName</h3>
+
+<div class="col-md-8 col-lg-12">
+<div class="d-grid grid-template-col-2 grid-template-col-lg-3 grid-template-col-xl-4 grid-gap-1 grid-gap-sm-3 mt-3">
+    @foreach (var item in (List<ITEM>)ViewData["item"])
+    {
+        <div class="card card-product card-style1">
+            <div class="card-body">
+                @*<button class="btn btn-icon btn-text-danger rounded-circle btn-wishlist atw-demo" data-toggle="button" title="Add to wishlist"></button>
+                <button class="btn btn-icon btn-text-secondary rounded-circle btn-quickview quickview-demo" type="button" title="Quick view"><i class="material-icons">zoom_in</i></button>*@
+                <a href="javascrit: void(0);"><img class="card-img-top" src="@Url.Content("~/"+item.IMAGE)" alt="@item.NAME"></a>
+                <a href="javascrit: void(0);" class="card-title card-link">@item.NAME</a>
+                @if(item.NEW == 1)
+                {
+                    <span class="badge badge-success">สินค้าใหม่</span>
+                }
+                
+                <div class="price">
+                    @if (item.DISCOUNT != null && item.DISCOUNT > 0)
+                    {
+                        <span class="h5 del">@item.DISCOUNT</span>
+                    }
+                    <span class="h5">@{@item.PRICE} บาท</span>
+                </div>
+            </div>
+            <div class="card-footer">
+                <a href="@Url.Action("ShoppingDetail", "Home", new { id = item.ITEM_ID })" class="btn btn-sm rounded-pill btn-faded-primary btn-block">ดูรายละเอียด</a>
+            </div>
+        </div>
+    }
+</div>
+</div>

@@ -1,0 +1,51 @@
+.img {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  margin: 0;
+}
+.img-zoom-in {
+  img,
+  [data-cover] {
+    transition: transform .3s ease-in-out;
+  }
+  &:hover img,
+  &:hover [data-cover] {
+    transform: scale(1.1);
+  }
+}
+
+[data-cover] {
+  display: block;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.overlay,
+.overlay-content {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transition: opacity .3s ease;
+  opacity: 0;
+}
+.overlay {
+  z-index: 1;
+  .img:hover &,
+  &.overlay-show {
+    opacity: .5;
+  }
+}
+.overlay-content {
+  @include flex-center;
+  flex-direction: column;
+  z-index: 2;
+  .img:hover &,
+  &.overlay-show {
+    opacity: 1;
+  }
+}

@@ -1,0 +1,70 @@
+<!-- MENU MODAL -->
+  <div class="modal fade modal-content-left" id="menuModal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable" role="document">
+      <div class="modal-content">
+        <div class="modal-header align-items-center border-bottom shadow-sm z-index-1">
+          <a href="#"><img src="../../img/logo.svg" alt="Logo" height="40"></a>
+          <button class="btn btn-icon btn-sm btn-text-secondary rounded-circle" type="button" data-dismiss="modal">
+            <i class="material-icons">close</i>
+          </button>
+        </div>
+        <div class="modal-body px-0 scrollbar-width-thin">
+          <ul class="menu" id="menu">
+            <li class="no-sub@@if(menu=='home' && sub=='layout1'){ mm-active}"><a href="index.html"><i class="material-icons">home</i> Home</a></li>
+            <li class="no-sub@@if(menu=='home' && sub=='layout2'){ mm-active}"><a href="index2.html"><i class="material-icons">home_work</i> Home layout 2</a></li>
+            <li class="no-sub@@if(menu=='home' && sub=='layout3'){ mm-active}"><a href="index3.html"><i class="material-icons">phonelink</i> Electronics Store</a></li>
+            <li>
+              <a href="#" class="has-arrow"><i class="material-icons">shopping_cart</i> Shop</a>
+              <ul>
+                <li@@if(menu=='shop' && sub=='shop-categories'){ class="mm-active"}><a href="shop-categories.html">Shop Categories</a></li>
+                <li@@if(menu=='shop' && sub=='shop-grid'){ class="mm-active"}><a href="shop-grid.html">Shop Grid</a></li>
+                <li@@if(menu=='shop' && sub=='shop-list'){ class="mm-active"}><a href="shop-list.html">Shop List</a></li>
+                <li@@if(menu=='shop' && sub=='cart'){ class="mm-active"}><a href="cart.html">Cart</a></li>
+                <li>
+                  <a href="#" class="has-arrow">Checkout</a>
+                  <ul>
+                    <li@@if(menu=='shop' && sub=='checkout' && child=='checkout-shipping'){ class="mm-active"}><a href="checkout-shipping.html">Checkout Shipping</a></li>
+                    <li@@if(menu=='shop' && sub=='checkout' && child=='checkout-payment'){ class="mm-active"}><a href="checkout-payment.html">Checkout Payment</a></li>
+                    <li@@if(menu=='shop' && sub=='checkout' && child=='checkout-review'){ class="mm-active"}><a href="checkout-review.html">Checkout Review</a></li>
+                    <li@@if(menu=='shop' && sub=='checkout' && child=='checkout-complete'){ class="mm-active"}><a href="checkout-complete.html">Checkout Complete</a></li>
+                  </ul>
+                </li>
+                <li@@if(menu=='shop' && sub=='shop-single'){ class="mm-active"}><a href="shop-single.html">Single Product</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#" class="has-arrow"><i class="material-icons">person</i> Account</a>
+              <ul>
+                <li@@if(menu=='account' && sub=='account-signin'){ class="mm-active"}><a href="account-signin.html">Sign In / Sign Up</a></li>
+                <li@@if(menu=='account' && sub=='account-profile'){ class="mm-active"}><a href="account-profile.html">Profile Page</a></li>
+                <li@@if(menu=='account' && sub=='account-orders'){ class="mm-active"}><a href="account-orders.html">Orders List</a></li>
+                <li@@if(menu=='account' && sub=='account-order-detail'){ class="mm-active"}><a href="account-order-detail.html">Order Detail</a></li>
+                <li@@if(menu=='account' && sub=='account-wishlist'){ class="mm-active"}><a href="account-wishlist.html" class="has-badge">Wishlist <span class="badge badge-primary badge-pill">3</span></a></li>
+                <li@@if(menu=='account' && sub=='account-address'){ class="mm-active"}><a href="account-address.html">Address</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#" class="has-arrow"><i class="material-icons">rss_feed</i> Blog</a>
+              <ul>
+                <li@@if(menu=='blog' && sub=='blog-grid'){ class="mm-active"}><a href="blog-grid.html">Post Grid</a></li>
+                <li@@if(menu=='blog' && sub=='blog-list'){ class="mm-active"}><a href="blog-list.html">Post List</a></li>
+                <li@@if(menu=='blog' && sub=='blog-single'){ class="mm-active"}><a href="blog-single.html">Single Post</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#" class="has-arrow"><i class="material-icons">file_copy</i> Pages</a>
+              <ul>
+                <li@@if(menu=='pages' && sub=='about'){ class="mm-active"}><a href="about.html">About Us</a></li>
+                <li@@if(menu=='pages' && sub=='contact'){ class="mm-active"}><a href="contact.html">Contact Us</a></li>
+                <li@@if(menu=='pages' && sub=='compare'){ class="mm-active"}><a href="compare.html">Compare</a></li>
+                <li@@if(menu=='pages' && sub=='faq'){ class="mm-active"}><a href="faq.html">Help / FAQ</a></li>
+                <li@@if(menu=='pages' && sub=='404'){ class="mm-active"}><a href="404.html">404 Not Found</a></li>
+              </ul>
+            </li>
+            <li class="no-sub@@if(menu=='components'){ mm-active}"><a href="components.html"><i class="material-icons">check_box_outline_blank</i> Components</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- /MENU MODAL -->

@@ -1,0 +1,200 @@
+.card-header,
+.card-footer {
+  display: flex;
+  align-items: center;
+}
+.card-header > {
+  h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    margin-bottom: 0;
+  }
+}
+
+// Theme colors
+@each $color, $value in $theme-colors {
+  @if $color != 'light' { // ignore '.card-light' use default card instead
+    .card.card-#{$color} {
+      border-color: $value;
+      .card-header,
+      .card-footer {
+        background-color: $value;
+        color: color-yiq($value);
+        border: 0;
+      }
+    }
+  }
+}
+
+// Accordion
+.accordion {
+  .card-header {
+    padding-top: .75rem;
+    padding-bottom: .75rem;
+    border-bottom-color: transparent;
+    &:hover,
+    &[aria-expanded="true"] {
+      text-decoration: none;
+      background-color: rgba(#000, .05);
+      color: inherit;
+    }
+  }
+  &.accordion-caret .card-header:not(.no-caret) {
+    padding-right: 2rem;
+    &::after {
+      content: '';
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      border-width: 0 0 1px 1px;
+      border-style: solid;
+      right: .75rem;
+      transform: rotate(-45deg);
+      margin-top: -2px;
+      transition: transform .35s ease;
+    }
+    &[aria-expanded="true"]::after {
+      transform: rotate(135deg);
+      margin-top: 2px;
+    }
+  }
+  &.accordion-no-border > .card {
+    border-color: transparent;
+    @if $enable-rounded {
+      border-radius: 0;
+      > .card-header {
+        border-radius: 0;
+      }
+    }
+  }
+}
+
+@each $color, $value in $theme-colors {
+  @if $color != 'light' { // ignore '.card-light' use default card instead
+    .accordion > .card-#{$color} {
+      .card-header {
+        background-color: theme-color-level($color, $faded-level);
+        @if $color == 'warning' {
+          color: color-yiq($value);
+        } @else {
+          color: $value;
+        }
+        &:hover,
+        &[aria-expanded="true"] {
+          background-color: $value;
+          @if $color != 'warning' {
+            color: color-yiq($value);
+          }
+        }
+      }
+    }
+  }
+}
+
+// Product Card
+.card-product {
+  text-align: center;
+  &:not(.card-product-list) {
+    .card-img-top {
+      margin-bottom: 1rem;
+    }
+    .custom-color {
+      margin: 0 auto;
+      margin-top: .5rem;
+    }
+    .rating {
+      display: block;
+      margin-bottom: .5rem;
+    }
+    .badge {
+      margin-bottom: .5rem;
+    }
+  }
+  .card-link {
+    font-weight: 500;
+    display: block;
+    &:not(:hover) {
+      color: $body-color;
+    }
+  }
+  .badge {
+    border-radius: .5rem;
+    border-top-left-radius: 0;
+    border-bottom-right-radius: 0;
+    @include media-breakpoint-up('sm') {
+      font-size: 90%;
+    }
+  }
+  .card-footer {
+    border-top: 0;
+    padding: 0 $card-spacer-x $card-spacer-x;
+    background-color: transparent;
+  }
+  @include media-breakpoint-down('xs') {
+    .card-body {
+      padding: .5rem;
+    }
+  }
+  .price span {
+    @include media-breakpoint-only('md') {
+      font-size: $h6-font-size;
+    }
+    @include media-breakpoint-down('xs') {
+      font-size: $h6-font-size;
+    }
+  }
+}
+
+// Product List Card
+.card-product-list {
+  flex-direction: row;
+  > a {
+    padding: $card-spacer-x;
+    @include media-breakpoint-down('md') { width: 40% }
+    @include media-breakpoint-only('lg') { width: 35% }
+    @include media-breakpoint-up('xl')   { width: 25% }
+  }
+  @include media-breakpoint-up('sm') {
+    .card-title {
+      font-size: $h5-font-size;
+    }
+  }
+  .card-body {
+    text-align: left;
+    @include media-breakpoint-down('md') { width: 60% }
+    @include media-breakpoint-only('lg') { width: 65% }
+    @include media-breakpoint-up('xl')   { width: 75% }
+  }
+  .badge,
+  .rating {
+    margin-left: .5rem;
+  }
+  .custom-color {
+    display: flex;
+    margin-bottom: .5rem;
+  }
+  .attr {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: .5rem;
+  }
+}
+
+// Card styles
+.card-style1 {
+  border: 0;
+  box-shadow: $box-shadow-sm;
+}
+
+// jquery Card
+.jp-card {
+  min-width: auto !important;
+}
+.jp-card-container {
+  width: 100% !important;
+}
+@if $enable-rounded == false {
+  .jp-card .jp-card-front,
+  .jp-card .jp-card-back {
+    border-radius: 0 !important;
+  }
+}

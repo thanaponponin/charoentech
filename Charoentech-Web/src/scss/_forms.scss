@@ -1,0 +1,78 @@
+/* Change autocomplete styles in WebKit */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+select:-webkit-autofill,
+select:-webkit-autofill:hover {
+  -webkit-box-shadow: 0 0 0px 1000px $input-bg inset;
+  -webkit-text-fill-color: $input-color;
+}
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0px 1000px $input-bg inset, $input-focus-box-shadow;
+}
+
+// input icon
+.input-icon {
+  position: relative;
+  display: block;
+  > i {
+    position: absolute;
+  }
+}
+// icon top position
+.input-icon > i { top: 7px }
+.input-icon.input-icon-sm > i { top: 5px; font-size: $material-icons-size-sm !important; }
+.input-icon.input-icon-lg > i { top: 9px; font-size: $material-icons-size-lg !important; }
+// icon left position
+.input-icon:not(.input-icon-right) > i { left: $input-padding-x - .25rem }
+.input-icon.input-icon-sm:not(.input-icon-right) > i { left: $input-padding-x-sm - .20rem }
+.input-icon.input-icon-lg:not(.input-icon-right) > i { left: $input-padding-x-lg - .20rem }
+// input padding-left
+.input-icon:not(.input-icon-right) > input.form-control { padding-left: $input-padding-x + $material-icons-size }
+.input-icon.input-icon-sm:not(.input-icon-right) > input.form-control-sm { padding-left: $input-padding-x-sm + $material-icons-size-sm }
+.input-icon.input-icon-lg:not(.input-icon-right) > input.form-control-lg { padding-left: $input-padding-x-lg + $material-icons-size-lg }
+.input-icon:not(.input-icon-right) > textarea.form-control { padding-left: $input-padding-x + $material-icons-size }
+.input-icon.input-icon-sm:not(.input-icon-right) > textarea.form-control-sm { padding-left: $input-padding-x-sm + $material-icons-size-sm }
+.input-icon.input-icon-lg:not(.input-icon-right) > textarea.form-control-lg { padding-left: $input-padding-x-lg + $material-icons-size-lg }
+// icon right position
+.input-icon.input-icon-right > i { right: $input-padding-x - .25rem }
+.input-icon.input-icon-right.input-icon-sm > i { right: $input-padding-x-sm - .20rem }
+.input-icon.input-icon-right.input-icon-lg > i { right: $input-padding-x-lg - .20rem }
+// input padding-right
+.input-icon.input-icon-right > input.form-control { padding-right: $input-padding-x + $material-icons-size }
+.input-icon.input-icon-right.input-icon-sm > input.form-control-sm { padding-right: $input-padding-x-sm + $material-icons-size-sm }
+.input-icon.input-icon-right.input-icon-lg > input.form-control-lg { padding-right: $input-padding-x-lg + $material-icons-size-lg }
+.input-icon.input-icon-right > textarea.form-control { padding-right: $input-padding-x + $material-icons-size }
+.input-icon.input-icon-right.input-icon-sm > textarea.form-control-sm { padding-right: $input-padding-x-sm + $material-icons-size-sm }
+.input-icon.input-icon-right.input-icon-lg > textarea.form-control-lg { padding-right: $input-padding-x-lg + $material-icons-size-lg }
+
+// Search input
+.input-group-search {
+  .twitter-typeahead {
+    width: 0;
+    flex: 1 1 auto;
+    .tt-menu {
+      width: auto;
+      right: -52px;
+      left: -52px !important;
+      @include media-breakpoint-up('lg') {
+        right: -64px;
+        left: -64px !important;
+      }
+    }
+  }
+}
+
+// Form style 1
+.form-style-1 {
+  .form-group:not(.form-check) label:not([class]) {
+    font-weight: bold;
+    font-size: $font-size-sm;
+  }
+  .form-control:not(:focus):not([disabled]):not([readonly]) {
+    background-color: $light;
+  }
+}

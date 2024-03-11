@@ -1,0 +1,426 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="CharoenTechModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="BANNER">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IMAGE" Type="nvarchar(max)" />
+          <Property Name="STATUS" Type="int" />
+        </EntityType>
+        <EntityType Name="BLOG">
+          <Key>
+            <PropertyRef Name="BLOG_ID" />
+          </Key>
+          <Property Name="BLOG_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NAME" Type="nvarchar(max)" />
+          <Property Name="TOPIC" Type="nvarchar(max)" />
+          <Property Name="DESCRIPTION" Type="nvarchar(max)" />
+          <Property Name="IMAGE" Type="nvarchar(max)" />
+          <Property Name="STATUS" Type="int" />
+          <Property Name="CREATED_DT" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="CUSTOMER">
+          <Key>
+            <PropertyRef Name="CUST_ID" />
+          </Key>
+          <Property Name="CUST_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NAME" Type="nvarchar(max)" />
+          <Property Name="TOPIC" Type="nvarchar(max)" />
+          <Property Name="DESCRIPTION" Type="nvarchar(max)" />
+          <Property Name="IMAGE" Type="nvarchar(max)" />
+          <Property Name="STATUS" Type="int" />
+          <Property Name="CREATED_DT" Type="datetime" />
+        </EntityType>
+        <EntityType Name="DOWNLOAD">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NAME" Type="nvarchar(max)" />
+          <Property Name="PATH" Type="nvarchar(max)" />
+          <Property Name="STATUS" Type="int" />
+        </EntityType>
+        <EntityType Name="ITEM">
+          <Key>
+            <PropertyRef Name="ITEM_ID" />
+          </Key>
+          <Property Name="ITEM_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ITEM_CATE_ID" Type="int" />
+          <Property Name="NAME" Type="nvarchar(max)" />
+          <Property Name="DESCRIPTION" Type="nvarchar(max)" />
+          <Property Name="DOWNLOAD_TAB" Type="nvarchar(max)" />
+          <Property Name="PRICE" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="DISCOUNT" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="FLAG" Type="int" />
+          <Property Name="BEST_SALLER" Type="int" />
+          <Property Name="NEW" Type="int" />
+          <Property Name="INDEX_HOME_PG" Type="int" />
+          <Property Name="ORDER_LIST" Type="int" />
+          <Property Name="IMAGE" Type="nvarchar(max)" />
+          <Property Name="BOSURE" Type="nvarchar(max)" />
+          <Property Name="PO" Type="nvarchar(max)" />
+          <Property Name="STATUS" Type="int" />
+          <Property Name="CREATED_DT" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ITEM_CATE">
+          <Key>
+            <PropertyRef Name="ITEM_CATE_ID" />
+          </Key>
+          <Property Name="ITEM_CATE_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NAME" Type="nvarchar(max)" />
+          <Property Name="DESCRIPTION" Type="nvarchar(max)" />
+          <Property Name="FLAG_HOME_PG" Type="int" />
+          <Property Name="IMAGE" Type="nvarchar(max)" />
+          <Property Name="STATUS" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="SERVICE_CATE">
+          <Key>
+            <PropertyRef Name="SERVICE_CATE_ID" />
+          </Key>
+          <Property Name="SERVICE_CATE_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NAME" Type="nvarchar(max)" />
+          <Property Name="TOPIC" Type="nvarchar(max)" />
+          <Property Name="DESCRIPTION" Type="nvarchar(max)" />
+          <Property Name="IMAGE" Type="nvarchar(max)" />
+          <Property Name="ICON" Type="nvarchar(max)" />
+          <Property Name="ORDER_LIST" Type="int" />
+          <Property Name="STATUS" Type="int" Nullable="false" />
+          <Property Name="CREATED_DT" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TEXT">
+          <Key>
+            <PropertyRef Name="TEXT_ID" />
+          </Key>
+          <Property Name="TEXT_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TASK" Type="nvarchar(max)" />
+          <Property Name="ICON" Type="nvarchar(max)" />
+          <Property Name="NAME" Type="nvarchar(max)" />
+          <Property Name="TOPIC" Type="nvarchar(max)" />
+          <Property Name="DESCRIPTION" Type="nvarchar(max)" />
+          <Property Name="IMAGE" Type="nvarchar(max)" />
+          <Property Name="STATUS" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TICKET">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NUMBER" Type="int" />
+        </EntityType>
+        <EntityType Name="USERS">
+          <Key>
+            <PropertyRef Name="USER_ID" />
+          </Key>
+          <Property Name="USER_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="USERNAME" Type="nvarchar" MaxLength="50" />
+          <Property Name="PASSWORD" Type="nvarchar" MaxLength="50" />
+          <Property Name="ACTIVE" Type="nchar" MaxLength="1" />
+        </EntityType>
+        <EntityContainer Name="CharoenTechModelStoreContainer">
+          <EntitySet Name="BANNER" EntityType="Self.BANNER" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="BLOG" EntityType="Self.BLOG" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CUSTOMER" EntityType="Self.CUSTOMER" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="DOWNLOAD" EntityType="Self.DOWNLOAD" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ITEM" EntityType="Self.ITEM" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ITEM_CATE" EntityType="Self.ITEM_CATE" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SERVICE_CATE" EntityType="Self.SERVICE_CATE" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TEXT" EntityType="Self.TEXT" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TICKET" EntityType="Self.TICKET" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="USERS" EntityType="Self.USERS" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="CharoenTechModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="ITEM">
+          <Key>
+            <PropertyRef Name="ITEM_ID" />
+          </Key>
+          <Property Name="ITEM_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NAME" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="DESCRIPTION" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PRICE" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="DISCOUNT" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="FLAG" Type="Int32" />
+          <Property Name="ORDER_LIST" Type="Int32" />
+          <Property Name="IMAGE" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="BOSURE" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PO" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="STATUS" Type="Int32" />
+          <Property Name="CREATED_DT" Type="Binary" MaxLength="8" FixedLength="true" Nullable="false" annotation:StoreGeneratedPattern="Computed" />
+          <Property Name="INDEX_HOME_PG" Type="Int32" />
+          <Property Name="ITEM_CATE_ID" Type="Int32" />
+          <Property Name="BEST_SALLER" Type="Int32" />
+          <Property Name="NEW" Type="Int32" />
+          <Property Name="DOWNLOAD_TAB" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="ITEM_CATE">
+          <Key>
+            <PropertyRef Name="ITEM_CATE_ID" />
+          </Key>
+          <Property Name="ITEM_CATE_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NAME" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="DESCRIPTION" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="STATUS" Type="Int32" Nullable="false" />
+          <Property Name="FLAG_HOME_PG" Type="Int32" />
+          <Property Name="IMAGE" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="SERVICE_CATE">
+          <Key>
+            <PropertyRef Name="SERVICE_CATE_ID" />
+          </Key>
+          <Property Name="SERVICE_CATE_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NAME" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="TOPIC" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="DESCRIPTION" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="IMAGE" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ICON" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ORDER_LIST" Type="Int32" />
+          <Property Name="STATUS" Type="Int32" Nullable="false" />
+          <Property Name="CREATED_DT" Type="Binary" MaxLength="8" FixedLength="true" Nullable="false" annotation:StoreGeneratedPattern="Computed" />
+        </EntityType>
+        <EntityContainer Name="CharoenTechEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="ITEM" EntityType="Self.ITEM" />
+          <EntitySet Name="ITEM_CATE" EntityType="Self.ITEM_CATE" />
+          <EntitySet Name="SERVICE_CATE" EntityType="Self.SERVICE_CATE" />
+          <EntitySet Name="BLOG" EntityType="CharoenTechModel.BLOG" />
+          <EntitySet Name="CUSTOMER" EntityType="CharoenTechModel.CUSTOMER" />
+          <EntitySet Name="TEXT" EntityType="CharoenTechModel.TEXT" />
+          <EntitySet Name="USERS" EntityType="CharoenTechModel.USERS" />
+          <EntitySet Name="BANNER" EntityType="CharoenTechModel.BANNER" />
+          <EntitySet Name="DOWNLOAD" EntityType="CharoenTechModel.DOWNLOAD" />
+          <EntitySet Name="TICKET" EntityType="CharoenTechModel.TICKET" />
+        </EntityContainer>
+        <EntityType Name="BLOG">
+          <Key>
+            <PropertyRef Name="BLOG_ID" />
+          </Key>
+          <Property Name="BLOG_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NAME" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="TOPIC" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="DESCRIPTION" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="IMAGE" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="STATUS" Type="Int32" />
+          <Property Name="CREATED_DT" Type="DateTime" Nullable="false" Precision="3" />
+        </EntityType>
+        <EntityType Name="CUSTOMER">
+          <Key>
+            <PropertyRef Name="CUST_ID" />
+          </Key>
+          <Property Name="CUST_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NAME" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="TOPIC" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="DESCRIPTION" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="IMAGE" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="STATUS" Type="Int32" />
+          <Property Name="CREATED_DT" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="TEXT">
+          <Key>
+            <PropertyRef Name="TEXT_ID" />
+          </Key>
+          <Property Name="TEXT_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TASK" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ICON" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="NAME" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="TOPIC" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="DESCRIPTION" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="IMAGE" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="STATUS" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="USERS">
+          <Key>
+            <PropertyRef Name="USER_ID" />
+          </Key>
+          <Property Name="USER_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="USERNAME" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PASSWORD" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ACTIVE" Type="String" MaxLength="1" FixedLength="true" Unicode="true" />
+        </EntityType>
+        <EntityType Name="BANNER">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IMAGE" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="STATUS" Type="Int32" />
+        </EntityType>
+        <EntityType Name="DOWNLOAD">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NAME" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PATH" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="STATUS" Type="Int32" />
+        </EntityType>
+        <EntityType Name="TICKET">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NUMBER" Type="Int32" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="CharoenTechModelStoreContainer" CdmEntityContainer="CharoenTechEntities">
+          <EntitySetMapping Name="ITEM">
+            <EntityTypeMapping TypeName="CharoenTechModel.ITEM">
+              <MappingFragment StoreEntitySet="ITEM">
+                <ScalarProperty Name="DOWNLOAD_TAB" ColumnName="DOWNLOAD_TAB" />
+                <ScalarProperty Name="NEW" ColumnName="NEW" />
+                <ScalarProperty Name="BEST_SALLER" ColumnName="BEST_SALLER" />
+                <ScalarProperty Name="ITEM_CATE_ID" ColumnName="ITEM_CATE_ID" />
+                <ScalarProperty Name="INDEX_HOME_PG" ColumnName="INDEX_HOME_PG" />
+                <ScalarProperty Name="ITEM_ID" ColumnName="ITEM_ID" />
+                <ScalarProperty Name="NAME" ColumnName="NAME" />
+                <ScalarProperty Name="DESCRIPTION" ColumnName="DESCRIPTION" />
+                <ScalarProperty Name="PRICE" ColumnName="PRICE" />
+                <ScalarProperty Name="DISCOUNT" ColumnName="DISCOUNT" />
+                <ScalarProperty Name="FLAG" ColumnName="FLAG" />
+                <ScalarProperty Name="ORDER_LIST" ColumnName="ORDER_LIST" />
+                <ScalarProperty Name="IMAGE" ColumnName="IMAGE" />
+                <ScalarProperty Name="BOSURE" ColumnName="BOSURE" />
+                <ScalarProperty Name="PO" ColumnName="PO" />
+                <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+                <ScalarProperty Name="CREATED_DT" ColumnName="CREATED_DT" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ITEM_CATE">
+            <EntityTypeMapping TypeName="CharoenTechModel.ITEM_CATE">
+              <MappingFragment StoreEntitySet="ITEM_CATE">
+                <ScalarProperty Name="IMAGE" ColumnName="IMAGE" />
+                <ScalarProperty Name="FLAG_HOME_PG" ColumnName="FLAG_HOME_PG" />
+                <ScalarProperty Name="ITEM_CATE_ID" ColumnName="ITEM_CATE_ID" />
+                <ScalarProperty Name="NAME" ColumnName="NAME" />
+                <ScalarProperty Name="DESCRIPTION" ColumnName="DESCRIPTION" />
+                <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SERVICE_CATE">
+            <EntityTypeMapping TypeName="CharoenTechModel.SERVICE_CATE">
+              <MappingFragment StoreEntitySet="SERVICE_CATE">
+                <ScalarProperty Name="SERVICE_CATE_ID" ColumnName="SERVICE_CATE_ID" />
+                <ScalarProperty Name="NAME" ColumnName="NAME" />
+                <ScalarProperty Name="TOPIC" ColumnName="TOPIC" />
+                <ScalarProperty Name="DESCRIPTION" ColumnName="DESCRIPTION" />
+                <ScalarProperty Name="IMAGE" ColumnName="IMAGE" />
+                <ScalarProperty Name="ICON" ColumnName="ICON" />
+                <ScalarProperty Name="ORDER_LIST" ColumnName="ORDER_LIST" />
+                <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+                <ScalarProperty Name="CREATED_DT" ColumnName="CREATED_DT" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BLOG">
+            <EntityTypeMapping TypeName="CharoenTechModel.BLOG">
+              <MappingFragment StoreEntitySet="BLOG">
+                <ScalarProperty Name="CREATED_DT" ColumnName="CREATED_DT" />
+                <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+                <ScalarProperty Name="IMAGE" ColumnName="IMAGE" />
+                <ScalarProperty Name="DESCRIPTION" ColumnName="DESCRIPTION" />
+                <ScalarProperty Name="TOPIC" ColumnName="TOPIC" />
+                <ScalarProperty Name="NAME" ColumnName="NAME" />
+                <ScalarProperty Name="BLOG_ID" ColumnName="BLOG_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CUSTOMER">
+            <EntityTypeMapping TypeName="CharoenTechModel.CUSTOMER">
+              <MappingFragment StoreEntitySet="CUSTOMER">
+                <ScalarProperty Name="CREATED_DT" ColumnName="CREATED_DT" />
+                <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+                <ScalarProperty Name="IMAGE" ColumnName="IMAGE" />
+                <ScalarProperty Name="DESCRIPTION" ColumnName="DESCRIPTION" />
+                <ScalarProperty Name="TOPIC" ColumnName="TOPIC" />
+                <ScalarProperty Name="NAME" ColumnName="NAME" />
+                <ScalarProperty Name="CUST_ID" ColumnName="CUST_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TEXT">
+            <EntityTypeMapping TypeName="CharoenTechModel.TEXT">
+              <MappingFragment StoreEntitySet="TEXT">
+                <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+                <ScalarProperty Name="IMAGE" ColumnName="IMAGE" />
+                <ScalarProperty Name="DESCRIPTION" ColumnName="DESCRIPTION" />
+                <ScalarProperty Name="TOPIC" ColumnName="TOPIC" />
+                <ScalarProperty Name="NAME" ColumnName="NAME" />
+                <ScalarProperty Name="ICON" ColumnName="ICON" />
+                <ScalarProperty Name="TASK" ColumnName="TASK" />
+                <ScalarProperty Name="TEXT_ID" ColumnName="TEXT_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="USERS">
+            <EntityTypeMapping TypeName="CharoenTechModel.USERS">
+              <MappingFragment StoreEntitySet="USERS">
+                <ScalarProperty Name="ACTIVE" ColumnName="ACTIVE" />
+                <ScalarProperty Name="PASSWORD" ColumnName="PASSWORD" />
+                <ScalarProperty Name="USERNAME" ColumnName="USERNAME" />
+                <ScalarProperty Name="USER_ID" ColumnName="USER_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BANNER">
+            <EntityTypeMapping TypeName="CharoenTechModel.BANNER">
+              <MappingFragment StoreEntitySet="BANNER">
+                <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+                <ScalarProperty Name="IMAGE" ColumnName="IMAGE" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DOWNLOAD">
+            <EntityTypeMapping TypeName="CharoenTechModel.DOWNLOAD">
+              <MappingFragment StoreEntitySet="DOWNLOAD">
+                <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+                <ScalarProperty Name="PATH" ColumnName="PATH" />
+                <ScalarProperty Name="NAME" ColumnName="NAME" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TICKET">
+            <EntityTypeMapping TypeName="CharoenTechModel.TICKET">
+              <MappingFragment StoreEntitySet="TICKET">
+                <ScalarProperty Name="NUMBER" ColumnName="NUMBER" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -1,0 +1,48 @@
+﻿@model PagedList.IPagedList<USERS>
+@using PagedList.Mvc;
+<link href="~/Content/PagedList.css" rel="stylesheet" type="text/css" />
+
+@{
+    ViewBag.Title = "User";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="row">
+    <div class="col-md-12" style="margin-top: 50px;">
+        <a href="@Url.Action("User_Create", "Admin")" class="btn btn-success pull-right">เพิ่มรายการ</a>
+        <h2>
+            User
+        </h2>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <td>ID</td>
+                    <td>Username</td>
+                    <td>สถานะ</td>
+                    <td>Action</td>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.USER_ID</td>
+                        <td>@item.USERNAME</td>
+                        <td>
+                            @if (item.ACTIVE == "A")
+                            { @Html.Raw("เปิด") }
+                            else
+                            { @Html.Raw("ปิด") }
+                        </td>
+                        <td><a href="@Url.Action("User_Edit", "Admin", new { id = item.USER_ID })" class="btn btn-xs btn-warning">ดู/แก้ไข</a></td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+        <br />
+        Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
+
+        @Html.PagedListPager(Model, page => Url.Action("User", new { page }))
+    </div>
+</div>
+
+

@@ -1,0 +1,64 @@
+﻿@model PagedList.IPagedList<Charoentech_Web.ModelViews.ITEM_MODEL_VIEW>
+@using PagedList.Mvc;
+<link href="~/Content/PagedList.css" rel="stylesheet" type="text/css" />
+
+@{
+    ViewBag.Title = "สินค้า";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="row">
+    <div class="col-md-12" style="margin-top: 50px;">
+        <a href="@Url.Action("item_Create", "Admin")" class="btn btn-success pull-right">เพิ่มรายการ</a>
+        <h2>สินค้า</h2>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <td>ID</td>
+                    <td>ชื่อ</td>
+                    <td>ประเภทสินค้า</td>
+                    <td>เรียงลำดับที่</td>
+                    <td>สินค้าใหม่</td>
+                    <td>แสดงในหน้าหลัก</td>
+                    <td>สถานะ</td>
+                    <td>Action</td>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.ITEM_ID</td>
+                        <td>@item.NAME</td>
+                        <td>@item.ITEM_CATE_NAME</td>
+                        <td>@item.ORDER_LIST</td>
+                        <td>
+                            @if (item.NEW == 1)
+                            { @Html.Raw("ใช่") }
+                            else
+                            { @Html.Raw("ไม่ใช่") }
+                        </td>
+                        <td>
+                            @if (item.INDEX_HOME_PG == 1)
+                            { @Html.Raw("เปิด") }
+                            else
+                            { @Html.Raw("ปิด") }
+                        </td>
+                        <td>
+                            @if (item.STATUS == 1)
+                            { @Html.Raw("เปิด") }
+                            else
+                            { @Html.Raw("ปิด") }
+                        </td>
+                        <td><a href="@Url.Action("item_Edit", "Admin", new { id = item.ITEM_ID })" class="btn btn-xs btn-warning">ดู/แก้ไข</a></td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+        <br />
+        Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
+
+        @Html.PagedListPager(Model, page => Url.Action("Item", new { page }))
+    </div>
+</div>
+
+

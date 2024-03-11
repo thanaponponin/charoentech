@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Font & Icon -->
+  @@include('./include/font-icon.html')
+
+  @@include('./include/style-css.html')
+
+  <title>Mimity</title>
+</head>
+
+<body>
+
+  @@include('./include/topbar.html', {
+    "show": "true",
+    "auth": "true"
+  })
+
+  @@include('./include/header.html', {
+    "menu": "shop",
+    "sub": "checkout",
+    "child": "checkout-payment"
+  })
+
+  <div class="breadcrumb-container">
+    <div class="container-fluid">
+      <nav aria-label="breadcrumb" class="text-center">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item"><a href="javascript:void(0)">Checkout</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Checkout - Payment</li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+
+  <div class="container-fluid mb-3">
+    <div class="row gutters-3 justify-content-center">
+      <div class="col-md-7 col-lg-6 col-xl-5">
+        <div class="card card-style1">
+          <div class="card-body">
+            <nav class="steps">
+              <a href="checkout-shipping.html" data-step="1" class="done">Shipping</a>
+              <a href="checkout-payment.html" data-step="2" class="current">Payment</a>
+              <a href="checkout-review.html" data-step="3">Review</a>
+            </nav>
+            <hr>
+            <div class="accordion accordion-caret accordion-no-border" id="accordion-payment">
+              <div class="card card-secondary">
+                <a class="card-header h6" data-toggle="collapse" href="#content-caret-1" aria-expanded="true">
+                  <i class="material-icons mr-3">credit_card</i>Pay with Credit Card
+                </a>
+                <div id="content-caret-1" class="collapse show" data-parent="#accordion-payment">
+                  <div class="card-body px-0">
+                    <form class="form-style-1" id="form-payment">
+                      <div class='card-wrapper mb-3'></div>
+                      <div class="form-row">
+                        <div class="form-group col-lg-6">
+                          <input type="text" name="number" class="form-control" placeholder="Card Number">
+                        </div>
+                        <div class="form-group col-lg-6">
+                          <input type="text" name="name" class="form-control" placeholder="Full Name">
+                        </div>
+                        <div class="form-group col-sm-6">
+                          <input type="text" name="expiry" class="form-control" placeholder="MM / YY">
+                        </div>
+                        <div class="form-group col-sm-6">
+                          <input type="text" name="cvc" class="form-control" placeholder="CVC Code">
+                        </div>
+                      </div>
+                      </form>
+                  </div>
+                </div>
+              </div>
+              <div class="card card-secondary">
+                <a class="card-header h6" data-toggle="collapse" href="#content-caret-2" aria-expanded="false">
+                  <i class="custom-icon mr-3" data-icon="paypal" data-size="24x20"></i>Pay with Paypal
+                </a>
+                <div id="content-caret-2" class="collapse" data-parent="#accordion-payment">
+                  <div class="card-body px-0">
+                    <em>Login to your Paypal account</em>
+                    <form class="form-style-1 mt-3">
+                      <div class="form-group">
+                        <span class="input-icon">
+                          <i class="material-icons">mail_outline</i>
+                          <input type="email" class="form-control" placeholder="Email address" required>
+                        </span>
+                      </div>
+                      <div class="form-group">
+                        <span class="input-icon">
+                          <i class="material-icons">lock_open</i>
+                          <input type="password" class="form-control" placeholder="Password" required>
+                        </span>
+                      </div>
+                      <div class="form-group d-flex justify-content-between">
+                        <button type="submit" class="btn btn-primary">Login</button>
+                        <a href="javascript:void(0)" class="text-primary small">Forgot password ?</a>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+              <div class="card card-secondary">
+                <a class="card-header h6" data-toggle="collapse" href="#content-caret-3" aria-expanded="false">
+                  <i class="material-icons mr-3">card_giftcard</i>Reedem Points
+                </a>
+                <div id="content-caret-3" class="collapse" data-parent="#accordion-payment">
+                  <div class="card-body px-0 text-center">
+                    <div class="alert alert-primary" role="alert">
+                      You currently have <strong>9,386</strong> Points to spend.
+                    </div>
+                    <div class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" id="usePoint">
+                      <label class="custom-control-label" for="usePoint">Use my Points to pay for this order.</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-5 col-xl-4 mt-1 mt-md-0">
+        <div class="card card-style1">
+          <div class="card-body">
+            <h5>Order summary</h5>
+            <ul class="list-group list-group-flush list-group-sm">
+              <li class="list-group-item px-0">
+                <div class="media">
+                  <a href="shop-single.html">
+                    <img src="../../img/products/1_small.jpg" alt="product" width="75">
+                  </a>
+                  <div class="media-body ml-3">
+                    <a href="shop-single.html" class="card-link text-secondary">Hanes Hooded Sweatshirt</a>
+                    <div class="font-size-sm"><span class="text-muted">Size:</span> small</div>
+                    <div class="price">
+                      <span class="text-success">$18.56</span>
+                      <span class="ml-3 text-secondary font-weight-normal">x 1</span>
+                      <span class="ml-3">$18.56</span>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="list-group-item px-0">
+                <div class="media">
+                  <a href="shop-single.html">
+                    <img src="../../img/products/2_small.jpg" alt="product" width="75">
+                  </a>
+                  <div class="media-body ml-3">
+                    <a href="shop-single.html" class="card-link text-secondary">The Flash Logo T-Shirt</a>
+                    <div class="font-size-sm"><span class="text-muted">Size:</span> medium</div>
+                    <div class="price">
+                      <span class="text-success">$16.64</span>
+                      <span class="ml-3 text-secondary font-weight-normal">x 2</span>
+                      <span class="ml-3">$33.28</span>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="list-group-item px-0">
+                <div class="media">
+                  <a href="shop-single.html">
+                    <img src="../../img/products/3_small.jpg" alt="product" width="75">
+                  </a>
+                  <div class="media-body ml-3">
+                    <a href="shop-single.html" class="card-link text-secondary">Open Front Cropped Cardigans</a>
+                    <div class="font-size-sm"><span class="text-muted">Size:</span> large</div>
+                    <div class="price">
+                      <span class="text-success">$15.20</span>
+                      <span class="ml-3 text-secondary font-weight-normal">x 1</span>
+                      <span class="ml-3">$15.20</span>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+            <div class="mt-3 font-condensed">
+              <div class="d-flex">
+                <div class="text-muted">Bag Total</div>
+                <div class="ml-auto font-weight-bold">$67.04</div>
+              </div>
+              <div class="d-flex">
+                <div class="text-muted">Bag Discount</div>
+                <div class="ml-auto font-weight-bold">$2.04</div>
+              </div>
+              <hr class="my-1">
+              <div class="d-flex">
+                <div class="text-muted">Coupon Discount</div>
+                <div class="ml-auto font-weight-bold">-</div>
+              </div>
+              <div class="d-flex">
+                <div class="text-muted">Shipping Cost</div>
+                <div class="ml-auto font-weight-bold">$10.00</div>
+              </div>
+              <hr>
+              <div class="d-flex">
+                <div class="text-muted">Order Total</div>
+                <div class="ml-auto font-weight-bold text-primary h4 mb-0">$75.00</div>
+              </div>
+              <hr>
+            </div>
+            <a href="checkout-review.html" class="btn btn-lg btn-primary btn-block has-icon">REVIEW MY ORDER<i class="material-icons">chevron_right</i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  @@include('./include/footer.html')
+
+  @@include('./include/modal-menu.html', {
+    "menu": "shop",
+    "sub": "checkout",
+    "child": "checkout-payment"
+  })
+
+  @@include('./include/modal-search.html')
+
+  @@include('./include/modal-cart.html')
+
+  @@include('./include/script-js.html')
+  <script src="../../plugins/card/jquery.card.min.js"></script>
+  @@include('./include/app-js.html')
+  <script>
+  $(() => {
+    $('#form-payment').card({
+      container: '.card-wrapper'
+    })
+  })
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,96 @@
+// Caret
+.dropdown-toggle {
+  &::after {
+    vertical-align: $caret-width * .5;
+  }
+  &.no-caret::after {
+    display: none;
+  }
+}
+
+.dropdown-item {
+  // Dropdown item active state
+  &.active,
+  &:active {
+    color: $component-active-bg;
+    background-color: theme-color-level('primary', $faded-level);
+  }
+  // Dropdown item with icon
+  &.has-icon {
+    display: flex;
+    align-items: center;
+    padding: $dropdown-item-padding-y $dropdown-item-padding-x / 2;
+  }
+}
+
+// Dropdown menu shadow
+.dropdown-menu {
+  box-shadow: $box-shadow-sm;
+}
+
+// Dropdown hover (lg & xl only)
+.dropdown-hover {
+  @include media-breakpoint-up('lg') {
+    .dropdown-menu {
+      margin: 0; // remove the gap so it doesn't close
+    }
+    &:hover > .dropdown-menu {
+      display: block;
+    }
+    > .dropdown-toggle:not(.forwardable):active {
+      pointer-events: none;
+    }
+  }
+}
+
+// Dropdown submenu
+.dropdown-submenu {
+  position: relative;
+  > .dropdown-item {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='25' height='16' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='feather feather-chevron-right'%3E%3Cpolyline points='9 18 15 12 9 6'%3E%3C/polyline%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right center;
+  }
+  > .dropdown-menu {
+    top: -2px;
+    left: calc(100% - 2px);
+    overflow: hidden;
+    min-width: 150px;
+  }
+  &:hover {
+    > .dropdown-menu {
+      display: block;
+    }
+  }
+}
+
+// Mega menu
+.dropdown-mega {
+  position: static;
+  > .dropdown-menu {
+    top: 40px;
+    right: 15px;
+    left: 15px;
+    transform: none;
+    padding: 1rem;
+    margin-top: $dropdown-spacer;
+  }
+}
+
+// Animate dropdown
+.dropdown-menu {
+  .show & {
+    animation-name: dropdownAnimate;
+    animation-duration: .25s;
+  }
+}
+@keyframes dropdownAnimate {
+  from {
+    transform: translate3d(0, -10px, 0);
+    opacity: 0;
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}

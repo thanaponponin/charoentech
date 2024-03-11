@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Font & Icon -->
+  @@include('./include/font-icon.html')
+
+  @@include('./include/style-css.html')
+
+  <title>Mimity</title>
+</head>
+
+<body>
+
+  @@include('./include/topbar.html', {
+    "show": "true",
+    "auth": "false"
+  })
+
+  @@include('./include/header.html', {
+    "menu": "pages",
+    "sub": "404",
+    "child": ""
+  })
+
+  <div class="breadcrumb-container text-center">
+    <div class="container-fluid">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item"><a href="javascript:void(0)">Pages</a></li>
+          <li class="breadcrumb-item active" aria-current="page">404 Not Found</li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+
+  <div class="container-fluid my-4 text-center">
+
+    <img src="../../img/404.jpg" alt="404" width="250" class="img-fluid rounded-circle mb-3 img-thumbnail border-info">
+    <h2><span class="text-danger">Oops!</span> Error 404 page not found</h2>
+    <p>The page you were looking for doesn't exist.</p>
+    <a href="javascript:history.back()" class="btn btn-danger has-icon"><i class="material-icons">chevron_left</i> Go back</a>
+
+  </div>
+
+  @@include('./include/footer.html')
+
+  @@include('./include/modal-signin.html')
+
+  @@include('./include/modal-menu.html', {
+    "menu": "pages",
+    "sub": "404",
+    "child": ""
+  })
+
+  @@include('./include/modal-search.html')
+
+  @@include('./include/modal-cart.html')
+
+  @@include('./include/script-js.html')
+  @@include('./include/app-js.html')
+</body>
+
+</html>

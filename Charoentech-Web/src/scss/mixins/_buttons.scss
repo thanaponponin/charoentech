@@ -1,0 +1,87 @@
+@mixin button-text($color, $value) {
+
+  $faded             : theme-color-level($color, $faded-level);
+  $hover-background  : $faded;
+  $hover-color       : if($color == 'light', color-yiq($faded), $value);
+  $active-background : darken($faded, $faded-active-level);
+  $active-color      : if($color == 'light', darken(color-yiq($faded), $faded-active-level), darken($value, $faded-active-level));
+
+  color: $value;
+  background-color: transparent;
+  border-color: transparent;
+
+  @include hover {
+    color: $hover-color;
+    background-color: $hover-background;
+  }
+
+  &:focus,
+  &.focus {
+    @if $enable-shadows {
+      box-shadow: $btn-box-shadow, 0 0 0 $btn-focus-width rgba(mix(color-yiq($value), $value, 15%), .5);
+    } @else {
+      box-shadow: 0 0 0 $btn-focus-width rgba(mix(color-yiq($value), $value, 15%), .5);
+    }
+  }
+
+  &.disabled,
+  &:disabled {
+    color: $value;
+    background-color: transparent;
+  }
+
+  &:not(:disabled):not(.disabled):active,
+  &:not(:disabled):not(.disabled).active,
+  .show > &.dropdown-toggle {
+    box-shadow: none !important;
+    color: $active-color;
+    background-color: $active-background;
+    @if $enable-gradients {
+      background-image: none;
+    }
+  }
+}
+
+@mixin button-faded($color, $value) {
+
+  $faded             : if($color == 'light', $value, theme-color-level($color, $faded-level));
+  $hover-background  : if($color == 'light', darken($faded, 2%), darken($faded, 5%));
+  $hover-color       : if($color == 'light', color-yiq($faded), $value);
+  $active-background : if($color == 'light', darken($faded, 7%), darken($faded, $faded-active-level));
+  $active-color      : if($color == 'light', darken(color-yiq($faded), $faded-active-level), darken($value, $faded-active-level));
+
+  color: $hover-color;
+  background-color: $faded;
+  border-color: transparent;
+
+  @include hover {
+    color: $hover-color;
+    background-color: $hover-background;
+  }
+
+  &:focus,
+  &.focus {
+    @if $enable-shadows {
+      box-shadow: $btn-box-shadow, 0 0 0 $btn-focus-width rgba(mix(color-yiq($value), $value, 15%), .5);
+    } @else {
+      box-shadow: 0 0 0 $btn-focus-width rgba(mix(color-yiq($value), $value, 15%), .5);
+    }
+  }
+
+  &.disabled,
+  &:disabled {
+    color: $value;
+    background-color: transparent;
+  }
+
+  &:not(:disabled):not(.disabled):active,
+  &:not(:disabled):not(.disabled).active,
+  .show > &.dropdown-toggle {
+    box-shadow: none !important;
+    color: $active-color;
+    background-color: $active-background;
+    @if $enable-gradients {
+      background-image: none;
+    }
+  }
+}

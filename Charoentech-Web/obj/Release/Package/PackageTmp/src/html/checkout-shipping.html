@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Font & Icon -->
+  @@include('./include/font-icon.html')
+
+  @@include('./include/style-css.html')
+
+  <title>Mimity</title>
+</head>
+
+<body>
+
+  @@include('./include/topbar.html', {
+    "show": "true",
+    "auth": "true"
+  })
+
+  @@include('./include/header.html', {
+    "menu": "shop",
+    "sub": "checkout",
+    "child": "checkout-shipping"
+  })
+
+  <div class="breadcrumb-container">
+    <div class="container-fluid">
+      <nav aria-label="breadcrumb" class="text-center">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item"><a href="javascript:void(0)">Checkout</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Checkout - Shipping</li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+
+  <div class="container-fluid mb-3">
+    <div class="row gutters-3 justify-content-center">
+      <div class="col-md-7 col-lg-6 col-xl-5">
+        <div class="card card-style1">
+          <div class="card-body">
+            <nav class="steps">
+              <a href="checkout-shipping.html" data-step="1" class="current">Shipping</a>
+              <a href="checkout-payment.html" data-step="2">Payment</a>
+              <a href="checkout-review.html" data-step="3">Review</a>
+            </nav>
+            <hr>
+            <form class="form-style-1">
+              <div class="custom-control custom-radio custom-control-inline">
+                <input type="radio" id="address1" name="addressId" class="custom-control-input" checked>
+                <label class="custom-control-label" for="address1">Home</label>
+              </div>
+              <div class="custom-control custom-radio custom-control-inline">
+                <input type="radio" id="address2" name="addressId" class="custom-control-input">
+                <label class="custom-control-label" for="address2">Office</label>
+              </div>
+              <hr>
+              <div class="form-group">
+                <label for="shippingFirstName">Full Name</label>
+                <input type="text" class="form-control" id="shippingFirstName" value="John Thor">
+              </div>
+              <div class="form-group">
+                <label for="shippingEmail">Email Address</label>
+                <input type="email" class="form-control" id="shippingEmail" value="john.thor@example.com">
+              </div>
+              <div class="form-group">
+                <label for="shippingPhone">Phone Number</label>
+                <input type="tel" class="form-control" id="shippingPhone" value="1-787-376-1552">
+              </div>
+              <div class="form-row">
+                <div class="form-group col-12">
+                  <div class="collapse show addressCollapse">
+                    <label for="shippingAddress">Address</label>
+                    <input type="text" class="form-control" id="shippingAddress" value="2114  Jadewood Farms">
+                  </div>
+                  <div class="addressCollapse collapse">
+                    <label for="anotherShippingAddress">Address</label>
+                    <input type="text" class="form-control" id="anotherShippingAddress" value="">
+                  </div>
+                  <div class="custom-control custom-checkbox mt-1">
+                    <input type="checkbox" class="custom-control-input" id="useAnotherAddress">
+                    <label class="custom-control-label text-secondary" for="useAnotherAddress" data-toggle="collapse" data-target=".addressCollapse">Use different address</label>
+                  </div>
+                </div>
+                <div class="form-group col-6 col-sm-5 col-md-6 col-lg-5">
+                  <label for="shippingCountry">Country</label>
+                  <select class="form-control custom-select" id="shippingCountry">
+                    <option>Choose country</option>
+                    <option value="Australia">Australia</option>
+                    <option value="Canada">Canada</option>
+                    <option value="France">France</option>
+                    <option value="Germany">Germany</option>
+                    <option value="Switzerland">Switzerland</option>
+                    <option value="USA" selected>United States</option>
+                  </select>
+                </div>
+                <div class="form-group col-6 col-sm-5 col-md-6 col-lg-5">
+                  <label for="shippingCity">City</label>
+                  <input type="text" class="form-control" id="shippingCity" value="Piscataway, New Jersey">
+                </div>
+                <div class="form-group col-3 col-sm-2 col-md-3 col-lg-2">
+                  <label for="shippingZip">ZIP Code</label>
+                  <input type="number" class="form-control" id="shippingZip" value="8854">
+                </div>
+              </div>
+              <hr>
+              <div class="form-group">
+                <h6><label><em>SHIPPING METHOD</em></label></h6>
+                <div class="custom-control custom-radio">
+                  <input type="radio" id="method1" name="shippingMethod" class="custom-control-input">
+                  <label class="custom-control-label" for="method1">
+                    Standard <span class="text-muted">(FREE)</span>
+                    <small class="text-muted d-block font-condensed">10-15 Days</small>
+                  </label>
+                </div>
+                <div class="custom-control custom-radio mt-2">
+                  <input type="radio" id="method2" name="shippingMethod" class="custom-control-input" checked>
+                  <label class="custom-control-label" for="method2">
+                    Express <span class="text-muted">($10)</span>
+                    <small class="text-muted d-block font-condensed">1-3 Days</small>
+                  </label>
+                </div>
+              </div>
+              <hr>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-5 col-xl-4 mt-1 mt-md-0">
+        <div class="card card-style1">
+          <div class="card-body">
+            <h5>Order summary</h5>
+            <ul class="list-group list-group-flush list-group-sm">
+              <li class="list-group-item px-0">
+                <div class="media">
+                  <a href="shop-single.html">
+                    <img src="../../img/products/1_small.jpg" alt="product" width="75">
+                  </a>
+                  <div class="media-body ml-3">
+                    <a href="shop-single.html" class="card-link text-secondary">Hanes Hooded Sweatshirt</a>
+                    <div class="font-size-sm"><span class="text-muted">Size:</span> small</div>
+                    <div class="price">
+                      <span class="text-success">$18.56</span>
+                      <span class="ml-3 text-secondary font-weight-normal">x 1</span>
+                      <span class="ml-3">$18.56</span>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="list-group-item px-0">
+                <div class="media">
+                  <a href="shop-single.html">
+                    <img src="../../img/products/2_small.jpg" alt="product" width="75">
+                  </a>
+                  <div class="media-body ml-3">
+                    <a href="shop-single.html" class="card-link text-secondary">The Flash Logo T-Shirt</a>
+                    <div class="font-size-sm"><span class="text-muted">Size:</span> medium</div>
+                    <div class="price">
+                      <span class="text-success">$16.64</span>
+                      <span class="ml-3 text-secondary font-weight-normal">x 2</span>
+                      <span class="ml-3">$33.28</span>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="list-group-item px-0">
+                <div class="media">
+                  <a href="shop-single.html">
+                    <img src="../../img/products/3_small.jpg" alt="product" width="75">
+                  </a>
+                  <div class="media-body ml-3">
+                    <a href="shop-single.html" class="card-link text-secondary">Open Front Cropped Cardigans</a>
+                    <div class="font-size-sm"><span class="text-muted">Size:</span> large</div>
+                    <div class="price">
+                      <span class="text-success">$15.20</span>
+                      <span class="ml-3 text-secondary font-weight-normal">x 1</span>
+                      <span class="ml-3">$15.20</span>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+            <div class="mt-3 font-condensed">
+              <div class="d-flex">
+                <div class="text-muted">Bag Total</div>
+                <div class="ml-auto font-weight-bold">$67.04</div>
+              </div>
+              <div class="d-flex">
+                <div class="text-muted">Bag Discount</div>
+                <div class="ml-auto font-weight-bold">$2.04</div>
+              </div>
+              <hr class="my-1">
+              <div class="d-flex">
+                <div class="text-muted">Coupon Discount</div>
+                <div class="ml-auto font-weight-bold">-</div>
+              </div>
+              <div class="d-flex">
+                <div class="text-muted">Shipping Cost</div>
+                <div class="ml-auto font-weight-bold">$10.00</div>
+              </div>
+              <hr>
+              <div class="d-flex">
+                <div class="text-muted">Order Total</div>
+                <div class="ml-auto font-weight-bold text-primary h4 mb-0">$75.00</div>
+              </div>
+              <hr>
+            </div>
+            <a href="checkout-payment.html" class="btn btn-lg btn-primary btn-block has-icon">CONTINUE TO PAYMENT<i class="material-icons">chevron_right</i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  @@include('./include/footer.html')
+
+  @@include('./include/modal-menu.html', {
+    "menu": "shop",
+    "sub": "checkout",
+    "child": "checkout-shipping"
+  })
+
+  @@include('./include/modal-search.html')
+
+  @@include('./include/modal-cart.html')
+
+  @@include('./include/script-js.html')
+  @@include('./include/app-js.html')
+</body>
+
+</html>

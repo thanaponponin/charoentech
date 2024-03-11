@@ -1,0 +1,135 @@
+// Restyle btn-light
+.btn-light {
+  border-color: $btn-light-border-color;
+  &.disabled,
+  &:disabled {
+    border-color: $btn-light-border-color;
+  }
+  @include hover {
+    &:not(:disabled):not(.disabled) {
+      border-color: darken($btn-light-border-color, 10%);
+    }
+  }
+}
+
+@each $color, $value in $theme-colors {
+  .btn-#{$color} {
+    // Restyle btn hover focus style
+    &:not(:disabled):not(.disabled):not(:active):not(.active) {
+      @include hover-focus {
+        @if $color == 'light' {
+          @include gradient-bg(lighten($value, 1%));
+          border-color: darken($btn-light-border-color, 10%);
+        } @else {
+          @include gradient-bg(lighten($value, 3%));
+          border-color: darken($value, 10%);
+        }
+      }
+    }
+    // Restyle btn active style
+    &:not(:disabled):not(.disabled):active,
+    &:not(:disabled):not(.disabled).active,
+    .show > &.dropdown-toggle {
+      box-shadow: inset 0 1px 2px rgba(#000, .10), 0 1px 2px rgba(#000, .05) !important;
+      @if $color == 'light' {
+        background-color: $btn-light-active-bg !important;
+        &:not([class*="border-"]) {
+          border-color: darken($btn-light-border-color, 12.5%) !important;
+        }
+      } @else {
+        background-color: darken($value, 10%) !important;
+        &:not([class*="border-"]) {
+          border-color: darken($value, 12.5%) !important;
+        }
+      }
+    }
+  }
+  // Button text
+  .btn-text-#{$color} {
+    @include button-text($color, $value);
+  }
+  // Button Faded
+  .btn-faded-#{$color} {
+    @include button-faded($color, $value);
+  }
+}
+
+// Button has icon
+.btn.has-icon {
+  display: inline-flex;
+  align-items: center;
+  &.btn-block {
+    display: flex;
+    justify-content: center;
+  }
+}
+// Button icon only
+.btn-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px !important;
+  height: 38px;
+  padding: 0 !important;
+  .btn-group-lg > &,
+  &.btn-lg {
+    width: 48px !important;
+    height: 48px;
+  }
+  .btn-group-sm > &,
+  &.btn-sm {
+    width: 31px !important;
+    height: 31px;
+  }
+}
+
+.btn-wishlist {
+  position: absolute;
+  top: .5rem;
+  left: .5rem;
+}
+
+.btn-wishlist {
+  background-color: #fff !important;
+  box-shadow: $box-shadow-sm !important;
+  z-index: 1;
+  &::before {
+    font-family: 'Material Icons';
+    content: '\e87e';
+    font-size: $material-icons-size;
+  }
+  &:not(:hover):not(.active)::before {
+    color: #ddd;
+  }
+  &.active {
+    &::before {
+      content: '\e87d';
+    }
+  }
+  &:not(:disabled):not(.disabled):active,
+  &:not(:disabled):not(.disabled).active {
+    box-shadow: $box-shadow-sm !important;
+  }
+  @include media-breakpoint-down('xs') {
+    width: 31px !important;
+    height: 31px !important;
+    &::before {
+      font-size: $material-icons-size-sm;
+    }
+  }
+}
+
+.btn-quickview {
+  position: absolute;
+  top: .5rem;
+  right: .5rem;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity .2s;
+  @include media-breakpoint-up('md') {
+    .card-product:hover & {
+      z-index: unset;
+      opacity: 1;
+    }
+  }
+}

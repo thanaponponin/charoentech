@@ -1,0 +1,74 @@
+<!-- TOP BAR -->
+  <div class="topbar">
+    <div class="container-fluid d-flex align-items-center">
+
+      <nav class="nav mr-1 d-none d-md-flex">
+        <a class="nav-link nav-link-sm has-icon bg-white pl-0" href="#"><i class="material-icons mr-1">phone</i> 212 123 456 789</a>
+        <a class="nav-link nav-link-sm has-icon bg-white" href="#"><i class="material-icons mr-1">mail_outline</i> support@mimity.com</a>
+      </nav>
+
+      <nav class="nav nav-circle d-none d-sm-flex">
+        <a class="nav-link nav-link-sm nav-icon p-0" href="#"><i class="custom-icon" data-icon="facebook" data-size="17x17"></i></a>
+        <a class="nav-link nav-link-sm nav-icon p-0" href="#"><i class="custom-icon" data-icon="twitter" data-size="17x17"></i></a>
+        <a class="nav-link nav-link-sm nav-icon p-0" href="#"><i class="custom-icon" data-icon="instagram" data-size="17x17"></i></a>
+      </nav>
+
+      <div class="btn-group btn-group-toggle btn-group-sm ml-auto mr-1" data-toggle="buttons" hidden>
+        <label class="btn btn-text-primary active">
+          <input type="radio" name="lang" checked> EN
+        </label>
+        <label class="btn btn-text-primary">
+          <input type="radio" name="lang"> RU
+        </label>
+      </div>
+
+      <nav class="nav nav-gap-x-1 ml-auto mr-1">
+        <div class="nav-item nav-pills dropdown">
+          <a class="nav-link nav-link-sm dropdown-toggle no-caret" href="#" id="currencyDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-display="static">
+            $ USD
+          </a>
+          <div class="dropdown-menu dropdown-menu-right font-size-sm" aria-labelledby="currencyDropdown">
+            <button class="dropdown-item active" type="button">$ USD</button>
+            <button class="dropdown-item" type="button">€ EUR</button>
+            <button class="dropdown-item" type="button">£ UKP</button>
+            <button class="dropdown-item" type="button">¥ JPY</button>
+          </div>
+        </div>
+        <div class="nav-item nav-pills dropdown">
+          <a class="nav-link nav-link-sm dropdown-toggle no-caret@@if(show =='false'){ hover}" href="#" id="langDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-display="static">
+            English
+          </a>
+          <div class="dropdown-menu dropdown-menu-right font-size-sm" aria-labelledby="langDropdown">
+            <button class="dropdown-item active" type="button">English</button>
+            <button class="dropdown-item" type="button">Français</button>
+            <button class="dropdown-item" type="button">Deutsch</button>
+            <button class="dropdown-item" type="button">Italiano</button>
+          </div>
+        </div>
+      </nav>
+
+      @@if (show == 'true' && auth == 'true') {
+      <nav class="nav">
+        <div class="nav-item nav-pills dropdown dropdown-hover">
+          <a class="nav-link nav-link-sm dropdown-toggle has-icon hover" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-display="static">
+            <i class="material-icons mr-1">person</i> Hi, John
+          </a>
+          <div class="dropdown-menu dropdown-menu-right font-size-sm" aria-labelledby="userDropdown">
+            <a class="dropdown-item has-icon pr-5" href="account-orders.html"><i class="material-icons mr-2">shopping_cart</i> My Orders</a>
+            <a class="dropdown-item has-icon pr-5" href="account-wishlist.html"><i class="material-icons mr-2">favorite_border</i> Wishlist</a>
+            <a class="dropdown-item has-icon pr-5" href="account-profile.html"><i class="material-icons mr-2">person</i> Account Setting</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item has-icon pr-5 text-danger" href="account-signin.html"><i class="material-icons mr-2">exit_to_app</i> Sign Out</a>
+          </div>
+        </div>
+      </nav>
+      }
+      @@if (show == 'true' && auth != 'true') {
+      <button type="button" data-toggle="modal" data-target="#signinModal" class="btn btn-faded-primary has-icon btn-sm">
+        <i class="material-icons mr-1">person</i> Sign in
+      </button>
+      }
+
+    </div>
+  </div>
+  <!-- /TOP BAR -->

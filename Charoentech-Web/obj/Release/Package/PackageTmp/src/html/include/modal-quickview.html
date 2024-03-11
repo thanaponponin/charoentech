@@ -1,0 +1,85 @@
+<!-- QUICK VIEW MODAL -->
+  <div class="modal fade" id="quickviewModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-body">
+          <button class="btn btn-icon btn-sm btn-text-secondary rounded-circle float-right" type="button" data-dismiss="modal">
+            <i class="material-icons">close</i>
+          </button>
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="swiper-container" id="quickviewSlider">
+                <div class="swiper-wrapper">
+                  <img src="../../img/products/1_medium.jpg" alt="Product" class="swiper-slide">
+                  <img src="../../img/products/1_medium_yellow.jpg" alt="Product" class="swiper-slide">
+                  <img src="../../img/products/1_medium_red.jpg" alt="Product" class="swiper-slide">
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev autohide"><i class="material-icons">chevron_left</i></div>
+                <div class="swiper-button-next autohide"><i class="material-icons">chevron_right</i></div>
+                <button class="btn btn-icon btn-text-danger rounded-circle btn-wishlist atw-demo" data-toggle="button" title="Add to wishlist" data-title="Hanes Men's Pullover EcoSmart Fleece Hooded Sweatshirt"></button>
+              </div>
+            </div>
+            <div class="col-lg-6 mt-3 mt-lg-0">
+              <h4 class="card-title font-weight-normal">Hanes Men's Pullover EcoSmart Fleece Hooded Sweatshirt</h4>
+              <h6><span class="rating" data-value="4.5"></span> <a href="javascript:void(0)">2 reviews</a></h6>
+              <h3 class="price">
+                <span class="del">$140.00</span>
+                <span >$120.00</span>
+              </h3>
+              <form>
+                <div class="form-group">
+                  <label class="font-weight-bold d-block">Size</label>
+                  <div class="btn-group btn-group-sm btn-group-toggle btn-group-circle" data-toggle="buttons">
+                    <label class="btn btn-outline-secondary" data-toggle="tooltip" title="Small" data-container="#quickviewModal">
+                      <input type="radio" name="quickViewProductSize">S
+                    </label>
+                    <label class="btn btn-outline-secondary active" data-toggle="tooltip" title="Medium" data-container="#quickviewModal">
+                      <input type="radio" name="quickViewProductSize" checked>M
+                    </label>
+                    <label class="btn btn-outline-secondary" data-toggle="tooltip" title="Large" data-container="#quickviewModal">
+                      <input type="radio" name="quickViewProductSize">L
+                    </label>
+                    <label class="btn btn-outline-secondary" data-toggle="tooltip" title="Extra Large" data-container="#quickviewModal">
+                      <input type="radio" name="quickViewProductSize">XL
+                    </label>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="font-weight-bold d-block">Color</label>
+                  <div class="custom-color custom-color-lg">
+                    <div class="color-item">
+                      <input type="radio" name="colorOption" id="colorOption-1" class="custom-control-input" checked>
+                      <label for="colorOption-1" class="rounded-circle" style="background-color:#314e76"></label>
+                    </div>
+                    <div class="color-item">
+                      <input type="radio" name="colorOption" id="colorOption-2" class="custom-control-input">
+                      <label for="colorOption-2" class="rounded-circle" style="background-color:#fcab28"></label>
+                    </div>
+                    <div class="color-item">
+                      <input type="radio" name="colorOption" id="colorOption-3" class="custom-control-input">
+                      <label for="colorOption-3" class="rounded-circle" style="background-color:#db4524"></label>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-group col-6">
+                    <label class="d-block font-weight-bold">Quantity</label>
+                    <div class="custom-spinner">
+                      <button class="btn btn-icon rounded-circle btn-faded-primary down" type="button"><i class="material-icons">remove</i></button>
+                      <input type="number" class="form-control" value="1" min="1" max="999">
+                      <button class="btn btn-icon rounded-circle btn-faded-primary up" type="button"><i class="material-icons">add</i></button>
+                    </div>
+                  </div>
+                  <div class="form-group col-6 d-flex align-items-end">
+                    <button class="btn rounded-pill btn-primary btn-block atc-demo" type="button" data-title="Hanes Men's Pullover EcoSmart Fleece Hooded Sweatshirt">Add to Cart</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- /QUICK VIEW MODAL -->

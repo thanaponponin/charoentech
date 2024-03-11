@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="1335ddb3ccdc4ba49177b2f5132eb00c" Name="Diagram1" ZoomLevel="95">
+        <EntityTypeShape EntityType="CharoenTechModel.ITEM" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CharoenTechModel.ITEM_CATE" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CharoenTechModel.SERVICE_CATE" Width="1.5" PointX="4.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CharoenTechModel.BLOG" Width="1.5" PointX="7.375" PointY="3.75" />
+        <EntityTypeShape EntityType="CharoenTechModel.CUSTOMER" Width="1.5" PointX="3.375" PointY="7.75" />
+        <EntityTypeShape EntityType="CharoenTechModel.TEXT" Width="1.5" PointX="0.75" PointY="5.75" />
+        <EntityTypeShape EntityType="CharoenTechModel.USERS" Width="1.5" PointX="7.375" PointY="0.75" />
+        <EntityTypeShape EntityType="CharoenTechModel.BANNER" Width="1.5" PointX="5.375" PointY="7.75" />
+        <EntityTypeShape EntityType="CharoenTechModel.DOWNLOAD" Width="1.5" PointX="7.375" PointY="7.75" />
+        <EntityTypeShape EntityType="CharoenTechModel.TICKET" Width="1.5" PointX="9.375" PointY="0.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

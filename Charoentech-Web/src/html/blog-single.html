@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Font & Icon -->
+  @@include('./include/font-icon.html')
+
+  @@include('./include/style-css.html')
+
+  <title>Mimity</title>
+</head>
+
+<body>
+
+  @@include('./include/topbar.html', {
+    "show": "true",
+    "auth": "false"
+  })
+
+  @@include('./include/header.html', {
+    "menu": "blog",
+    "sub": "blog-single",
+    "child": ""
+  })
+
+  <div class="breadcrumb-container">
+    <div class="container-fluid">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item"><a href="javascript:void(0)">Blog</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Single Post</li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+
+  <div class="container-fluid mb-3">
+    <div class="row gutters-3">
+      <div class="col-md-8 col-xl-9">
+        <div class="card card-style1">
+          <div class="card-body" lang="zxx"> <!-- because 'lorem ipsum' is not english language, so we add lang="zxx" attribute, remove it on production environment -->
+
+            <!-- Blog Info -->
+            <div class="d-flex align-items-center small mb-3">
+              <i class="material-icons font-size-base mr-1">access_time</i> Jan 01, 19
+              <a href="javascript:void(0)" class="d-flex align-items-center text-muted ml-3">
+                <i class="material-icons font-size-base mr-1">person</i> Admin
+              </a>
+              <a href="javascript:void(0)" class="d-flex align-items-center text-muted ml-3">
+                <i class="material-icons font-size-base mr-1">label</i> Fashion
+              </a>
+            </div>
+
+            <!-- Blog Content -->
+            <h2>5 Coolest Winter Outfits You Can Steal</h2>
+            <img src="../../img/blog/blog-single.jpeg" alt="Blog" class="img-fluid w-100 my-3">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla ipsa fuga et tenetur dolore, maxime consequuntur! Adipisci sed eligendi reprehenderit alias, beatae perspiciatis, id dolore laborum aliquam praesentium excepturi odio quas aut enim, libero sit minus blanditiis veritatis repellat cum suscipit non obcaecati qui iure? Voluptates a perspiciatis sunt quaerat.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas asperiores rem dolorem vitae reiciendis rerum, id a dicta labore ea, est sed odio animi nostrum veniam, inventore vel. Delectus, ex, qui. Quidem ea, natus aut nihil quaerat suscipit vel fuga numquam excepturi nemo minus quae at, ab qui rerum cum!</p>
+            <ul>
+              <li>Lorem ipsum dolor sit amet</li>
+              <li>Consectetur adipiscing elit</li>
+              <li>Integer molestie lorem at massa</li>
+              <li>Facilisis in pretium nisl aliquet</li>
+              <li>Nulla volutpat aliquam velit
+                <ul>
+                  <li>Phasellus iaculis neque</li>
+                  <li>Purus sodales ultricies</li>
+                  <li>Vestibulum laoreet porttitor sem</li>
+                  <li>Ac tristique libero volutpat at</li>
+                </ul>
+              </li>
+              <li>Faucibus porta lacus fringilla vel</li>
+              <li>Aenean sit amet erat nunc</li>
+              <li>Eget porttitor lorem</li>
+            </ul>
+            <!-- /Blog Content -->
+
+            <!-- Share Button -->
+            <div class="d-flex align-items-center">
+              <span class="text-muted">Share</span>
+              <button class="btn btn-icon btn-faded-primary btn-sm rounded-circle ml-1" data-toggle="tooltip" title="Facebook">
+                <i class="custom-icon" data-icon="facebook" data-size="17x17"></i>
+              </button>
+              <button class="btn btn-icon btn-faded-info btn-sm rounded-circle ml-1" data-toggle="tooltip" title="Twitter">
+                <i class="custom-icon" data-icon="twitter" data-size="17x17"></i>
+              </button>
+              <button class="btn btn-icon btn-faded-danger btn-sm rounded-circle ml-1" data-toggle="tooltip" title="Google">
+                <i class="custom-icon" data-icon="gplus" data-size="17x17"></i>
+              </button>
+            </div>
+            <!-- /Share Button -->
+
+            <hr>
+
+            <!-- Blog Comments -->
+            <h3>Comments</h3>
+            <div class="media my-4">
+              <a href="javascript:void(0)"><img src="../../img/user/user.svg" alt="User" width="45" height="45" class="rounded-circle"></a>
+              <div class="media-body ml-2 ml-sm-3">
+                <textarea rows="2" placeholder="Leave a comment" class="form-control border rounded-0 shadow-none autosize"></textarea>
+                <button class="btn btn-sm btn-light border border-top-0 btn-block rounded-0 shadow-none">Post</button>
+              </div>
+            </div>
+            <div class="media">
+              <a href="javascript:void(0)"><img src="../../img/user/user1.svg" alt="User" width="45" height="45" class="rounded-circle"></a>
+              <div class="media-body ml-2 ml-sm-3">
+                <div class="d-flex align-items-center">
+                  <a href="javascript:void(0)" class="mr-2">Alex</a>
+                  <span class="font-size-sm text-muted">17 minutes ago</span>
+                </div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et suscipit vitae eius incidunt odit nulla, repellat harum, repudiandae doloremque expedita.</p>
+                <ul class="list-inline font-size-sm">
+                  <li class="list-inline-item"><a href="javascript:void(0)" class="text-muted text-decoration-none" title="vote up">5 <i class="material-icons align-bottom">keyboard_arrow_up</i></a></li>
+                  <li class="list-inline-item"><a href="javascript:void(0)" class="text-muted text-decoration-none" title="vote down"><i class="material-icons align-bottom">keyboard_arrow_down</i></a></li>
+                  <li class="list-inline-item"><a href="javascript:void(0)" class="text-muted text-decoration-none">Reply</a></li>
+                </ul>
+                <hr>
+                <div class="media">
+                  <a href="javascript:void(0)"><img src="../../img/user/user2.svg" alt="User" width="45" height="45" class="rounded-circle"></a>
+                  <div class="media-body ml-2 ml-sm-3">
+                    <div class="d-flex align-items-center">
+                      <a href="javascript:void(0)" class="mr-2">Twink</a>
+                      <span class="font-size-sm text-muted">5 minutes ago</span>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et suscipit vitae eius incidunt odit nulla, repellat harum, repudiandae doloremque expedita.</p>
+                    <ul class="list-inline font-size-sm">
+                      <li class="list-inline-item"><a href="javascript:void(0)" class="text-muted text-decoration-none" title="vote up"><i class="material-icons align-bottom">keyboard_arrow_up</i></a></li>
+                      <li class="list-inline-item"><a href="javascript:void(0)" class="text-muted text-decoration-none" title="vote down"><i class="material-icons align-bottom">keyboard_arrow_down</i></a></li>
+                      <li class="list-inline-item"><a href="javascript:void(0)" class="text-muted text-decoration-none">Reply</a></li>
+                    </ul>
+                    <hr>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="media">
+              <a href="javascript:void(0)"><img src="../../img/user/user3.svg" alt="User" width="45" height="45" class="rounded-circle"></a>
+              <div class="media-body ml-2 ml-sm-3">
+                <div class="d-flex align-items-center">
+                  <a href="javascript:void(0)" class="mr-2">Steve</a>
+                  <span class="font-size-sm text-muted">an hour ago</span>
+                </div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et suscipit vitae eius incidunt odit nulla, repellat harum, repudiandae doloremque expedita.</p>
+                <ul class="list-inline font-size-sm">
+                  <li class="list-inline-item"><a href="javascript:void(0)" class="text-muted text-decoration-none" title="vote up"><i class="material-icons align-bottom">keyboard_arrow_up</i></a></li>
+                  <li class="list-inline-item"><a href="javascript:void(0)" class="text-muted text-decoration-none" title="vote down"><i class="material-icons align-bottom">keyboard_arrow_down</i></a></li>
+                  <li class="list-inline-item"><a href="javascript:void(0)" class="text-muted text-decoration-none">Reply</a></li>
+                </ul>
+                <hr>
+              </div>
+            </div>
+            <!-- /Blog Comments -->
+
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 col-xl-3">
+        @@include('./include/blog-sidebar.html')
+      </div>
+    </div>
+  </div>
+
+  @@include('./include/footer.html')
+
+  @@include('./include/modal-signin.html')
+
+  @@include('./include/modal-menu.html', {
+    "menu": "blog",
+    "sub": "blog-single",
+    "child": ""
+  })
+
+  @@include('./include/modal-search.html')
+
+  @@include('./include/modal-cart.html')
+
+  @@include('./include/script-js.html')
+  <script src="../../plugins/autosize/autosize.min.js"></script>
+  @@include('./include/app-js.html')
+  <script>
+  $(() => {
+    // Autosize textarea
+    autosize($('textarea.autosize'))
+  })
+  </script>
+</body>
+
+</html>

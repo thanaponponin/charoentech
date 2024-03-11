@@ -1,0 +1,26 @@
+.popover {
+  box-shadow: $box-shadow-sm;
+}
+
+.popover-static {
+  font-size: inherit;
+  position: relative;
+  border-color: $card-border-color;
+  max-width: 100%;
+  z-index: unset;
+  &.bs-popover-right,
+  &.bs-popover-left {
+    .arrow {
+      top: 7px;
+    }
+  }
+  &.bs-popover-right .arrow:not([class*="arrow-border"])::before {
+    border-right-color: rgba($black, .175);
+  }
+  &.bs-popover-left .arrow:not([class*="arrow-border"])::before {
+    border-left-color: rgba($black, .175);
+  }
+  .popover-body {
+    padding: $card-spacer-x;
+  }
+}

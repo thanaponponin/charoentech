@@ -1,0 +1,33 @@
+﻿@model Charoentech_Web.USERS
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="~/Content/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="~/css/signin.css" />
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+</head>
+<body>
+    <div class="col-12">
+        @if (TempData["notice"] != null)
+        {
+            <p class="alert alert-danger" role="alert">@TempData["notice"]</p>
+        }
+        <form class="form-signin" method="post" action="Login/Index">
+            <h1 class="h3 mb-3 font-weight-normal">CharoenTech Admin Login</h1>
+            <label for="inputEmail" class="sr-only">Username</label>
+            @*<input type="text" id="inputEmail" class="form-control col-md-4" placeholder="Username" required autofocus>*@
+            @Html.TextBoxFor(model => model.USERNAME, new { @placeholder = "Username", @class = "form-control col-md-4", required = "required" })
+            <label for="inputPassword" class="sr-only">Password</label>
+            @*<input type="password" id="inputPassword" class="form-control" placeholder="Password" required>*@
+            @Html.PasswordFor(model => model.PASSWORD, new { @placeholder = "Password", @class = "form-control col-md-4", required = "required" })
+            <button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>
+        </form>
+    </div>
+</body>
+</html>

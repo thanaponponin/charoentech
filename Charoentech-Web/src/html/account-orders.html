@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Font & Icon -->
+  @@include('./include/font-icon.html')
+
+  @@include('./include/style-css.html')
+
+  <title>Mimity</title>
+</head>
+
+<body>
+
+  @@include('./include/topbar.html', {
+    "show": "true",
+    "auth": "true"
+  })
+
+  @@include('./include/header.html', {
+    "menu": "account",
+    "sub": "account-orders",
+    "child": ""
+  })
+
+  <div class="breadcrumb-container">
+    <div class="container-fluid">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item"><a href="javascript:void(0)">Account</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Orders List</li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+
+  <div class="container-fluid my-3">
+    <div class="row gutters-3">
+      <div class="col-md-4 col-lg-3">
+        @@include('./include/card-user.html', {
+          "active": "account-orders"
+        })
+      </div>
+      <div class="col mt-3 mt-md-0">
+        <div class="card card-style1">
+          <div class="card-body">
+            <h4>My Orders</h4>
+            <hr>
+            <div class="table-responsive">
+              <table class="table table-hover">
+                <thead class="thead-light">
+                  <tr>
+                    <th scope="col">Order ID</th>
+                    <th scope="col">Date</th>
+                    <th scope="col" class="text-right">Total</th>
+                    <th scope="col" class="text-center">Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row"><a href="account-order-detail.html">ORD556789</a></th>
+                    <td>Dec 19, 2017</td>
+                    <td class="text-right">$74.00</td>
+                    <td class="text-center"><span class="badge badge-warning rounded">In Progress</span></td>
+                  </tr>
+                  <tr>
+                    <th scope="row"><a href="account-order-detail.html">ORD456789</a></th>
+                    <td>Dec 10, 2017</td>
+                    <td class="text-right">$100.00</td>
+                    <td class="text-center"><span class="badge badge-danger rounded">Canceled</span></td>
+                  </tr>
+                  <tr>
+                    <th scope="row"><a href="account-order-detail.html">ORD356789</a></th>
+                    <td>Dec 01, 2017</td>
+                    <td class="text-right">$20.00</td>
+                    <td class="text-center"><span class="badge badge-success rounded">Finished</span></td>
+                  </tr>
+                  <tr>
+                    <th scope="row"><a href="account-order-detail.html">ORD256789</a></th>
+                    <td>Nov 19, 2017</td>
+                    <td class="text-right">$74.00</td>
+                    <td class="text-center"><span class="badge badge-success rounded">Finished</span></td>
+                  </tr>
+                  <tr>
+                    <th scope="row"><a href="account-order-detail.html">ORD156789</a></th>
+                    <td>Nov 10, 2017</td>
+                    <td class="text-right">$100.00</td>
+                    <td class="text-center"><span class="badge badge-success rounded">Finished</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <button class="btn btn-outline-success btn-sm has-icon"><i class="material-icons mr-2">cloud_download</i> Download as xls</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  @@include('./include/footer.html')
+
+  @@include('./include/modal-menu.html', {
+    "menu": "account",
+    "sub": "account-orders",
+    "child": ""
+  })
+
+  @@include('./include/modal-search.html')
+
+  @@include('./include/modal-cart.html')
+
+  @@include('./include/script-js.html')
+  @@include('./include/app-js.html')
+</body>
+
+</html>

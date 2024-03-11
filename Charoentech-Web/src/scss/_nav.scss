@@ -1,0 +1,108 @@
+.nav-link {
+  $faded-primary: theme-color-level('primary', $faded-level);
+  color: $body-color;
+  &:hover,
+  &:focus,
+  &.hover {
+    color: $component-active-bg;
+    background-color: $faded-primary;
+  }
+  &:focus {
+    outline: 0;
+  }
+  .nav .show > &,
+  .navbar-nav .show > &,
+  .nav-pills &.active,
+  &:active,
+  &.active {
+    color: darken($component-active-bg, $faded-active-level);
+    background-color: darken($faded-primary, $faded-active-level);
+  }
+  .nav-tabs & {
+    @include hover-focus {
+      background-color: transparent;
+    }
+    &.active {
+      color: $component-active-bg;
+      box-shadow: 0 -2px 0 0 $component-active-bg inset;
+    }
+  }
+  &.has-icon {
+    display: flex;
+    align-items: center;
+  }
+  &.nav-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+  }
+  .nav-circle & {
+    border-radius: 50%;
+  }
+  &.nav-link-sm {
+    font-size: $font-size-sm;
+    padding: ($nav-link-padding-y - .125rem) ($nav-link-padding-x - .125rem);
+    &.has-icon > i,
+    &.nav-icon > i {
+      font-size: 1.25rem;
+    }
+    &.nav-icon {
+      width: 33px;
+      height: 33px;
+    }
+  }
+  &.has-img {
+    display: flex;
+    align-items: center;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    img {
+      width: 38px;
+      height: 38px;
+      border: 2px solid #fff;
+    }
+    &.nav-link-sm img {
+      width: 31px;
+      height: 31px;
+    }
+  }
+}
+
+.tab-content:not(.card-body) {
+  padding: 1rem;
+  border-top-width: 0;
+  @if $enable-rounded {
+    @include border-bottom-radius($nav-tabs-border-radius);
+  }
+}
+
+@each $size, $length in $spacers {
+  @if $size != 0 {
+    .nav-gap-x-#{$size} {
+      > .nav-link + .nav-link:not(.nav-item),
+      > .nav-item + .nav-item {
+        margin-left: $length;
+      }
+    }
+    .nav-gap-y-#{$size} {
+      > .nav-link + .nav-link:not(.nav-item),
+      > .nav-item + .nav-item {
+        margin-top: $length;
+      }
+    }
+  }
+}
+
+// Nav link divider
+.nav-link-divider {
+  width: 0;
+  border-left: 1px solid $dropdown-divider-bg;
+  .navbar-light & {
+    border-color: $navbar-light-toggler-border-color;
+  }
+  .navbar-dark & {
+    border-color: $navbar-dark-toggler-border-color;
+  }
+}

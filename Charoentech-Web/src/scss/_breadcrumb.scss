@@ -1,0 +1,17 @@
+.breadcrumb {
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  .breadcrumb-item {
+    display: inline;
+  }
+}
+
+.breadcrumb-container {
+  background-color: $breadcrumb-bg;
+  .breadcrumb {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}

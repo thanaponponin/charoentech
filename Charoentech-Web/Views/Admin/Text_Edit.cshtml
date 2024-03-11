@@ -1,0 +1,99 @@
+﻿@model Charoentech_Web.ModelViews.TEXT_MODEL_VIEW
+
+@{
+    ViewBag.Title = "Task";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Task แก้ไข</h2>
+@if (TempData["notice"] != null)
+{
+    <p class="alert alert-success" role="alert">@TempData["notice"]</p>
+}
+@using (Html.BeginForm("Text_Edit", "Admin", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.TASK, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.TASK, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.TASK, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.NAME, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.NAME, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.NAME, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.DESCRIPTION, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextAreaFor(model => model.DESCRIPTION, new { @class = "form-control textarea-editor" })
+                @Html.ValidationMessageFor(model => model.DESCRIPTION, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.IMAGE, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <input type="file" name="ImageFile" class="form-control" id="exampleFormControlFile1">
+                @Html.ValidationMessageFor(model => model.IMAGE, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.STATUS, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownListFor(model => model.STATUS, (IEnumerable<SelectListItem>)ViewBag.STATUS1, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.STATUS, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.ICON, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.ICON, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.ICON, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                @Html.HiddenFor(model => model.IMAGE)
+                @Html.HiddenFor(model => model.TEXT_ID)
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+@section Scripts {
+    <script type="text/javascript"
+            src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.2/summernote.js"> </script>
+    @Scripts.Render("~/Scripts/Script-custom-editor.js") <link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.2/summernote.css"
+                                                               rel="stylesheet">
+}
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        // Initialize Editor
+        $('.textarea-editor').summernote({
+            height: 300, // set editor height
+            minHeight: null, // set minimum height of editor
+            maxHeight: null, // set maximum height of editor
+            focus: true // set focus to editable area after initializing summernote
+        });
+    });
+</script>
+
+<div>
+    @Html.ActionLink("กลับหน้ารายการ", "Text")
+</div>

@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Font & Icon -->
+  @@include('./include/font-icon.html')
+
+  @@include('./include/style-css.html')
+
+  <title>Mimity</title>
+</head>
+
+<body>
+
+  @@include('./include/topbar.html', {
+    "show": "true",
+    "auth": "false"
+  })
+
+  @@include('./include/header.html', {
+    "menu": "blog",
+    "sub": "blog-grid",
+    "child": ""
+  })
+
+  <div class="breadcrumb-container">
+    <div class="container-fluid">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item"><a href="javascript:void(0)">Blog</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Post Grid</li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+
+  <div class="container-fluid mb-3">
+    <div class="row gutters-3">
+      <div class="col-md-8 col-xl-9">
+        <div class="card card-style1">
+          <div class="card-body d-flex align-items-center py-2">
+            Latest Blog
+            <select class="custom-select custom-select-sm w-auto mr-3 ml-auto">
+              <option>Newest</option>
+              <option>Oldest</option>
+              <option>Popular</option>
+            </select>
+            <a href="blog-grid.html" data-toggle="tooltip" title="Show Grid" class="btn btn-sm btn-text-primary btn-icon rounded-circle active"><i class="material-icons">apps</i></a>
+            <a href="blog-list.html" data-toggle="tooltip" title="Show List" class="btn btn-sm btn-text-primary btn-icon rounded-circle ml-1"><i class="material-icons">list</i></a>
+          </div>
+        </div>
+        <div class="d-grid grid-template-col-sm-2 grid-template-col-xl-4 grid-gap-3 mt-3">
+          <div class="card card-style1">
+            <a href="blog-single.html" class="img img-zoom-in"><img src="../../img/blog/1.jpeg" class="w-100" alt="Blog"></a>
+            <div class="card-body">
+              <a href="blog-single.html" class="h5 card-link d-block">5 Coolest Winter Outfits You Can Steal</a>
+              <p class="text-muted mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam consequuntur eligendi a aut fugit nam[...]</p>
+            </div>
+            <div class="card-footer">
+              <div class="small text-muted d-flex align-items-center">
+                <i class="material-icons font-size-base mr-1">favorite</i> 55
+                <i class="material-icons font-size-base mr-1 ml-3">comment</i> 15
+              </div>
+            </div>
+          </div>
+          <div class="card card-style1">
+            <a href="blog-single.html" class="img img-zoom-in"><img src="../../img/blog/2.jpeg" class="w-100" alt="Blog"></a>
+            <div class="card-body">
+              <a href="blog-single.html" class="h5 card-link d-block">How to Pick the Right Men's Shirt</a>
+              <p class="text-muted mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam consequuntur eligendi a aut fugit nam[...]</p>
+            </div>
+            <div class="card-footer">
+              <div class="small text-muted d-flex align-items-center">
+                <i class="material-icons font-size-base mr-1">favorite</i> 14
+                <i class="material-icons font-size-base mr-1 ml-3">comment</i> 5
+              </div>
+            </div>
+          </div>
+          <div class="card card-style1">
+            <a href="blog-single.html" class="img img-zoom-in"><img src="../../img/blog/3.jpeg" class="w-100" alt="Blog"></a>
+            <div class="card-body">
+              <a href="blog-single.html" class="h5 card-link d-block">5 Simple Outfits for Men</a>
+              <p class="text-muted mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam consequuntur eligendi a aut fugit nam[...]</p>
+            </div>
+            <div class="card-footer">
+              <div class="small text-muted d-flex align-items-center">
+                <i class="material-icons font-size-base mr-1">favorite</i> 43
+                <i class="material-icons font-size-base mr-1 ml-3">comment</i> 9
+              </div>
+            </div>
+          </div>
+          <div class="card card-style1">
+            <a href="blog-single.html" class="img img-zoom-in"><img src="../../img/blog/4.jpeg" class="w-100" alt="Blog"></a>
+            <div class="card-body">
+              <a href="blog-single.html" class="h5 card-link d-block">Business Casual Outfit Ideas</a>
+              <p class="text-muted mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam consequuntur eligendi a aut fugit nam[...]</p>
+            </div>
+            <div class="card-footer">
+              <div class="small text-muted d-flex align-items-center">
+                <i class="material-icons font-size-base mr-1">favorite</i> 39
+                <i class="material-icons font-size-base mr-1 ml-3">comment</i> 11
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card card-style1 mt-3">
+          <div class="card-body">
+            <ul class="pagination pagination-circle justify-content-center mb-0">
+              <li class="page-item disabled"><span class="page-link has-icon"><i class="material-icons">chevron_left</i></span></li>
+              <li class="page-item active"><span class="page-link">1</span></li>
+              <li class="page-item"><a class="page-link" href="javascript:void(0)">2</a></li>
+              <li class="page-item"><a class="page-link" href="javascript:void(0)">3</a></li>
+              <li class="page-item"><a class="page-link has-icon" href="javascript:void(0)"><i class="material-icons">chevron_right</i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 col-xl-3">
+        @@include('./include/blog-sidebar.html')
+      </div>
+    </div>
+  </div>
+
+  @@include('./include/footer.html')
+
+  @@include('./include/modal-signin.html')
+
+  @@include('./include/modal-menu.html', {
+    "menu": "blog",
+    "sub": "blog-grid",
+    "child": ""
+  })
+
+  @@include('./include/modal-search.html')
+
+  @@include('./include/modal-cart.html')
+
+  @@include('./include/script-js.html')
+  @@include('./include/app-js.html')
+</body>
+
+</html>

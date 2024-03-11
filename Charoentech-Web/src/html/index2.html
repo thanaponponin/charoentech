@@ -1,0 +1,490 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Font & Icon -->
+  @@include('./include/font-icon.html')
+
+  <!-- Plugins -->
+  <link rel="stylesheet" href="../../plugins/swiper/swiper.min.css">
+
+  @@include('./include/style-css.html')
+
+  <title>Mimity</title>
+</head>
+
+<body>
+
+  @@include('./include/topbar.html', {
+    "show": "true",
+    "auth": "false"
+  })
+
+  @@include('./include/header.html', {
+    "menu": "home",
+    "sub": "layout2",
+    "child": ""
+  })
+
+  <div class="container-fluid mt-3">
+    <div class="d-grid grid-template-col-2 grid-template-col-lg-3 grid-gap-1 grid-gap-sm-3">
+
+      <!-- HOME SLIDER -->
+      <div class="swiper-container grid-column-start-1 grid-column-end-3 grid-row-start-1 grid-row-end-3" id="homeSlider">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide" data-cover="../../img/slider/1.jpg" data-height="220px 320px 350px 470px 420px">
+            <div class="overlay-content overlay-show align-items-end text-white">
+              <div class="text-center">
+                <h1 class="animated font-weight-bold" data-animate="fadeDown">Business Casual<br/>Outfit Ideas</h1>
+                <a href="shop-grid.html" class="btn btn-faded-primary rounded-pill animated mt-4" data-animate="fadeUp">SHOP NOW</a>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide" data-cover="../../img/slider/2.jpg" data-height="220px 320px 350px 470px 420px">
+            <div class="overlay-content overlay-show align-items-start text-white">
+              <div class="text-center">
+                <h2 class="bg-white text-dark d-inline-block p-1 animated" data-animate="fadeDown">TOP BRANDS</h2>
+                <h1 class="animated font-weight-bold" data-animate="fadeDown">30% - 70% OFF</h1>
+                <a href="shop-grid.html" class="btn btn-warning rounded-pill animated mt-4" data-animate="fadeUp">SHOP NOW</a>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide" data-cover="../../img/slider/3.jpg" data-height="220px 320px 350px 470px 420px">
+            <div class="overlay-content overlay-show align-items-end text-white">
+              <div class="text-center">
+                <h2 class="bg-white text-dark d-inline-block p-1 animated" data-animate="fadeDown">Brand New</h2>
+                <h1 class="animated font-weight-bold" data-animate="fadeDown">High Quality Clothes</h1>
+                <a href="shop-grid.html" class="btn btn-faded-primary rounded-pill animated mt-4" data-animate="fadeUp">SHOP NOW</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev autohide"><i class="material-icons">chevron_left</i></div>
+        <div class="swiper-button-next autohide"><i class="material-icons">chevron_right</i></div>
+      </div>
+      <!-- /HOME SLIDER -->
+
+      <!-- TOP CATEGORIES 1 -->
+      <div class="card card-style1 overflow-hidden">
+        <div class="d-grid grid-template-row-2 grid-template-row-md-none grid-template-col-md-2">
+          <div data-cover="../../img/categories/men.jpg" class="order-md-2"></div>
+          <div class="text-center p-3 order-md-1">
+            <h3>Men</h3>
+            <p class="text-center d-none d-md-block">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            <a href="shop-grid.html" class="btn btn-outline-primary rounded-pill stretched-link">Shop Now</a>
+          </div>
+        </div>
+      </div>
+      <div class="card card-style1 overflow-hidden">
+        <div class="d-grid grid-template-row-2 grid-template-row-md-none grid-template-col-md-2">
+          <div data-cover="../../img/categories/women.jpg" class="order-md-2"></div>
+          <div class="text-center p-3 order-md-1">
+            <h3>Women</h3>
+            <p class="text-center d-none d-md-block">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            <a href="shop-grid.html" class="btn btn-outline-danger rounded-pill stretched-link">Shop Now</a>
+          </div>
+        </div>
+      </div>
+      <!-- /TOP CATEGORIES 1 -->
+
+    </div>
+
+    <!-- SERVICES BLOCK -->
+    <div class="d-grid grid-template-col-sm-2 grid-template-col-xl-4 column-gap-3 row-gap-4 mt-5 mb-5">
+      <div class="media">
+        <button class="btn btn-icon btn-lg rounded-circle btn-faded-primary active" type="button">
+          <i class="material-icons">local_shipping</i>
+        </button>
+        <div class="media-body ml-3">
+          <h6>FREE SHIPPING &amp; RETURN</h6>
+          <span class="text-secondary font-condensed">Get free shipping for all orders $99 or more</span>
+        </div>
+      </div>
+      <div class="media">
+        <button class="btn btn-icon btn-lg rounded-circle btn-faded-primary active" type="button">
+          <i class="material-icons">refresh</i>
+        </button>
+        <div class="media-body ml-3">
+          <h6>MONEY BACK GUARANTEE</h6>
+          <span class="text-secondary font-condensed">Get the item you ordered, or your money back</span>
+        </div>
+      </div>
+      <div class="media">
+        <button class="btn btn-icon btn-lg rounded-circle btn-faded-primary active" type="button">
+          <i class="material-icons">security</i>
+        </button>
+        <div class="media-body ml-3">
+          <h6>100% SECURE PAYMENT</h6>
+          <span class="text-secondary font-condensed">Your transaction are secure with SSL Encryption</span>
+        </div>
+      </div>
+      <div class="media">
+        <button class="btn btn-icon btn-lg rounded-circle btn-faded-primary active" type="button">
+          <i class="material-icons">phone</i>
+        </button>
+        <div class="media-body ml-3">
+          <h6>ONLINE SUPPORT 24/7</h6>
+          <span class="text-secondary font-condensed">Chat with experts or have us call you right away</span>
+        </div>
+      </div>
+    </div>
+    <!-- /SERVICES BLOCK -->
+
+    <!-- DISCOVER -->
+    <h4 class="mt-4 text-center">Discover</h4>
+    <div class="d-grid grid-template-col-2 grid-template-col-lg-4 grid-gap-1 grid-gap-sm-3 mt-3">
+      <div class="img img-zoom-in">
+        <div data-cover="../../img/discover/2.jpeg" data-height="125px 130px 150px 120px 150px"></div>
+        <div class="overlay overlay-show bg-dark"></div>
+        <div class="overlay-content overlay-show">
+          <a href="shop-grid.html" class="card-link h3 text-white font-condensed stretched-link text-center px-3">Crossbody Bag</a>
+        </div>
+      </div>
+      <div class="img img-zoom-in">
+        <div data-cover="../../img/discover/3.jpeg" data-height="125px 130px 150px 120px 150px"></div>
+        <div class="overlay overlay-show bg-dark"></div>
+        <div class="overlay-content overlay-show">
+          <a href="shop-grid.html" class="card-link h3 text-white font-condensed stretched-link text-center px-3">Winter Collection</a>
+        </div>
+      </div>
+      <div class="img img-zoom-in">
+        <div data-cover="../../img/discover/4.jpeg" data-height="125px 130px 150px 120px 150px"></div>
+        <div class="overlay overlay-show bg-dark"></div>
+        <div class="overlay-content overlay-show">
+          <a href="shop-grid.html" class="card-link h3 text-white font-condensed stretched-link text-center px-3">Accessories</a>
+        </div>
+      </div>
+      <div class="img img-zoom-in">
+        <div data-cover="../../img/discover/5.jpeg" data-height="125px 130px 150px 120px 150px"></div>
+        <div class="overlay overlay-show bg-dark"></div>
+        <div class="overlay-content overlay-show">
+          <a href="shop-grid.html" class="card-link h3 text-white font-condensed stretched-link text-center px-3">Hats</a>
+        </div>
+      </div>
+    </div>
+    <div class="text-right mt-3">
+      <a href="shop-categories.html" class="btn btn-light rounded-pill has-icon">Explore <i class="material-icons">arrow_right</i></a>
+    </div>
+    <!-- /DISCOVER -->
+
+    <!-- FLASH DEALS -->
+    <div class="card card-style1 mt-5">
+      <div class="card-body">
+        <h5 class="card-title">
+          <i class="material-icons align-bottom text-warning">flash_on</i>
+          FLASH DEALS
+          <span class="text-danger" id="flash-deals-countdown"></span>
+        </h5>
+        <div class="swiper-container" id="dealSlider2">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide card card-product">
+              <div class="card-body">
+                <button class="btn btn-icon btn-text-danger rounded-circle btn-wishlist atw-demo" data-toggle="button" title="Add to wishlist"></button>
+                <a href="shop-single.html"><img class="card-img-top" src="../../img/products/flash_deals_1.jpg" alt="Card image cap"></a>
+                <a href="shop-single.html" class="card-title card-link">Legendary Whitetails Hoodie</a>
+                <span class="badge badge-warning">25% OFF</span>
+                <div class="price">
+                  <span class="h4">$44.99</span>
+                  <span class="h5 del">$59.99</span>
+                </div>
+              </div>
+              <div class="card-footer">
+                <button class="btn btn-sm rounded-pill btn-faded-primary btn-block atc-demo">Add to Cart</button>
+              </div>
+            </div>
+            <div class="swiper-slide card card-product">
+              <div class="card-body">
+                <button class="btn btn-icon btn-text-danger rounded-circle btn-wishlist atw-demo" data-toggle="button" title="Add to wishlist"></button>
+                <a href="shop-single.html"><img class="card-img-top" src="../../img/products/flash_deals_2.jpg" alt="Card image cap"></a>
+                <a href="shop-single.html" class="card-title card-link">Casual Floral Print 3/4 Sleeve Shirt</a>
+                <span class="badge badge-success">15% OFF</span>
+                <div class="price">
+                  <span class="h4">$18.69</span>
+                  <span class="h5 del">$21.99</span>
+                </div>
+              </div>
+              <div class="card-footer">
+                <button class="btn btn-sm rounded-pill btn-faded-primary btn-block atc-demo">Add to Cart</button>
+              </div>
+            </div>
+            <div class="swiper-slide card card-product">
+              <div class="card-body">
+                <button class="btn btn-icon btn-text-danger rounded-circle btn-wishlist atw-demo" data-toggle="button" title="Add to wishlist"></button>
+                <a href="shop-single.html"><img class="card-img-top" src="../../img/products/flash_deals_1.jpg" alt="Card image cap"></a>
+                <a href="shop-single.html" class="card-title card-link">Legendary Whitetails Hoodie</a>
+                <span class="badge badge-warning">25% OFF</span>
+                <div class="price">
+                  <span class="h4">$44.99</span>
+                  <span class="h5 del">$59.99</span>
+                </div>
+              </div>
+              <div class="card-footer">
+                <button class="btn btn-sm rounded-pill btn-faded-primary btn-block atc-demo">Add to Cart</button>
+              </div>
+            </div>
+            <div class="swiper-slide card card-product">
+              <div class="card-body">
+                <button class="btn btn-icon btn-text-danger rounded-circle btn-wishlist atw-demo" data-toggle="button" title="Add to wishlist"></button>
+                <a href="shop-single.html"><img class="card-img-top" src="../../img/products/flash_deals_2.jpg" alt="Card image cap"></a>
+                <a href="shop-single.html" class="card-title card-link">Casual Floral Print 3/4 Sleeve Shirt</a>
+                <span class="badge badge-success">15% OFF</span>
+                <div class="price">
+                  <span class="h4">$18.69</span>
+                  <span class="h5 del">$21.99</span>
+                </div>
+              </div>
+              <div class="card-footer">
+                <button class="btn btn-sm rounded-pill btn-faded-primary btn-block atc-demo">Add to Cart</button>
+              </div>
+            </div>
+            <div class="swiper-slide card card-product">
+              <div class="card-body">
+                <button class="btn btn-icon btn-text-danger rounded-circle btn-wishlist atw-demo" data-toggle="button" title="Add to wishlist"></button>
+                <a href="shop-single.html"><img class="card-img-top" src="../../img/products/flash_deals_1.jpg" alt="Card image cap"></a>
+                <a href="shop-single.html" class="card-title card-link">Legendary Whitetails Hoodie</a>
+                <span class="badge badge-warning">25% OFF</span>
+                <div class="price">
+                  <span class="h4">$44.99</span>
+                  <span class="h5 del">$59.99</span>
+                </div>
+              </div>
+              <div class="card-footer">
+                <button class="btn btn-sm rounded-pill btn-faded-primary btn-block atc-demo">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-button-prev"><i class="material-icons">chevron_left</i></div>
+          <div class="swiper-button-next"><i class="material-icons">chevron_right</i></div>
+        </div>
+      </div>
+    </div>
+    <!-- /FLASH DEALS -->
+
+    <!-- BRANDS SLIDER -->
+    <h4 class="mt-4 text-center">Top Brands You'll Love</h4>
+    <div class="card mt-3 border-0">
+      <div class="card-body pb-0">
+        <div class="swiper-container" id="brandSlider">
+          <div class="swiper-wrapper pb-5">
+            <div class="swiper-slide card p-3">
+              <a href="shop-grid.html" class="stretched-link">
+                <img src="../../img/brands/brand1.svg" alt="brand1" class="card-img-top">
+              </a>
+            </div>
+            <div class="swiper-slide card p-3">
+              <a href="shop-grid.html" class="stretched-link">
+                <img src="../../img/brands/brand2.svg" alt="brand2" class="card-img-top">
+              </a>
+            </div>
+            <div class="swiper-slide card p-3">
+              <a href="shop-grid.html" class="stretched-link">
+                <img src="../../img/brands/brand3.svg" alt="brand3" class="card-img-top">
+              </a>
+            </div>
+            <div class="swiper-slide card p-3">
+              <a href="shop-grid.html" class="stretched-link">
+                <img src="../../img/brands/brand4.svg" alt="brand4" class="card-img-top">
+              </a>
+            </div>
+            <div class="swiper-slide card p-3">
+              <a href="shop-grid.html" class="stretched-link">
+                <img src="../../img/brands/brand5.svg" alt="brand5" class="card-img-top">
+              </a>
+            </div>
+            <div class="swiper-slide card p-3">
+              <a href="shop-grid.html" class="stretched-link">
+                <img src="../../img/brands/brand1.svg" alt="brand1" class="card-img-top">
+              </a>
+            </div>
+            <div class="swiper-slide card p-3">
+              <a href="shop-grid.html" class="stretched-link">
+                <img src="../../img/brands/brand2.svg" alt="brand2" class="card-img-top">
+              </a>
+            </div>
+            <div class="swiper-slide card p-3">
+              <a href="shop-grid.html" class="stretched-link">
+                <img src="../../img/brands/brand3.svg" alt="brand3" class="card-img-top">
+              </a>
+            </div>
+            <div class="swiper-slide card p-3">
+              <a href="shop-grid.html" class="stretched-link">
+                <img src="../../img/brands/brand4.svg" alt="brand4" class="card-img-top">
+              </a>
+            </div>
+            <div class="swiper-slide card p-3">
+              <a href="shop-grid.html" class="stretched-link">
+                <img src="../../img/brands/brand5.svg" alt="brand5" class="card-img-top">
+              </a>
+            </div>
+            <div class="swiper-slide card p-3">
+              <a href="shop-grid.html" class="stretched-link">
+                <img src="../../img/brands/brand1.svg" alt="brand1" class="card-img-top">
+              </a>
+            </div>
+            <div class="swiper-slide card p-3">
+              <a href="shop-grid.html" class="stretched-link">
+                <img src="../../img/brands/brand2.svg" alt="brand2" class="card-img-top">
+              </a>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </div>
+    <!-- /BRANDS SLIDER -->
+
+    <!-- BEST SELLERS & TOP CATEGORIES 2 -->
+    <div class="d-grid grid-template-col-2 grid-template-col-lg-5 grid-template-col-xl-4 grid-gap-2 grid-gap-xl-3 mt-4 mb-3">
+      <div class="card card-style1 grid-column-start-1 grid-column-end-3 grid-column-end-sm-2 grid-column-end-lg-3 grid-column-end-xl-2">
+        <div class="card-body">
+          <h5 class="card-title">Best Sellers</h5>
+          <ul class="list-group list-group-flush list-group-sms">
+            <li class="list-group-item px-0">
+              <div class="media">
+                <a href="shop-single.html">
+                  <img src="../../img/products/1_small.jpg" width="75" alt="product">
+                </a>
+                <div class="media-body ml-3">
+                  <a href="shop-single.html" class="card-link text-secondary">Hanes Hooded Sweatshirt</a>
+                  <div class="price"><span>$18.56</span></div>
+                </div>
+              </div>
+            </li>
+            <li class="list-group-item px-0">
+              <div class="media">
+                <a href="shop-single.html">
+                  <img src="../../img/products/2_small.jpg" width="75" alt="product">
+                </a>
+                <div class="media-body ml-3">
+                  <a href="shop-single.html" class="card-link text-secondary">The Flash Logo T-Shirt</a>
+                  <div class="price"><span>$16.64</span></div>
+                </div>
+              </div>
+            </li>
+            <li class="list-group-item px-0">
+              <div class="media">
+                <a href="shop-single.html">
+                  <img src="../../img/products/3_small.jpg" width="75" alt="product">
+                </a>
+                <div class="media-body ml-3">
+                  <a href="shop-single.html" class="card-link text-secondary">Open Front Cropped Cardigans</a>
+                  <div class="price">
+                    <span>$15.20</span>
+                    <span class="del">$19.00</span>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="list-group-item px-0">
+              <div class="media">
+                <a href="shop-single.html">
+                  <img src="../../img/products/4_small.jpg" width="75" alt="product">
+                </a>
+                <div class="media-body ml-3">
+                  <a href="shop-single.html" class="card-link text-secondary">Cotton Fleece Long Hoodie</a>
+                  <div class="price">
+                    <span>$85.00</span>
+                    <span class="del">$98.90</span>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="card card-style1">
+        <a href="shop-grid.html" class="card-link">
+          <img class="card-img-top" src="../../img/categories/men2.jpg" alt="Men">
+          <div class="card-body bg-primary-faded text-primary">
+            <h5 class="mb-0">MEN</h5>
+          </div>
+        </a>
+        <div class="list-group list-group-sms list-group-no-border list-group-flush">
+          <a href="shop-grid.html" class="list-group-item list-group-item-action">Clothing</a>
+          <a href="shop-grid.html" class="list-group-item list-group-item-action">Shoes</a>
+          <a href="shop-grid.html" class="list-group-item list-group-item-action">Watches</a>
+          <a href="shop-grid.html" class="list-group-item list-group-item-action">Accessories</a>
+          <a href="shop-grid.html" class="list-group-item list-group-item-action">More &raquo;</a>
+        </div>
+      </div>
+      <div class="card card-style1">
+        <a href="shop-grid.html" class="card-link">
+          <img class="card-img-top" src="../../img/categories/women2.jpg" alt="Women">
+          <div class="card-body bg-danger-faded text-danger">
+            <h5 class="mb-0">WOMEN</h5>
+          </div>
+        </a>
+        <div class="list-group list-group-sms list-group-no-border list-group-flush">
+          <a href="shop-grid.html" class="list-group-item list-group-item-action">Clothing</a>
+          <a href="shop-grid.html" class="list-group-item list-group-item-action">Shoes</a>
+          <a href="shop-grid.html" class="list-group-item list-group-item-action">Jewelry</a>
+          <a href="shop-grid.html" class="list-group-item list-group-item-action">Accessories</a>
+          <a href="shop-grid.html" class="list-group-item list-group-item-action">More &raquo;</a>
+        </div>
+      </div>
+      <div class="card card-style1 grid-column-start-1 grid-column-end-3 grid-column-start-sm-2 grid-column-end-sm-3
+      grid-column-start-lg-5 grid-column-end-lg-6 grid-column-start-xl-4 grid-column-end-xl-5">
+        <a href="shop-grid.html" class="card-link">
+          <img class="card-img-top" src="../../img/categories/kids.jpg" alt="Kids">
+          <div class="card-body bg-success-faded text-success">
+            <h5 class="mb-0">KIDS</h5>
+          </div>
+        </a>
+        <div class="list-group list-group-sms list-group-no-border list-group-flush">
+          <a href="shop-grid.html" class="list-group-item list-group-item-action">Boys Clothing</a>
+          <a href="shop-grid.html" class="list-group-item list-group-item-action">Girls Clothing</a>
+          <a href="shop-grid.html" class="list-group-item list-group-item-action">Toys</a>
+          <a href="shop-grid.html" class="list-group-item list-group-item-action">Accessories</a>
+          <a href="shop-grid.html" class="list-group-item list-group-item-action">More &raquo;</a>
+        </div>
+      </div>
+    </div>
+    <!-- /BEST SELLERS & TOP CATEGORIES 2 -->
+
+  </div>
+
+  @@include('./include/footer.html')
+
+  @@include('./include/modal-signin.html')
+
+  @@include('./include/modal-menu.html', {
+    "menu": "home",
+    "sub": "layout2",
+    "child": ""
+  })
+
+  @@include('./include/modal-search.html')
+
+  @@include('./include/modal-cart.html')
+
+  @@include('./include/script-js.html')
+  <script src="../../plugins/swiper/swiper.min.js"></script>
+  <script src="../../plugins/jquery-countdown/jquery.countdown.min.js"></script>
+  @@include('./include/app-js.html')
+  <script>
+    $(() => {
+
+      App.atcDemo() // Add to Cart Demo
+      App.atwDemo() // Add to Wishlist Demo
+      App.homeSlider('#homeSlider')
+      App.dealSlider2('#dealSlider2')
+      App.brandSlider('#brandSlider')
+      App.colorOption()
+
+      // example countdown, 6 hours from now for flash deals
+      var countdown = new Date()
+      countdown.setHours(countdown.getHours() + 6)
+      $('#flash-deals-countdown').countdown(countdown, function (e) {
+        $(this).text(e.strftime('%H:%M:%S'))
+      })
+
+    })
+  </script>
+</body>
+
+</html>

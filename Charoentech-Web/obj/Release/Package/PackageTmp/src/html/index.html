@@ -1,0 +1,361 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Font & Icon -->
+  @@include('./include/font-icon.html')
+
+  <!-- Plugins -->
+  <link rel="stylesheet" href="../../../plugins/swiper/swiper.min.css">
+
+  @@include('./include/style-css.html')
+
+  <title>Mimity</title>
+</head>
+
+<body>
+
+  @@include('./include/topbar.html', {
+    "show": "true",
+    "auth": "false"
+  })
+
+  @@include('./include/header.html', {
+    "menu": "home",
+    "sub": "layout1",
+    "child": ""
+  })
+
+  <!-- HOME SLIDER -->
+  <div class="swiper-container" id="homeSlider">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide" data-cover="../../img/slider/1.jpg" data-height="220px 350px 400px 430px 460px">
+        <div class="overlay-content overlay-show align-items-end text-white">
+          <div class="text-center">
+            <h1 class="animated font-weight-bold" data-animate="fadeDown">Business Casual<br/>Outfit Ideas</h1>
+            <a href="shop-grid.html" class="btn btn-faded-primary rounded-pill animated mt-4" data-animate="fadeUp">SHOP NOW</a>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide" data-cover="../../img/slider/2.jpg" data-height="220px 350px 400px 430px 460px">
+        <div class="overlay-content overlay-show align-items-start text-white">
+          <div class="text-center">
+            <h2 class="bg-white text-dark d-inline-block p-1 animated" data-animate="fadeDown">TOP BRANDS</h2>
+            <h1 class="animated font-weight-bold" data-animate="fadeDown">30% - 70% OFF</h1>
+            <a href="shop-grid.html" class="btn btn-warning rounded-pill animated mt-4" data-animate="fadeUp">SHOP NOW</a>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide" data-cover="../../img/slider/3.jpg" data-height="220px 350px 400px 430px 460px">
+        <div class="overlay-content overlay-show align-items-end text-white">
+          <div class="text-center">
+            <h2 class="bg-white text-dark d-inline-block p-1 animated" data-animate="fadeDown">Brand New</h2>
+            <h1 class="animated font-weight-bold" data-animate="fadeDown">High Quality Clothes</h1>
+            <a href="shop-grid.html" class="btn btn-faded-primary rounded-pill animated mt-4" data-animate="fadeUp">SHOP NOW</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="swiper-pagination"></div>
+    <div class="swiper-button-prev autohide"><i class="material-icons">chevron_left</i></div>
+    <div class="swiper-button-next autohide"><i class="material-icons">chevron_right</i></div>
+  </div>
+  <!-- /HOME SLIDER -->
+
+  <div class="container-fluid mt-3">
+
+    <!-- TOP CATEGORIES 1 -->
+    <div class="d-grid grid-template-col-2 column-gap-1 column-gap-sm-3">
+      <div class="card card-style1 overflow-hidden">
+        <div class="d-grid grid-template-row-2 grid-template-row-md-none grid-template-col-md-2">
+          <div data-cover="../../img/categories/men.jpg" class="order-md-2"></div>
+          <div class="text-center p-3 order-md-1">
+            <h3>Men</h3>
+            <p class="text-center d-none d-md-block">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum minima, magnam quam.</p>
+            <a href="shop-grid.html" class="btn btn-outline-primary rounded-pill stretched-link">Shop Now</a>
+          </div>
+        </div>
+      </div>
+      <div class="card card-style1 overflow-hidden">
+        <div class="d-grid grid-template-row-2 grid-template-row-md-none grid-template-col-md-2">
+          <div data-cover="../../img/categories/women.jpg" class="order-md-2"></div>
+          <div class="text-center p-3 order-md-1">
+            <h3>Women</h3>
+            <p class="text-center d-none d-md-block">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum minima, magnam quam.</p>
+            <a href="shop-grid.html" class="btn btn-outline-danger rounded-pill stretched-link">Shop Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /TOP CATEGORIES 1 -->
+
+    <!-- TOP CATEGORIES 2 -->
+    <div class="d-grid grid-template-col-2 column-gap-1 column-gap-sm-3 mt-1 mt-sm-3">
+      <div class="img img-zoom-in">
+        <img src="../../img/categories/sunglasses.jpg" class="img-fluid w-100" alt="sunglasses">
+        <div class="overlay overlay-show bg-dark"></div>
+        <div class="overlay-content overlay-show flex-column text-white text-center">
+          <a href="shop-grid.html" class="card-link h3 text-white stretched-link text-center">Sunglasses</a>
+          <p class="d-none d-lg-block">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum minima, magnam quam quisquam. Ipsum, provident.</p>
+          <a href="shop-grid.html" class="btn btn-outline-warning rounded-pill stretched-link d-none d-lg-inline-block">Shop Now</a>
+        </div>
+      </div>
+      <div class="img img-zoom-in">
+        <img src="../../img/categories/backpack.jpg" class="img-fluid w-100" alt="backpack">
+        <div class="overlay overlay-show bg-dark"></div>
+        <div class="overlay-content overlay-show flex-column text-white text-center">
+          <a href="shop-grid.html" class="card-link h3 text-white stretched-link text-center">Backpacks</a>
+          <p class="d-none d-lg-block">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum minima, magnam quam quisquam. Ipsum, provident.</p>
+          <a href="shop-grid.html" class="btn btn-outline-success rounded-pill stretched-link d-none d-lg-inline-block">Shop Now</a>
+        </div>
+      </div>
+    </div>
+    <!-- /TOP CATEGORIES 2 -->
+
+    <div class="text-center mt-3">
+      <a href="shop-categories.html" class="btn btn-light rounded-pill has-icon">All Categories <i class="material-icons">arrow_right</i></a>
+    </div>
+
+    <!-- FLASH DEALS -->
+    <div class="card card-style1 mt-3">
+      <div class="card-body">
+        <h5 class="card-title">
+          <i class="material-icons align-bottom text-warning">flash_on</i>
+          FLASH DEALS
+          <span class="text-danger" id="flash-deals-countdown"></span>
+        </h5>
+        <div class="swiper-container" id="dealSlider">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="d-md-grid grid-template-col-md-2">
+                <a href="shop-single.html" class="d-block" data-cover="../../img/products/flash_deals_1.jpg" data-height="300px 240px 240px 220px 250px"></a>
+                <div class="text-center p-3">
+                  <h4><a href="shop-single.html" class="card-link text-secondary">Legendary Whitetails Heavyweight Hoodie</a></h4>
+                  <p class="price text-center">
+                    <span class="h4">$44.99</span>
+                    <span class="h5 del">$59.99</span>
+                  </p>
+                  <button class="btn btn-primary has-icon rounded-pill atc-demo" data-title="Legendary Whitetails Heavyweight Hoodie" type="button"><i class="material-icons mr-1">shopping_cart</i>Add to cart</button>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="d-md-grid grid-template-col-md-2">
+                <a href="shop-single.html" class="d-block" data-cover="../../img/products/flash_deals_2.jpg" data-height="300px 240px 240px 220px 250px"></a>
+                <div class="text-center p-3">
+                  <h4><a href="shop-single.html" class="card-link text-secondary">Casual Floral Print 3/4 Sleeve Shirt</a></h4>
+                  <p class="price text-center">
+                    <span class="h4">$18.69</span>
+                    <span class="h5 del">$21.99</span>
+                  </p>
+                  <button class="btn btn-primary has-icon rounded-pill atc-demo" data-title="Casual Floral Print 3/4 Sleeve Shirt" type="button"><i class="material-icons mr-1">shopping_cart</i>Add to cart</button>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="d-md-grid grid-template-col-md-2">
+                <a href="shop-single.html" class="d-block" data-cover="../../img/products/flash_deals_1.jpg" data-height="300px 240px 240px 220px 250px"></a>
+                <div class="text-center p-3">
+                  <h4><a href="shop-single.html" class="card-link text-secondary">Legendary Whitetails Heavyweight Hoodie</a></h4>
+                  <p class="price text-center">
+                    <span class="h4">$44.99</span>
+                    <span class="h5 del">$59.99</span>
+                  </p>
+                  <button class="btn btn-primary has-icon rounded-pill atc-demo" data-title="Legendary Whitetails Heavyweight Hoodie" type="button"><i class="material-icons mr-1">shopping_cart</i>Add to cart</button>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="d-md-grid grid-template-col-md-2">
+                <a href="shop-single.html" class="d-block" data-cover="../../img/products/flash_deals_2.jpg" data-height="300px 240px 240px 220px 250px"></a>
+                <div class="text-center p-3">
+                  <h4><a href="shop-single.html" class="card-link text-secondary">Casual Floral Print 3/4 Sleeve Shirt</a></h4>
+                  <p class="price text-center">
+                    <span class="h4">$18.69</span>
+                    <span class="h5 del">$21.99</span>
+                  </p>
+                  <button class="btn btn-primary has-icon rounded-pill atc-demo" data-title="Casual Floral Print 3/4 Sleeve Shirt" type="button"><i class="material-icons mr-1">shopping_cart</i>Add to cart</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-button-prev"><i class="material-icons">chevron_left</i></div>
+          <div class="swiper-button-next"><i class="material-icons">chevron_right</i></div>
+        </div>
+      </div>
+    </div>
+    <!-- /FLASH DEALS -->
+
+    <!-- CATEGORIES GRID -->
+    <div class="d-grid grid-template-col-2 grid-template-col-md-3 grid-gap-1 grid-gap-sm-3 mt-3">
+      <div class="img img-zoom-in grid-column-start-1 grid-column-end-3 grid-column-end-sm-2 grid-row-start-sm-1 grid-row-end-sm-3">
+        <div data-cover="../../img/discover/1.jpeg" data-height="150px 276px 250px 325px 400px"></div>
+        <div class="overlay overlay-show bg-dark"></div>
+        <div class="overlay-content overlay-show">
+          <a href="shop-grid.html" class="card-link h3 text-white font-condensed font-weight-bold stretched-link">NEW ARRIVALS</a>
+        </div>
+      </div>
+      <div class="img img-zoom-in">
+        <div data-cover="../../img/discover/2.jpeg" data-height="125px 100% 100% 100% 100%"></div>
+        <div class="overlay overlay-show bg-dark"></div>
+        <div class="overlay-content overlay-show">
+          <a href="shop-grid.html" class="card-link h3 text-white font-condensed stretched-link text-center px-3">Crossbody Bag</a>
+        </div>
+      </div>
+      <div class="img img-zoom-in">
+        <div data-cover="../../img/discover/3.jpeg" data-height="125px 100% 100% 100% 100%"></div>
+        <div class="overlay overlay-show bg-dark"></div>
+        <div class="overlay-content overlay-show">
+          <a href="shop-grid.html" class="card-link h3 text-white font-condensed stretched-link text-center px-3">Winter Collection</a>
+        </div>
+      </div>
+      <div class="img img-zoom-in">
+        <div data-cover="../../img/discover/4.jpeg" data-height="125px 130px 100% 100% 100%"></div>
+        <div class="overlay overlay-show bg-dark"></div>
+        <div class="overlay-content overlay-show">
+          <a href="shop-grid.html" class="card-link h3 text-white font-condensed stretched-link text-center px-3">Accessories</a>
+        </div>
+      </div>
+      <div class="img img-zoom-in">
+        <div data-cover="../../img/discover/5.jpeg" data-height="125px 130px 100% 100% 100%"></div>
+        <div class="overlay overlay-show bg-dark"></div>
+        <div class="overlay-content overlay-show">
+          <a href="shop-grid.html" class="card-link h3 text-white font-condensed stretched-link text-center px-3">Hats</a>
+        </div>
+      </div>
+    </div>
+    <!-- /CATEGORIES GRID -->
+
+    <!-- FEATURED PRODUCTS -->
+    <h4 class="mt-4 text-center">Featured Products</h4>
+    <div class="d-grid grid-template-col-2 grid-template-col-md-4 grid-gap-1 grid-gap-sm-3 my-3">
+      <div class="card card-product card-style1">
+        <div class="card-body">
+          <button class="btn btn-icon btn-text-danger rounded-circle btn-wishlist atw-demo" data-toggle="button" title="Add to wishlist"></button>
+          <a href="shop-single.html"><img class="card-img-top" src="../../img/products/1_small.jpg" alt="Card image cap"></a>
+          <a href="shop-single.html" class="card-title card-link">Hanes Hooded Sweatshirt</a>
+          <span class="badge badge-success">New arrival</span>
+          <div class="price"><span class="h5">$18.56</span></div>
+        </div>
+        <div class="card-footer">
+          <button class="btn btn-sm rounded-pill btn-faded-primary btn-block atc-demo">Add to Cart</button>
+        </div>
+      </div>
+      <div class="card card-product card-style1">
+        <div class="card-body">
+          <button class="btn btn-icon btn-text-danger rounded-circle btn-wishlist atw-demo" data-toggle="button" title="Add to wishlist"></button>
+          <a href="shop-single.html"><img class="card-img-top" src="../../img/products/2_small.jpg" alt="Card image cap"></a>
+          <a href="shop-single.html" class="card-title card-link">The Flash Logo T-Shirt</a>
+          <div class="price">
+            <span class="h5">$16.64</span>
+          </div>
+          <div class="custom-color custom-color-lg">
+            <div class="color-item">
+              <input type="radio" name="productColor1" value="../../img/products/2_small.jpg" id="productColor1-1" class="custom-control-input" checked>
+              <label for="productColor1-1" class="rounded-circle" style="background-color:#f2c43a"></label>
+            </div>
+            <div class="color-item">
+              <input type="radio" name="productColor1" value="../../img/products/2_small_black.jpg" id="productColor1-2" class="custom-control-input">
+              <label for="productColor1-2" class="rounded-circle" style="background-color:#23232b"></label>
+            </div>
+            <div class="color-item">
+              <input type="radio" name="productColor1" value="../../img/products/2_small_red.jpg" id="productColor1-3" class="custom-control-input">
+              <label for="productColor1-3" class="rounded-circle" style="background-color:#eb0015"></label>
+            </div>
+          </div>
+        </div>
+        <div class="card-footer">
+          <button class="btn btn-sm rounded-pill btn-faded-primary btn-block atc-demo">Add to Cart</button>
+        </div>
+      </div>
+      <div class="card card-product card-style1">
+        <div class="card-body">
+          <button class="btn btn-icon btn-text-danger rounded-circle btn-wishlist atw-demo" data-toggle="button" title="Add to wishlist"></button>
+          <a href="shop-single.html"><img class="card-img-top" src="../../img/products/3_small.jpg" alt="Card image cap"></a>
+          <a href="shop-single.html" class="card-title card-link">Open Front Cropped Cardigans</a>
+          <span class="badge badge-warning">20% OFF</span>
+          <div class="price">
+            <span class="h5 del">$19.00</span>
+            <span class="h5">$15.20</span>
+          </div>
+        </div>
+        <div class="card-footer">
+          <button class="btn btn-sm rounded-pill btn-faded-primary btn-block atc-demo">Add to Cart</button>
+        </div>
+      </div>
+      <div class="card card-product card-style1">
+        <div class="card-body">
+          <button class="btn btn-icon btn-text-danger rounded-circle btn-wishlist atw-demo" data-toggle="button" title="Add to wishlist"></button>
+          <a href="shop-single.html"><img class="card-img-top" src="../../img/products/4_small.jpg" alt="Card image cap"></a>
+          <a href="shop-single.html" class="card-title card-link">Cotton Fleece Long Hoodie</a>
+          <div class="price">
+            <span class="h5 del">$98.90</span>
+            <span class="h5">$85.00</span>
+          </div>
+          <div class="custom-color custom-color-lg">
+            <div class="color-item">
+              <input type="radio" name="productColor2" value="../../img/products/4_small.jpg" id="productColor2-1" class="custom-control-input" checked>
+              <label for="productColor2-1" class="rounded-circle" style="background-color:#625e39"></label>
+            </div>
+            <div class="color-item">
+              <input type="radio" name="productColor2" value="../../img/products/4_small_blue.jpg" id="productColor2-2" class="custom-control-input">
+              <label for="productColor2-2" class="rounded-circle" style="background-color:#2e4797"></label>
+            </div>
+            <div class="color-item">
+              <input type="radio" name="productColor2" value="../../img/products/4_small_maroon.jpg" id="productColor2-3" class="custom-control-input">
+              <label for="productColor2-3" class="rounded-circle" style="background-color:#791949"></label>
+            </div>
+          </div>
+        </div>
+        <div class="card-footer">
+          <button class="btn btn-sm rounded-pill btn-faded-primary btn-block atc-demo">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+    <!-- /FEATURED PRODUCTS -->
+
+  </div>
+
+  @@include('./include/footer.html')
+
+  @@include('./include/modal-signin.html')
+
+  @@include('./include/modal-menu.html', {
+    "menu": "home",
+    "sub": "layout1",
+    "child": ""
+  })
+
+  @@include('./include/modal-search.html')
+
+  @@include('./include/modal-cart.html')
+
+  @@include('./include/script-js.html')
+  <script src="../../../plugins/swiper/swiper.min.js"></script>
+  <script src="../../../plugins/jquery-countdown/jquery.countdown.min.js"></script>
+  @@include('./include/app-js.html')
+  <script>
+    $(() => {
+
+      App.atcDemo() // Add to Cart Demo
+      App.atwDemo() // Add to Wishlist Demo
+      App.homeSlider('#homeSlider')
+      App.dealSlider('#dealSlider')
+      App.colorOption()
+
+      // example countdown, 6 hours from now for flash deals
+      var countdown = new Date()
+      countdown.setHours(countdown.getHours() + 6)
+      $('#flash-deals-countdown').countdown(countdown, function (e) {
+        $(this).text(e.strftime('%H:%M:%S'))
+      })
+
+    })
+  </script>
+</body>
+
+</html>

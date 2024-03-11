@@ -1,0 +1,45 @@
+// Topbar
+.topbar {
+  position: relative;
+  z-index: $zindex-fixed + 1;
+  padding: .25rem 0;
+  border-bottom: 1px solid $border-color;
+  background-color: #fff;
+}
+
+// Main header
+header {
+  position: relative;
+  z-index: $zindex-fixed;
+  background-color: #fff;
+  box-shadow: $box-shadow-sm;
+  padding: .5rem 0;
+  > .container,
+  > .container-fluid {
+    display: flex;
+    position: relative;
+    align-items: center;
+  }
+}
+
+// Animate fixed top header
+.fixed-top {
+  animation-name: headerAnimation;
+  animation-duration: .5s;
+  animation-fill-mode: both;
+}
+@keyframes headerAnimation {
+  from {
+    transform: translate3d(0, -100%, 0);
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+// Main nav
+.nav-main .nav-link {
+  border-width: 1px 0;
+  border-style: solid;
+  border-color: #fff;
+}

@@ -1,0 +1,441 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="keywords" content="ไม้กั้นรถยนต์, แขนกั้นรถยนต์, เครื่องสแกนลายนิ้วมือ, เครื่องสแกนใบหน้า, เครื่องสแกนนิ้ว, เครื่องสแกนหน้า, นาฬิกายาม, เครื่องกั้น 3 ขา">
+    <meta content="icontech คือผู้เชี่ยวชาญด้านสินค้าระบบรักษาความปลอดภัย เครื่องสแกนลายนิ้วมือ เครื่องสแกนใบหน้า ไม้กั้นรถยนต์ นาฬิกายาม สัญญาณกันขโมย พร้อมบริการให้คำปรึกษาฟรีตลอดอายุการใช้งาน" name="description">
+    <meta content="Charoen Tech" name="author">
+
+    <!-- Font & Icon -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Kanit&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="~/img/favicon/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="~/img/favicon/favicon.ico">
+    <link rel="icon" type="image/png" href="~/img/favicon/favicon.png">
+    <link rel="apple-touch-icon" href="~/img/favicon/touch-icon-iphone.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="~/img/favicon/touch-icon-ipad.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="~/img/favicon/touch-icon-iphone-retina.png">
+    <link rel="apple-touch-icon" sizes="167x167" href="~/img/favicon/touch-icon-ipad-retina.png">
+
+    <!-- Plugins -->
+    <link rel="stylesheet" href="~/plugins/swiper/swiper.min.css">
+
+    <!-- Main style -->
+    <link rel="stylesheet" href="~/css/style.css">
+
+    <title>ไม้กั้นรถยนต์ icontech เครื่องสแกนลายนิ้วมือ เครื่องสแกนใบหน้า นาฬิกายาม สัญญาณกันขโมย</title>
+</head>
+<body>
+    <!-- Wrapper -->
+    <div class="wrapper">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="modal fade modal-content-left modal-shown-static" id="menuModal" tabindex="-1" role="dialog" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-scrollable" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header align-items-center border-bottoms z-index-1">
+                            <a href="/"><img src="~/img/icontech-logo.bmp" alt="Logo" height="70"></a>
+                            <button class="btn btn-icon btn-sm btn-text-light rounded-circle" type="button" data-dismiss="modal">
+                                <i class="material-icons">close</i>
+                            </button>
+                        </div>
+                        <div class="modal-body px-0 scrollbar-width-thin">
+                            <ul class="menu" id="menu">
+                                <li class="no-sub"><a href="/"><i class="material-icons">home</i> หน้าแรก</a></li>
+                                <li class="no-sub"><a href="@Url.Action("About", "Home")"><i class="material-icons">info</i> เกี่ยวกับเรา</a></li>
+                                <li>
+                                    <a href="#" class="has-arrow"><i class="material-icons">shopping_cart</i> สินค้า</a>
+                                    <ul>
+                                        @foreach (var menuCate in (List<ITEM_CATE>)ViewData["menuCate"])
+                                        {
+                                            <li><a href="@Url.Action("Shopping", "Home", new { id = menuCate.ITEM_CATE_ID })">@menuCate.NAME</a></li>
+                                        }
+                                    </ul>
+                                </li>
+                                <li class="no-sub"><a href="@Url.Action("ServiceList", "Home")"><i class="material-icons">build</i> บริการ</a></li>
+                                <li>
+                                    <a href="@Url.Action("BlogList", "Home")" class=""><i class="material-icons">rss_feed</i> คลังข้อมูล</a>
+                                </li>
+                                <li class="no-sub"><a href="@Url.Action("CustomerList", "Home")"><i class="material-icons">stars</i> ผลงานของเรา</a></li>
+                                <li class="no-sub"><a href="@Url.Action("Contact", "Home")"><i class="material-icons">contacts</i> ติดต่อเรา</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /Sidebar -->
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand navbar-light fixed-top navbar-main">
+            <div class="navbar-nav nav-circle d-lg-none mr-auto">
+                <a href="#menuModal" data-toggle="modal" class="nav-link nav-icon"><i class="material-icons">menu</i></a>
+            </div>
+            <a class="nav-link nav-link-sm btn btn-faded-info" href="@Url.Action("Partner", "Home")" id="langDropdown" role="button">
+                สมัครตัวแทนจำหน่าย
+            </a>
+            <a href="@Url.Action("Ticket", "Home")" class="nav-link nav-link-sm btn btn-faded-danger text-dark">แจ้งปัญหาการใช้งาน</a>
+            @*<form class="form-inline border rounded-lg d-none d-lg-flex">
+                <div class="input-group">
+                    <input type="search" class="form-control border-0 shadow-none" placeholder="Search..." required>
+                    <div class="input-group-append">
+                        <button class="btn btn-text-secondary btn-icon" type="submit">
+                            <i class="material-icons">search</i>
+                        </button>
+                    </div>
+                </div>
+            </form>*@
+            <nav class="nav nav-pills nav-gap-x-1 ml-auto mr-1 d-none d-lg-flex">
+                @*<div class="nav-item dropdown">
+        <a class="nav-link nav-link-sm dropdown-toggle" href="index.html" id="currencyDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            $ USD
+        </a>
+        <div class="dropdown-menu dropdown-menu-right font-size-sm" aria-labelledby="currencyDropdown">
+            <button class="dropdown-item active" type="button">$ USD</button>
+            <button class="dropdown-item" type="button">€ EUR</button>
+            <button class="dropdown-item" type="button">£ UKP</button>
+            <button class="dropdown-item" type="button">¥ JPY</button>
+        </div>
+    </div>
+    <div class="nav-item dropdown">
+        <a class="nav-link nav-link-sm" href="index.html" id="langDropdown" role="button">
+            สมัครตัวแทนจำหน่าย
+        </a>
+    </div>*@
+            </nav>
+            <nav class="nav nav-circle nav-gap-x-1">
+                @*@<a class="nav-link nav-icon d-flex d-lg-none" href="#searchModal">
+                    สมัครตัวแทนจำหน่าย
+                </a>
+                <a class="nav-link nav-icon has-badge d-none d-sm-flex" href="account-wishlist.html">
+                    <i class="material-icons">favorite_border</i>
+                    <span class="badge badge-pill badge-danger">3</span>
+                </a>
+                <a class="nav-link nav-icon has-badge" data-toggle="modal" href="#cartModal">
+                    <i class="material-icons">shopping_cart</i>
+                    <span class="badge badge-pill badge-danger">4</span>
+                </a>*@
+            </nav>
+            <nav class="nav">
+                <!--<a><i class="material-icons">perm_phone_msg</i> Hotline: 095-721-0597</a>-->
+                @*<div class="nav-link-divider mx-2"></div>
+                <div class="nav-item nav-pills dropdown dropdown-hover">
+                    <a class="nav-link nav-link-sm dropdown-toggle has-icon hover" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-display="static">
+                        <i class="material-icons mr-1">person</i> Hi, John
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right font-size-sm" aria-labelledby="userDropdown">
+                        <a class="dropdown-item has-icon pr-5" href="account-orders.html"><i class="material-icons mr-2">shopping_cart</i> My Orders</a>
+                        <a class="dropdown-item has-icon pr-5" href="account-wishlist.html"><i class="material-icons mr-2">favorite_border</i> Wishlist</a>
+                        <a class="dropdown-item has-icon pr-5" href="account-profile.html"><i class="material-icons mr-2">person</i> Account Setting</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item has-icon pr-5 text-danger" href="account-signin.html"><i class="material-icons mr-2">exit_to_app</i> Sign Out</a>
+                    </div>
+                </div>*@
+            </nav>
+        </nav>
+        <!-- /Navbar -->
+        <!-- Main Content -->
+        <div class="main">
+            @RenderBody()
+        </div>
+        <!-- /Main Content -->
+
+    </div>
+    <!-- /Wrapper -->
+    <!-- SIGN-IN MODAL -->
+    <div class="modal fade modal-content-right" id="signinModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-sm" role="document">
+
+            <div class="modal-content" id="signinContent">
+                <div class="modal-header pb-0">
+                    <div>
+                        <h3 class="modal-title">Sign in</h3>
+                        <em>to your account</em>
+                    </div>
+                    <button class="btn btn-icon btn-sm btn-text-secondary rounded-circle" type="button" data-dismiss="modal">
+                        <i class="material-icons">close</i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="formSignin">
+                        <div class="form-group">
+                            <span class="input-icon">
+                                <i class="material-icons">mail_outline</i>
+                                <input type="email" class="form-control" id="signInEmailInput" placeholder="Email address" required>
+                            </span>
+                        </div>
+                        <div class="form-group">
+                            <span class="input-icon">
+                                <i class="material-icons">lock_open</i>
+                                <input type="password" class="form-control" id="signInPasswordInput" placeholder="Password" required>
+                            </span>
+                        </div>
+                        <div class="form-group d-flex justify-content-between">
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="rememberCheck" checked>
+                                <label class="custom-control-label" for="rememberCheck">Remember me</label>
+                            </div>
+                            <u><a href="#" class="text-primary small" id="showResetContent">Forgot password ?</a></u>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">Sign In</button>
+                    </form>
+                    <hr>
+                    <p class="font-italic">Don't have an account ? <u><a href="#" id="showSignupContent">Sign Up</a></u></p>
+                    <hr>
+                    <div class="text-center">
+                        <p class="font-italic">Or sign in via</p>
+                        <button class="btn btn-icon btn-faded-primary rounded-circle" data-toggle="tooltip" title="Facebook" data-container="#signinContent">
+                            <i class="custom-icon" data-icon="facebook" data-size="20x20"></i>
+                        </button>
+                        <button class="btn btn-icon btn-faded-info rounded-circle" data-toggle="tooltip" title="Twitter" data-container="#signinContent">
+                            <i class="custom-icon" data-icon="twitter" data-size="20x20"></i>
+                        </button>
+                        <button class="btn btn-icon btn-faded-danger rounded-circle" data-toggle="tooltip" title="Google" data-container="#signinContent">
+                            <i class="custom-icon" data-icon="gplus" data-size="20x20"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal-content" id="signupContent" hidden>
+                <div class="modal-header pb-0">
+                    <div>
+                        <h3 class="modal-title">Sign up</h3>
+                        <em>create an account</em>
+                    </div>
+                    <button class="btn btn-icon btn-sm btn-text-secondary rounded-circle" type="button" data-dismiss="modal">
+                        <i class="material-icons">close</i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="formSignup">
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="signUpNameInput" placeholder="Full name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control" id="signUpEmailInput" placeholder="Email address" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control" id="signUpPasswordInput" placeholder="Password" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control" id="signUpPasswordConfirmInput" placeholder="Confirm password" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">Sign Up</button>
+                    </form>
+                    <hr>
+                    <button class="btn btn-faded-light has-icon btn-sm showSigninContent" type="button">
+                        <i class="material-icons">chevron_left</i> Back to sign in
+                    </button>
+                </div>
+            </div>
+
+            <div class="modal-content" id="resetContent" hidden>
+                <div class="modal-header pb-0">
+                    <div>
+                        <h3 class="modal-title">Reset Password</h3>
+                        <em>enter your email address</em>
+                    </div>
+                    <button class="btn btn-icon btn-sm btn-text-secondary rounded-circle" type="button" data-dismiss="modal">
+                        <i class="material-icons">close</i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="formReset">
+                        <div class="form-group">
+                            <span class="input-icon">
+                                <i class="material-icons">mail_outline</i>
+                                <input type="email" class="form-control" id="resetEmailInput" placeholder="Email address" required>
+                            </span>
+                        </div>
+                        <button type="submit" class="btn btn-danger btn-block">RESET</button>
+                    </form>
+                    <hr>
+                    <button class="btn btn-faded-light has-icon btn-sm showSigninContent" type="button">
+                        <i class="material-icons">chevron_left</i> Back to sign in
+                    </button>
+                </div>
+            </div>
+
+            <div class="modal-content" id="resetDoneContent" hidden>
+                <div class="modal-header pb-0 justify-content-end">
+                    <button class="btn btn-icon btn-sm btn-text-secondary rounded-circle" type="button" data-dismiss="modal">
+                        <i class="material-icons">close</i>
+                    </button>
+                </div>
+                <div class="modal-body text-center pt-0">
+                    <i class="material-icons text-primary display-4">check_circle_outline</i>
+                    <h3>CHECK YOUR EMAIL</h3>
+                    <p>We just sent you a letter with instructions to reset your password</p>
+                    <button class="btn btn-primary btn-block showSigninContent" type="button">Sign in</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- /SIGN-IN MODAL -->
+    <!-- SEARCH MODAL -->
+    <div class="modal fade" id="searchModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-body p-1 p-lg-3">
+                    <form>
+                        <div class="input-group input-group-lg input-group-search">
+                            <div class="input-group-prepend">
+                                <button class="btn btn-text-secondary btn-icon btn-lg rounded-circle" type="button" data-dismiss="modal">
+                                    <i class="material-icons">chevron_left</i>
+                                </button>
+                            </div>
+                            <input type="search" class="form-control form-control-lg border-0 shadow-none mx-1 px-0 px-lg-3" id="searchInput" placeholder="Search..." required>
+                            <div class="input-group-append">
+                                <button class="btn btn-text-secondary btn-icon btn-lg rounded-circle" type="submit">
+                                    <i class="material-icons">search</i>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /SEARCH MODAL -->
+    <!-- CART MODAL -->
+    <div class="modal fade modal-content-right modal-cart" id="cartModal" tabindex="-1" role="dialog" aria-labelledby="cartModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable" role="document">
+            <div class="modal-content">
+                <div class="modal-header border-bottom">
+                    <h5 class="modal-title" id="cartModalLabel">You have 4 items in your cart</h5>
+                    <button class="btn btn-icon btn-sm btn-text-secondary rounded-circle" type="button" data-dismiss="modal">
+                        <i class="material-icons">close</i>
+                    </button>
+                </div>
+                <div class="modal-body scrollbar-width-thin">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item px-0">
+                            <div class="media">
+                                <a href="shop-single.html" class="mr-2"><img src="../../img/products/1_small.jpg" width="50" height="50" alt="Hanes Hooded Sweatshirt"></a>
+                                <div class="media-body">
+                                    <a href="shop-single.html" class="d-block text-body" title="Hanes Hooded Sweatshirt">Hanes Hooded Sweatshirt</a>
+                                    <em class="text-muted">1 x $18.56</em>
+                                </div>
+                                <button class="btn btn-icon btn-sm btn-text-danger rounded-circle" type="button"><i class="material-icons">close</i></button>
+                            </div>
+                        </li>
+                        <li class="list-group-item px-0">
+                            <div class="media">
+                                <a href="shop-single.html" class="mr-2"><img src="../../img/products/2_small.jpg" width="50" height="50" alt="The Flash Logo T-Shirt"></a>
+                                <div class="media-body">
+                                    <a href="shop-single.html" class="d-block text-body" title="The Flash Logo T-Shirt">The Flash Logo T-Shirt</a>
+                                    <em class="text-muted">2 x $16.64</em>
+                                </div>
+                                <button class="btn btn-icon btn-sm btn-text-danger rounded-circle" type="button"><i class="material-icons">close</i></button>
+                            </div>
+                        </li>
+                        <li class="list-group-item px-0">
+                            <div class="media">
+                                <a href="shop-single.html" class="mr-2"><img src="../../img/products/3_small.jpg" width="50" height="50" alt="Open Front Cropped Cardigans"></a>
+                                <div class="media-body">
+                                    <a href="shop-single.html" class="d-block text-body" title="Open Front Cropped Cardigans">Open Front Cropped Cardigans</a>
+                                    <em class="text-muted">1 x $15.20</em>
+                                </div>
+                                <button class="btn btn-icon btn-sm btn-text-danger rounded-circle" type="button"><i class="material-icons">close</i></button>
+                            </div>
+                        </li>
+                        <li class="list-group-item px-0">
+                            <div class="media">
+                                <a href="shop-single.html" class="mr-2"><img src="../../img/products/4_small.jpg" width="50" height="50" alt="Cotton Fleece Long Hoodie"></a>
+                                <div class="media-body">
+                                    <a href="shop-single.html" class="d-block text-body" title="Cotton Fleece Long Hoodie">Cotton Fleece Long Hoodie</a>
+                                    <em class="text-muted">1 x $85.00</em>
+                                </div>
+                                <button class="btn btn-icon btn-sm btn-text-danger rounded-circle" type="button"><i class="material-icons">close</i></button>
+                            </div>
+                        </li>
+                    </ul>
+
+                </div>
+                <div class="modal-footer border-top">
+                    <div class="mr-auto">
+                        <em>Subtotal</em>
+                        <h5 class="mb-0 text-dark font-weight-bold font-condensed">$152.04</h5>
+                    </div>
+                    <a href="cart.html" class="btn btn-faded-success">View Cart</a>
+                    <a href="shipping.html" class="btn btn-success">Checkout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /CART MODAL -->
+    <!-- Main script -->
+    <script src="~/js/script.min.js"></script>
+
+    <!-- Plugins -->
+    <script src="~/plugins/swiper/swiper.min.js"></script>
+    <script src="~/plugins/jquery-countdown/jquery.countdown.min.js"></script>
+
+    <!-- Application script -->
+    <script src="~/js/app.min.js"></script>
+    <script>$(() => {
+
+    App.atcDemo() // Add to Cart Demo
+    App.atwDemo() // Add to Wishlist Demo
+    App.rating()
+
+    // Remove static modal for small devices
+    App.resize(() => {
+      if (App.mdDown()) {
+        document.getElementById('menuModal').classList.remove('modal-shown-static')
+      } else {
+        document.getElementById('menuModal').classList.add('modal-shown-static')
+        $('#menuModal').modal('hide')
+      }
+    })()
+
+    // Home slider
+    new Swiper('#homeSlider', {
+      loop: true,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false
+      }
+    })
+
+    // Categories slider
+    new Swiper('#categoriesSlider', {
+      navigation: {
+        nextEl: '#categories-slider-next',
+        prevEl: '#categories-slider-prev',
+      }
+    })
+
+    // Brands slider
+    new Swiper('#brandSlider2', {
+      navigation: {
+        nextEl: '#brand-slider-next',
+        prevEl: '#brand-slider-prev',
+      }
+    })
+
+    // Popular slider
+    new Swiper('#popularSlider', {
+      navigation: {
+        nextEl: '#popular-slider-next',
+        prevEl: '#popular-slider-prev',
+      }
+    })
+
+  })</script>
+</body>
+</html>

@@ -1,0 +1,157 @@
+<!-- HEADER -->
+  <header>
+    <div class="container-fluid">
+      <nav class="nav nav-circle d-flex d-lg-none">
+        <a href="#menuModal" data-toggle="modal" class="nav-link nav-icon"><i class="material-icons">menu</i></a>
+      </nav>
+      <nav class="nav ml-3 ml-lg-0">
+        <a href="index.html" class="nav-link has-icon p-0 bg-white">
+          <img src="../../../img/logo.png" alt="Logo" height="40">
+        </a>
+      </nav>
+
+      <nav class="nav nav-main nav-gap-x-1 nav-pills ml-3 d-none d-lg-flex">
+        <div class="nav-item dropdown dropdown-hover">
+          <a class="nav-link dropdown-toggle no-caret forwardable@@if(menu=='home'){ active}" href="index.html" id="homeDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Home
+          </a>
+          <div class="dropdown-menu" aria-labelledby="homeDropdown">
+            <a class="dropdown-item@@if(sub=='layout1'){ active}" href="index.html">Layout 1</a>
+            <a class="dropdown-item@@if(sub=='layout2'){ active}" href="index2.html">Layout 2</a>
+            <a class="dropdown-item@@if(sub=='layout3'){ active}" href="index3.html">Electronics Store</a>
+          </div>
+        </div>
+        <div class="nav-item dropdown dropdown-hover">
+          <a class="nav-link dropdown-toggle no-caret forwardable@@if(menu=='shop'){ active}" href="shop-categories.html" id="shopDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Shop
+          </a>
+          <div class="dropdown-menu" aria-labelledby="shopDropdown">
+            <a class="dropdown-item@@if(sub=='shop-categories'){ active}" href="shop-categories.html">Shop Categories</a>
+            <a class="dropdown-item@@if(sub=='shop-grid'){ active}" href="shop-grid.html">Shop Grid</a>
+            <a class="dropdown-item@@if(sub=='shop-list'){ active}" href="shop-list.html">Shop List</a>
+            <a class="dropdown-item@@if(sub=='cart'){ active}" href="cart.html">Cart</a>
+            <div class="dropdown-submenu">
+              <a class="dropdown-item@@if(sub=='checkout'){ active}" href="checkout-shipping.html">Checkout</a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item@@if(child =='checkout-shipping'){ active}" href="checkout-shipping.html">Checkout - Shipping</a>
+                <a class="dropdown-item@@if(child =='checkout-payment'){ active}" href="checkout-payment.html">Checkout - Payment</a>
+                <a class="dropdown-item@@if(child =='checkout-review'){ active}" href="checkout-review.html">Checkout - Review</a>
+                <a class="dropdown-item@@if(child =='checkout-complete'){ active}" href="checkout-complete.html">Checkout - Complete</a>
+              </div>
+            </div>
+            <a class="dropdown-item@@if(sub=='shop-single'){ active}" href="shop-single.html">Single Product</a>
+          </div>
+        </div>
+        <div class="nav-item dropdown dropdown-hover dropdown-mega">
+          <a class="nav-link dropdown-toggle no-caret" href="#" id="megaDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-display="static">
+            Mega Menu
+          </a>
+          <div class="dropdown-menu" aria-labelledby="megaDropdown">
+            <div class="row">
+              <div class="col-lg-3">
+                <div class="list-group list-group-flush list-group-no-border list-group-sm">
+                  <a href="shop-grid.html" class="list-group-item list-group-item-action"><strong>CLOTHING</strong></a>
+                  <a href="shop-grid.html" class="list-group-item list-group-item-action">Polos &amp; Tees</a>
+                  <a href="shop-grid.html" class="list-group-item list-group-item-action">Casual Shirts</a>
+                  <a href="shop-grid.html" class="list-group-item list-group-item-action">Jeans</a>
+                  <a href="shop-grid.html" class="list-group-item list-group-item-action">Casual Trousers</a>
+                  <a href="shop-grid.html" class="list-group-item list-group-item-action">Formal Shirts</a>
+                  <a href="shop-grid.html" class="list-group-item list-group-item-action">Formal Trousers</a>
+                  <a href="shop-grid.html" class="list-group-item list-group-item-action">Suits &amp; Blazers</a>
+                  <a href="shop-grid.html" class="list-group-item list-group-item-action">Shorts &amp; 3/4ths</a>
+                </div>
+              </div>
+              <div class="col-lg-3 border-left">
+                <div class="list-group list-group-flush list-group-no-border list-group-sm">
+                  <a href="shop-grid.html" class="list-group-item list-group-item-action"><strong>FOOTWEAR</strong></a>
+                  <a href="shop-grid.html" class="list-group-item list-group-item-action">Sports Shoes</a>
+                  <a href="shop-grid.html" class="list-group-item list-group-item-action">Sneakers</a>
+                  <a href="shop-grid.html" class="list-group-item list-group-item-action">Casual Shoes</a>
+                  <a href="shop-grid.html" class="list-group-item list-group-item-action">Loafers</a>
+                  <a href="shop-grid.html" class="list-group-item list-group-item-action">Formal Shoes</a>
+                  <a href="shop-grid.html" class="list-group-item list-group-item-action">Boots</a>
+                  <a href="shop-grid.html" class="list-group-item list-group-item-action">Outdoor &amp; Hiking</a>
+                  <a href="shop-grid.html" class="list-group-item list-group-item-action">Floaters</a>
+                </div>
+              </div>
+              <div class="col-lg-3 border-left">
+                <div class="img img-zoom-in w-100 h-100">
+                  <div data-cover="../../img/categories/1.jpeg"></div>
+                  <div class="overlay overlay-show bg-dark"></div>
+                  <div class="overlay-content overlay-show flex-column text-white">
+                    <h4 class="card-title text-center">New Men's Fashion</h4>
+                    <h6>See what's new</h6>
+                    <a href="shop-grid.html" class="btn btn-primary rounded-pill">Shop Now</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3 border-left">
+                <div class="img img-zoom-in w-100 h-100">
+                  <div data-cover="../../img/categories/6.jpeg"></div>
+                  <div class="overlay overlay-show bg-dark"></div>
+                  <div class="overlay-content overlay-show flex-column text-white">
+                    <h4 class="card-title text-center">New Women's Fashion</h4>
+                    <h6>See what's new</h6>
+                    <a href="shop-grid.html" class="btn btn-danger rounded-pill">Shop Now</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="nav-item dropdown dropdown-hover">
+          <a class="nav-link dropdown-toggle no-caret forwardable@@if(menu=='account'){ active}" href="account-profile.html" id="accountDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Account
+          </a>
+          <div class="dropdown-menu" aria-labelledby="accountDropdown">
+            <a class="dropdown-item@@if(sub=='account-signin'){ active}" href="account-signin.html">Sign In / Sign Up</a>
+            <a class="dropdown-item@@if(sub=='account-profile'){ active}" href="account-profile.html">Profile Page</a>
+            <a class="dropdown-item@@if(sub=='account-orders'){ active}" href="account-orders.html">Orders List</a>
+            <a class="dropdown-item@@if(sub=='account-order-detail'){ active}" href="account-order-detail.html">Order Detail</a>
+            <a class="dropdown-item@@if(sub=='account-wishlist'){ active}" href="account-wishlist.html">Wishlist</a>
+            <a class="dropdown-item@@if(sub=='account-address'){ active}" href="account-address.html">Address</a>
+          </div>
+        </div>
+        <div class="nav-item dropdown dropdown-hover">
+          <a class="nav-link dropdown-toggle no-caret forwardable@@if(menu=='blog'){ active}" href="blog-grid.html" id="blogDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Blog
+          </a>
+          <div class="dropdown-menu" aria-labelledby="blogDropdown">
+            <a class="dropdown-item@@if(sub=='blog-grid'){ active}" href="blog-grid.html">Post Grid</a>
+            <a class="dropdown-item@@if(sub=='blog-list'){ active}" href="blog-list.html">Post List</a>
+            <a class="dropdown-item@@if(sub=='blog-single'){ active}" href="blog-single.html">Single Post</a>
+          </div>
+        </div>
+        <div class="nav-item dropdown dropdown-hover">
+          <a class="nav-link dropdown-toggle no-caret@@if(menu=='pages'){ active}" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Pages
+          </a>
+          <div class="dropdown-menu" aria-labelledby="pagesDropdown">
+            <a class="dropdown-item@@if(sub=='about'){ active}" href="about.html">About Us</a>
+            <a class="dropdown-item@@if(sub=='contact'){ active}" href="contact.html">Contact Us</a>
+            <a class="dropdown-item@@if(sub=='compare'){ active}" href="compare.html">Compare</a>
+            <a class="dropdown-item@@if(sub=='faq'){ active}" href="faq.html">Help / FAQ</a>
+            <a class="dropdown-item@@if(sub=='404'){ active}" href="404.html">404 Not Found</a>
+          </div>
+        </div>
+        <a class="nav-item nav-link@@if(menu=='components'){ active}" href="components.html">
+          Components
+        </a>
+      </nav>
+      <nav class="nav nav-circle nav-gap-x-1 ml-auto">
+        <a class="nav-link nav-icon" data-toggle="modal" href="#searchModal">
+          <i class="material-icons">search</i>
+        </a>
+        <a class="nav-link nav-icon has-badge d-none d-sm-flex" href="account-wishlist.html">
+          <i class="material-icons">favorite_border</i>
+          <span class="badge badge-pill badge-danger">3</span>
+        </a>
+        <a class="nav-link nav-icon has-badge" data-toggle="modal" href="#cartModal">
+          <i class="material-icons">shopping_cart</i>
+          <span class="badge badge-pill badge-danger">4</span>
+        </a>
+      </nav>
+
+    </div>
+  </header>
+  <!-- /HEADER -->

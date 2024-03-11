@@ -1,0 +1,181 @@
+﻿@model Charoentech_Web.ModelViews.ITEM_MODEL_VIEW
+
+@{
+    ViewBag.Title = "สินค้า";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>สินค้า</h2>
+@if (TempData["notice"] != null)
+{
+    <p class="alert alert-success" role="alert">@TempData["notice"]</p>
+}
+@using (Html.BeginForm("Item_Create", "Admin", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.LabelFor(model => model.NAME, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.NAME, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.NAME, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.DESCRIPTION, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextAreaFor(model => model.DESCRIPTION, new { @class = "form-control textarea-editor" })
+                @Html.ValidationMessageFor(model => model.DESCRIPTION, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.DOWNLOAD_TAB, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextAreaFor(model => model.DOWNLOAD_TAB, new { @class = "form-control textarea-editor" })
+                @Html.ValidationMessageFor(model => model.DOWNLOAD_TAB, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.PRICE, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.PRICE, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.PRICE, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.DISCOUNT, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.DISCOUNT, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.DISCOUNT, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.ORDER_LIST, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.ORDER_LIST, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.ORDER_LIST, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.IMAGE, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @*@Html.EditorFor(model => model.IMAGE, new { htmlAttributes = new { @class = "form-control" } })*@
+                <input type="file" name="ImageFile" class="form-control" id="exampleFormControlFile1">
+                @Html.ValidationMessageFor(model => model.IMAGE, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        @*<div class="form-group">
+            @Html.LabelFor(model => model.BOSURE, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <input type="file" name="ImageFileBOSURE" class="form-control" id="exampleFormControlFile1">
+                @Html.ValidationMessageFor(model => model.BOSURE, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.PO, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <input type="file" name="ImageFilePO" class="form-control" id="exampleFormControlFile1">
+                @Html.ValidationMessageFor(model => model.PO, "", new { @class = "text-danger" })
+            </div>
+        </div>*@
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.BOSURE, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <input type="file" name="ImageFileBOSURE" class="form-control" id="exampleFormControlFile1">
+                @*@Html.EditorFor(model => model.BOSURE, new { htmlAttributes = new { @class = "form-control" } })*@
+                @Html.ValidationMessageFor(model => model.BOSURE, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        @*<div class="form-group">
+        @Html.LabelFor(model => model.PO, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.PO, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.PO, "", new { @class = "text-danger" })
+        </div>
+    </div>*@
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.STATUS, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownListFor(model => Model.STATUS, (IEnumerable<SelectListItem>)ViewBag.STATUS, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.STATUS, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.INDEX_HOME_PG, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownListFor(model => Model.INDEX_HOME_PG, (IEnumerable<SelectListItem>)ViewBag.STATUS, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.INDEX_HOME_PG, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.ITEM_CATE_ID, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownListFor(model => Model.ITEM_CATE_ID, (IEnumerable<SelectListItem>)ViewBag.ITEM_CATE_LIST, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.ITEM_CATE_ID, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.BEST_SALLER, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownListFor(model => Model.BEST_SALLER, (IEnumerable<SelectListItem>)ViewBag.STATUS, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.BEST_SALLER, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.NEW, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownListFor(model => Model.NEW, (IEnumerable<SelectListItem>)ViewBag.STATUS, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.NEW, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+@section Scripts { <script type = "text/javascript"
+    src = "http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.2/summernote.js" > </script>
+    @Scripts.Render("~/Scripts/Script-custom-editor.js") <link href = "http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.2/summernote.css"
+    rel = "stylesheet">
+}
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        // Initialize Editor  
+        $('.textarea-editor').summernote({
+            height: 300, // set editor height  
+            minHeight: null, // set minimum height of editor  
+            maxHeight: null, // set maximum height of editor  
+            focus: true // set focus to editable area after initializing summernote  
+        });
+
+        $('.textarea-editor2').summernote({
+            height: 300, // set editor height  
+            minHeight: null, // set minimum height of editor  
+            maxHeight: null, // set maximum height of editor  
+            focus: true // set focus to editable area after initializing summernote  
+        });
+    });
+</script>
+  
+<div>
+    @Html.ActionLink("กลับหน้ารายการ", "Item")
+</div>

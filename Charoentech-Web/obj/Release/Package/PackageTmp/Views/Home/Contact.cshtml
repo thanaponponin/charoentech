@@ -1,0 +1,120 @@
+﻿@model Charoentech_Web.ModelViews.EMAIL_MODEL_VIEW
+@{
+    ViewBag.Title = "Contact";
+}
+
+<div class="container-fluid mb-3">
+    <div class="card card-style1">
+        <div class="card-body">
+            <!-- <div class="row"> -->
+            <div class="d-grid grid-template-col-md-1 grid-gap-5">
+
+                <!-- Map 
+                <div class="embed-responsive embed-map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3021.9264094650316!2d-73.97488578459351!3d40.763643279326224!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c258f00eb25f59%3A0x75ddbee78904e799!2s767+5th+Ave%2C+New+York%2C+NY+10153%2C+USA!5e0!3m2!1sen!2sid!4v1532319134271" width="600" height="450" style="border:0" allowfullscreen></iframe>
+                </div>-->
+
+                <!-- Contact Us Form -->
+                <div>
+                    <h3>ติดต่อเรา</h3>
+                    <div class="form-row">
+                        <div class="form-group col-md-12">
+                            <div class="media">
+                                <span><i class="fa fa-map-marker fa-fw text-info"></i></span>
+                                @*<div class="media-body ml-1">
+                            <div>767 Fifth Avenue</div>
+                            <div>New York</div>
+                            <div>NY 10153</div>
+                        </div>*@
+                                <div class="media-body ml-12">
+                                    <ul>
+                                        <li>
+                                            ห้างหุ้นส่วนจํากัด เจริญเทค 559 สำนักงานใหญ่
+                                        </li>
+                                        <li>
+                                            เลขที่ 222/72 หมู่บ้านโกลเด้นทาวน์ บางนา-สวนหลวง ถ.กาญจนาภิเษก แขวงดอกไม้ เขตประเวศ กรุงเทพฯ 10250
+                                        </li>
+                                        <li>
+                                            Email : charoentech@gmail.com
+                                        </li>
+                                        <li>@Html.Raw("Line : @charoentech")</li>
+                                        <li>
+                                            Tel : 087-984-2273
+                                        </li>
+                                        <li>
+                                            Tel : 02-003-3750
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-12">
+                            <div class="media">
+                                <div class="media-body ml-12">
+                                    <ul>
+                                        <li>
+                                            0803559000214 เลขที่ผู้เสียภาษี
+                                        </li>
+                                        <li>
+                                            ชื่อบัญชี : หจก.เจริญเทค 559
+                                        </li>
+                                        <li>
+                                            ชื่อธนาคาร : ธนาคารกสิกรไทย สาขาเดอะมอลล์บางกะปิ
+                                        </li>
+                                        <li>เลขที่บัญชี : 009-3-41744-5</li>
+                                    </ul>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                                <hr />
+                                @using (Html.BeginForm("Contact", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
+                                {
+                                    @Html.AntiForgeryToken()
+                                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                                    <div class="form-group col-md-6">
+                                        <span class="input-icon">
+                                            <i class="material-icons">person</i>
+                                            @*<input type="text" class="form-control" id="email_name" placeholder="Your Name">*@
+                                            @Html.TextBoxFor(model => Model.subject, new { placeholder = "Your Name", @class = "form-control" })
+                                            @Html.ValidationMessageFor(model => Model.subject, "", new { @readonly = "readonly", @class = "text-danger" })
+                                        </span>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <span class="input-icon">
+                                            <i class="material-icons">mail_outline</i>
+                                            @*<input type="email" class="form-control" id="email" placeholder="Email">*@
+                                            @Html.TextBoxFor(model => Model.fromEmail, new { placeholder = "Email", @class = "form-control" })
+                                            @Html.ValidationMessageFor(model => Model.fromEmail, "", new { @readonly = "readonly", @class = "text-danger" })
+                                        </span>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <span class="input-icon">
+                                            <i class="material-icons">phone</i>
+                                            @*<input type="email" class="form-control" id="email" placeholder="Email">*@
+                                            @Html.TextBoxFor(model => Model.fromPhone, new { placeholder = "Phone", @class = "form-control" })
+                                            @Html.ValidationMessageFor(model => Model.fromPhone, "", new { @readonly = "readonly", @class = "text-danger" })
+                                        </span>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <span class="input-icon">
+                                            <i class="material-icons">comment</i>
+                                            @*<textarea class="form-control" rows="3" id="email_message" placeholder="Message"></textarea>*@
+                                            @Html.TextAreaFor(model => model.description, new { @rows = 3, @class = "form-control" })
+                                            @Html.ValidationMessageFor(model => Model.description, "", new { @readonly = "readonly", placeholder = "Message", @class = "text-danger" })
+                                        </span>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <input type="submit" class="btn btn-primary" value="ส่งเมล์" />
+                                    </div>
+                                }
+                            </div>
+                            <!-- /Contact Us Form -->
+
+                        </div>
+                    </div>
+                </div>
+</div>
